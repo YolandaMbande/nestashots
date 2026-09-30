@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
   <link href="img/style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -16,22 +17,18 @@
 <!-- Navigation -->
 <nav>
   <div class="logo">
-    <a href="/index.html">
-      <img src="img/logo.png" width="80">
+    <a href="#home">
+      <img src="img/logo.png" alt="NestaShots Photography">
     </a>
   </div>
+
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-
-    <!-- Portfolio with dropdown -->
-    <li class="dropdown">
-        <a href="#portfolio">Portfolio</a>
-    </li>
+    <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#testimonial">Testimonials</a></li>
     <li><a href="#contact">Book Me</a></li>
   </ul>
-  
 </nav>
 
 <!-- Hero Section -->
@@ -55,366 +52,969 @@
 
 <!-- Photographer Section -->
 <section class="photographer" id="about">
-  <video controls>
-    <source src="img/vids/Download.mp4" type="video/mp4"> <!-- Update the video source path -->
-    Your browser does not support the video tag.
-  </video>
+  <div class="photographer-layout">
+<div class="photographer-video-wrap">
+
+  <div class="video-frame">
+    <video autoplay muted loop playsinline>
+      <source src="img/vids/Download.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-caption">
+    <span>Behind the lens</span>
+    <span class="caption-line"></span>
+    <span>NestaShots</span>
+  </div>
+
+</div>
+
   <div class="photographer-card">
     <div class="photographer-content">
+
       <h2>About the Photographer</h2>
-      <h4>Thando Mbande  -  All Round Photographer in Eastern Ccape</h4>
-      <p>With a keen eye for detail and a passion for capturing life's most precious moments, our lead photographer brings artistry and professionalism to every shoot. Their unique perspective and creative approach ensure that every image tells a compelling story, making your special occasions truly unforgettable.</p>
-      <p>From the grandeur of weddings and the excitement of corporate events to the intimate beauty of family gatherings and the thrill of outdoor adventures, our photographers expertly capture the essence of every occasion. Explore our portfolio to discover the perfect images to inspire, commemorate, or simply cherish</p>
+
+      <h4>Thando Mbande — All Round Photographer in Eastern Cape</h4>
+
+      <p>
+        With a keen eye for detail and a passion for capturing life's most precious moments, our lead photographer brings artistry and professionalism to every shoot. Their unique perspective and creative approach ensure that every image tells a compelling story, making your special occasions truly unforgettable.
+      </p>
+
+      <p>
+        From the grandeur of weddings and the excitement of corporate events to the intimate beauty of family gatherings and the thrill of outdoor adventures, our photographers expertly capture the essence of every occasion. Explore our portfolio to discover the perfect images to inspire, commemorate, or simply cherish.
+      </p>
+
+      <br>
+
       <div class="photographer-buttons">
         <a href="about_me.html">Learn more ...</a>
       </div>
+
     </div>
+  </div>
   </div>
 </section>
 
-<!-- Services Offered Section -->
+<!-- Portfolio / Galleries Section -->
 <section class="services" id="portfolio">
+
   <div class="services-content">
-    <h2>Services Offered</h2>
-    <p>We offer a range of professional photography services tailored to your needs. Explore our services and find out how we can capture your special moments.</p>
-    <div class="services-list">
-      <div class="service">
-        <img src="img/wedding_package.png" alt="Service 1">
-        <div class="service-info">
-         <!--- <h3>WEDDINGS</h3> -->
-          <div class="service-links">
-            <a href="galleries/weddings_gallery.html">View Gallery</a> 
-            <a href="galleries/weddings_packages.html">View Packages</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="service">
-        <img src="img/matric_dance.png" alt="Service 2">
-        <div class="service-info">
-          <div class="service-links">
-            <a href="galleries/matric_gallery.html">View Gallery</a>
-            <a href="galleries/weddings_packages.html">View Packages</a>
-          </div>
-        </div>
-      </div>
+    <span class="gallery-eyebrow">Explore the stories</span>
 
-      <div class="service">
-        <img src="img/maternity_shoot.png" alt="Service 3">
-        <div class="service-info">
-          <div class="service-links">
-            <a href="galleries/pregnancy_gallery.html">View Gallery</a>
-            <a href="galleries/pregnancy_packages.html">View Packages</a>
-          </div>
-        </div>
-      </div>
+    <h2>Galleries.</h2>
 
-      <div class="service">
-        <img src="img/birthday_package.png" alt="Service 4">
-        <div class="service-info">
-          <div class="service-links">
-            <a href="galleries/birthdays_gallery.html">Gallery</a>
-            <a href="galleries/birthdays_packages.html">Packages</a>
-          </div>
-        </div>
-      </div>
+    <p class="gallery-intro">
+      Moments worth remembering, captured exactly as they felt.
+      Explore a collection of weddings, celebrations, portraits and everything in between.
+    </p>
 
-      <div class="service">
-        <img src="img/graduation_shoot.png" alt="Service 4">
-        <div class="service-info">
-          <div class="service-links">
-            <a href="galleries/graduation_gallery.html">View Gallery</a>
-            <a href="galleries/graduation_packages.html">View Packages</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Added Services -->
-      <div class="service">
-        <img src="img//outdoor_events.png" alt="Corporate Event">
-        <div class="service-info">
-          <div class="service-links">
-            <a href="galleries/outdooor_events_gallery.html">View Gallery</a>
-            <a href="galleries/outdoor_events_packages.html">View Packages</a>
-          </div>
-        </div>
-      </div>
+    <!-- Gallery Categories -->
 
-      <div class="service">
-        <img src="img/business_promos.png" alt="Engagement Shoot">
-        <div class="service-info">
-          <div class="service-links">
-            <a href="#">View Gallery</a>
-            <a href="#">View Packages</a>
-          </div>
-        </div>
-      </div>
+    <div class="gallery-categories">
 
-      <div class="service">
-        <img src="img/family_potraits.png" alt="Family Portrait">
-        <div class="service-info">
-          <div class="service-links">
-            <a href="galleries/family_potraits_gallery.html">View Gallery</a>
-            <a href="galleries/family_potraits_packages.html">View Packages</a>
-          </div>
-        </div>
-      </div>
+      <button class="gallery-filter active" data-category="weddings">
+        Weddings
+      </button>
+
+      <button class="gallery-filter" data-category="matric">
+        Matric Dance
+      </button>
+
+      <button class="gallery-filter" data-category="maternity">
+        Maternity
+      </button>
+
+      <button class="gallery-filter" data-category="birthdays">
+        Birthdays
+      </button>
+
+      <button class="gallery-filter" data-category="graduation">
+        Graduation
+      </button>
+
+      <button class="gallery-filter" data-category="events">
+        Events
+      </button>
+
+      <button class="gallery-filter" data-category="business">
+        Business
+      </button>
+
+      <button class="gallery-filter" data-category="family">
+        Family
+      </button>
+
     </div>
+
+
+    <!-- Gallery Preview -->
+
+    <div class="gallery-preview">
+
+      <div class="gallery-photo gallery-photo-tall">
+        <img src="img/wedding_package.png" alt="Wedding photography">
+      </div>
+
+      <div class="gallery-photo">
+        <img src="img/wedding_package.png" alt="Wedding photography">
+      </div>
+
+      <div class="gallery-photo gallery-photo-wide">
+        <img src="img/wedding_package.png" alt="Wedding photography">
+      </div>
+
+      <div class="gallery-photo">
+        <img src="img/wedding_package.png" alt="Wedding photography">
+      </div>
+
+      <div class="gallery-photo gallery-photo-tall">
+        <img src="img/wedding_package.png" alt="Wedding photography">
+      </div>
+
+    </div>
+
+
+    <!-- Gallery Links -->
+
+    <div class="gallery-actions">
+
+      <a href="galleries/weddings_gallery.html">
+        View Full Gallery
+      </a>
+
+      <a href="galleries/weddings_packages.html">
+        View Packages
+      </a>
+
+    </div>
+
   </div>
+
 </section>
 
 <!-- Hire Me Section -->
 <section class="hire_me">
-  <div style="display: flex; align-items: center; height: 100%;">
+
+  <div class="hire-me-layout">
+
+    <!-- LEFT - TEXT CARD -->
     <div class="hire-me-card">
-      <div class="photographer-content">
+
+      <div class="hire-me-content">
+
         <h2>Why You Should Hire Me As Your Photographer</h2>
+
         <p>
           With a keen eye for detail and a passion for capturing life's most precious moments, our lead photographer brings artistry and professionalism to every shoot. Their unique perspective and creative approach ensure that every image tells a compelling story, making your special occasions truly unforgettable.
         </p>
+
         <p>
           Immerse yourself in the magic of moments captured through the lens. Our photography website offers a diverse collection of stunning images that tell stories, evoke emotions, and preserve memories. From the grandeur of weddings and the excitement of corporate events to the intimate beauty of family gatherings and the thrill of outdoor adventures, our photographers expertly capture the essence of every occasion. Explore our portfolio to discover the perfect images to inspire, commemorate, or simply cherish.
         </p>
+
         <div class="photographer-buttons">
-          <a href="tel:+27845805377"> Give me a call</a>
+          <a href="tel:+27845805377">Give me a call</a>
         </div>
+
       </div>
+
     </div>
-    <img src="img/hire_me_section.jpg"
-         alt="Photographer Image"
-         style="width:30%; margin-left:40px; border-radius:8px;">
+
+
+    <!-- RIGHT - IMAGE -->
+    <div class="hire-me-image-wrap">
+
+      <div class="hire-me-image-frame">
+
+        <img
+          src="img/hire_me_section.jpg"
+          alt="NestaShots Photography"
+        >
+
+      </div>
+
+      <div class="hire-me-caption">
+        <span>Capturing stories</span>
+        <span class="hire-caption-line"></span>
+        <span>NestaShots</span>
+      </div>
+
     </div>
+
+  </div>
+
 </section>
 
 <!-- Testimonials Section -->
 <section class="testimonials-container" id="testimonial">
-  <h1>CLIENT TESTIMONIALS</h1>
-  <h4>WHAT MY BEAUTIFUL CLIENTS HAD TO SAY ABOUT MY WORK!</h4>
-  <div class="testimonials">
-    <div class="testimonial-box">
-      <p>"Had an amazing experience. The photographer and the assistant helped so much with poses, created a comfortable atmosphere and made the whole process fun. The location of the studio is convenient making it easily accessible."</p>
-      <p>"Highly recommend!"</p>
-      <div class="client-info">
-        <img src="img/testimonials/xhegwana.jpeg" alt="Client 1">
-        <span>Siyolise Xhegwana</span>
-      </div>
-    </div>
-    <div class="testimonial-box">
-      <p>"I highly recommend NestaShots Photography 🔥🙌 11/10. Best quality pictures you will get. "</p>
-      <p>"Birthday shoot ? 🔥quality speaks for it self thank you nestashots I love the images.🙏"</p>
-      <div class="client-info">
-        <img src="img/testimonials/Komna.jpg" alt="Client 2">
-        <span>Nalilitha Komna</span>
-      </div>
-    </div>
-    <div class="testimonial-box">
-      <p>"The best photographer in town, on God!
-        Super friendly and accommodative 👌
-        Seamless service.
-        Picture quality is insane 💯"</p>
-      <div class="client-info">
-        <img src="img/testimonials/Mpatelwa.png" alt="Client 3">
-        <span>Simamkele Mpatelwa</span>
-      </div>
-    </div>
-    <div class="testimonial-box">
-      <p>"My experience at Nesta Photoshoot was absolutely amazing! Highly recommend him to anyone looking for top-quality photography."</p>
-      <p>"From ndumie."</p>
-      <div class="client-info">
-        <img src="img/testimonials/Melissas.png" alt="Client 4">
-        <span>Nondumiso Melissas</span>
-      </div>
-    </div>
-    <div class="testimonial-box">
-      <p>"I highly recommend this company ! Nesta is a consummate professional, great with communication and to top
-        It off , he's a friendly guy. We are very happy with the photos we received.
-        May your business grow from strength to strength"</p>
-      <div class="client-info">
-        <img src="img/testimonials/Pelisa.jpeg" alt="Client 5">
-        <span>Pelisa Norman</span>
-      </div>
-    </div>
-    <div class="testimonial-box">
-      <p>"Great job Nestashots......keep it up the good work"</p>
-      <div class="client-info">
-        <img src="img/testimonials/buhlungu.jpg" alt="Client 5">
-        <span>Lungisa Buhlungu</span>
-      </div>
-    </div>
+
+  <div class="testimonials-heading">
+
+    <span class="testimonials-eyebrow">Kind words</span>
+
+    <h2>From My Clients.</h2>
+
+    <p>
+      A few words from the beautiful people I've had the pleasure of capturing.
+    </p>
+
   </div>
+
+
+  <div class="testimonials-wrapper">
+
+    <button class="testimonial-arrow arrow-left" aria-label="Previous testimonial">
+      &#8592;
+    </button>
+
+
+    <div class="testimonials">
+
+      <!-- Testimonial 1 -->
+      <article class="testimonial-box">
+
+        <span class="quote-mark">“</span>
+
+        <div class="testimonial-text">
+          <p>
+            Had an amazing experience. The photographer and the assistant helped
+            so much with poses, created a comfortable atmosphere and made the
+            whole process fun. The location of the studio is convenient making
+            it easily accessible.
+          </p>
+
+          <p>Highly recommend!</p>
+        </div>
+
+        <div class="client-info">
+          <img src="img/testimonials/xhegwana.jpeg" alt="Siyolise Xhegwana">
+
+          <div>
+            <span class="client-name">Siyolise Xhegwana</span>
+            <span class="client-label">NestaShots Client</span>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- Testimonial 2 -->
+      <article class="testimonial-box">
+
+        <span class="quote-mark">“</span>
+
+        <div class="testimonial-text">
+          <p>
+            I highly recommend NestaShots Photography 🔥🙌 11/10.
+            Best quality pictures you will get.
+          </p>
+
+          <p>
+            Birthday shoot? 🔥 Quality speaks for itself. Thank you
+            NestaShots, I love the images. 🙏
+          </p>
+        </div>
+
+        <div class="client-info">
+          <img src="img/testimonials/Komna.jpg" alt="Nalilitha Komna">
+
+          <div>
+            <span class="client-name">Nalilitha Komna</span>
+            <span class="client-label">NestaShots Client</span>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- Testimonial 3 -->
+      <article class="testimonial-box">
+
+        <span class="quote-mark">“</span>
+
+        <div class="testimonial-text">
+          <p>
+            The best photographer in town, on God! Super friendly and
+            accommodative 👌 Seamless service. Picture quality is insane 💯
+          </p>
+        </div>
+
+        <div class="client-info">
+          <img src="img/testimonials/Mpatelwa.png" alt="Simamkele Mpatelwa">
+
+          <div>
+            <span class="client-name">Simamkele Mpatelwa</span>
+            <span class="client-label">NestaShots Client</span>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- Testimonial 4 -->
+      <article class="testimonial-box">
+
+        <span class="quote-mark">“</span>
+
+        <div class="testimonial-text">
+          <p>
+            My experience at Nesta Photoshoot was absolutely amazing!
+            Highly recommend him to anyone looking for top-quality photography.
+          </p>
+
+          <p>From Ndumie.</p>
+        </div>
+
+        <div class="client-info">
+          <img src="img/testimonials/Melissas.png" alt="Nondumiso Melissas">
+
+          <div>
+            <span class="client-name">Nondumiso Melissas</span>
+            <span class="client-label">NestaShots Client</span>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- Testimonial 5 -->
+      <article class="testimonial-box">
+
+        <span class="quote-mark">“</span>
+
+        <div class="testimonial-text">
+          <p>
+            I highly recommend this company! Nesta is a consummate professional,
+            great with communication and to top it off, he's a friendly guy.
+            We are very happy with the photos we received. May your business
+            grow from strength to strength.
+          </p>
+        </div>
+
+        <div class="client-info">
+          <img src="img/testimonials/Pelisa.jpeg" alt="Pelisa Norman">
+
+          <div>
+            <span class="client-name">Pelisa Norman</span>
+            <span class="client-label">NestaShots Client</span>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- Testimonial 6 -->
+      <article class="testimonial-box">
+
+        <span class="quote-mark">“</span>
+
+        <div class="testimonial-text">
+          <p>
+            Great job NestaShots... keep up the good work.
+          </p>
+        </div>
+
+        <div class="client-info">
+          <img src="img/testimonials/buhlungu.jpg" alt="Lungisa Buhlungu">
+
+          <div>
+            <span class="client-name">Lungisa Buhlungu</span>
+            <span class="client-label">NestaShots Client</span>
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <button class="testimonial-arrow arrow-right" aria-label="Next testimonial">
+      &#8594;
+    </button>
+
+  </div>
+
 
   <div class="testimonial-button">
-    <a href="https://www.google.com/search?sca_esv=6de1e227e5d8aae8&rlz=1C1CHBF_enZA1114ZA1114&sxsrf=APpeQntWqL6r8eyLzhmWk50gbfsCDR7d0w:1785609183290&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_zWRMD4VkvXNYaNhHBEPyistqO95ndlOJcHXJr3W4VyJin5HI9nG0KqvCkoqF2XNmGhcvbDn7uVBs_GkyCcTsAxI_vxIZX-qtBWsIl2JT9Y_nqSWHg%3D%3D&q=NestaShots+photography+Reviews&sa=X&ved=2ahUKEwidlc_IiICWAxVehP0HHRDkEI4Q0bkNegQIJRAF&biw=1280&bih=551&dpr=1.5">View All Testimonies  &#10132;</a>
+    <a href="https://www.google.com/search?q=nestashots+photography+reviews&rlz=1C1CHBF_enZA1114ZA1114&oq=nestashots&gs_lcrp=EgZjaHJvbWUqBggCECMYJzIGCAAQRRg8Mg0IARAuGK8BGMcBGIAEMgYIAhAjGCcyBggDEAAYHjIGCAQQABgeMgoIBRAAGIAEGKIEMgYIBhBFGDwyBggHEEUYPNIBCTIzNDExajBqN6gCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0x1e66b198caae2719:0xf2060273118935a8,1,,,,">
+      Read All Reviews &#8599;
+    </a>
   </div>
-  
-  <div class="arrow-right">&#10095;</div>
-  <div class="arrow-left">&#10094;</div>
+
 </section>
 
-<!--- Enquire Section ---->
+<!-- Enquire Section -->
 <section class="enquire">
-  <h1>Ready To Enquire?</h1>
-  <p>Please send me a personal message if you’d like to hire me as your photographer anywhere in Eastern Cape. I only accept a limited number of bookings per month to make sure all my clients get the best personalised photography service they deserve.</p>
-  <div class="enquire-button">
-      <a href="#contact">Talk To Me  &#10132;</a>
+
+  <div class="enquire-content">
+
+    <span class="enquire-eyebrow">Ready when you are</span>
+
+    <h2>
+      Let's Create<br>
+      Something Beautiful.
+    </h2>
+
+    <p>
+      Please send me a personal message if you'd like to hire me as your
+      photographer anywhere in Eastern Cape. I only accept a limited number
+      of bookings per month to make sure every client receives the
+      personalised photography experience they deserve.
+    </p>
+
+    <div class="enquire-button">
+      <a href="#contact">Talk To Me &#8594;</a>
+    </div>
+
   </div>
+
+
+  <!-- Photo Collage -->
+
+  <div class="enquire-collage">
+
+    <div class="enquire-photo enquire-photo-one">
+      <img src="img/wedding_package.png" alt="NestaShots photography">
+    </div>
+
+    <div class="enquire-photo enquire-photo-two">
+      <img src="img/maternity_shoot.png" alt="NestaShots photography">
+    </div>
+
+    <div class="enquire-photo enquire-photo-three">
+      <img src="img/graduation_shoot.png" alt="NestaShots photography">
+    </div>
+
+    <span class="enquire-note">
+      YOUR STORY,<br>
+      BEAUTIFULLY TOLD.
+    </span>
+
+  </div>
+
 </section>
 
-<!-- Contact M Section-->
+<!-- Contact Section -->
 <section class="contact-section" id="contact">
 
-    <div class="contact-info">
-        <h2>Let's Work Together</h2>
+  <!-- LEFT SIDE -->
+  <div class="contact-info">
 
-        <p>
-            Let's create memories you'll treasure forever. Whether it's your
-            wedding, graduation, birthday or any special event, I'd love to
-            capture every moment.
-        </p>
+    <span class="contact-eyebrow">Get in touch</span>
 
-        <div class="contact-details">
+    <h2>
+      Let's Work<br>
+      Together.
+    </h2>
 
-            <div class="contact-item">
-              <a href="tel:+27845805377"> 
-                <h4><i class="fa-solid fa-phone"></i><a href="tel:+27845805377"> Phone</h4>
-                <p> +27 84 580 5377</p>
-              </a>
-            </div>
+    <p class="contact-intro">
+      Let's create memories you'll treasure forever. Whether it's your
+      wedding, graduation, birthday or any special event, I'd love to
+      capture every moment.
+    </p>
 
-            <div class="contact-item">
-              <a href="mailto:hello@nestashots.co.za">
-                <h4><i class="fa-solid fa-envelope"></i> Email</h4>
-                <p>hello@nestashots.co.za</p>
-              </a>
-            </div>
 
-            <div class="contact-item">
-              <a href="https://maps.google.com/?q=Eastern+Cape,+South+Africa" target="_blank">
-                <h4><i class="fa-solid fa-location-dot"></i> Location</h4>
-                <p>Eastern Cape, South Africa</p>
-              </a>
-            </div>
+    <div class="contact-details">
 
+      <!-- Phone -->
+      <a href="tel:+27845805377" class="contact-item">
+
+        <span class="contact-number">01</span>
+
+        <div>
+          <h4>
+            <i class="fa-solid fa-phone"></i>
+            Phone
+          </h4>
+
+          <p>+27 84 580 5377</p>
         </div>
+
+      </a>
+
+
+      <!-- Email -->
+      <a href="mailto:hello@nestashots.co.za" class="contact-item">
+
+        <span class="contact-number">02</span>
+
+        <div>
+          <h4>
+            <i class="fa-solid fa-envelope"></i>
+            Email
+          </h4>
+
+          <p>hello@nestashots.co.za</p>
+        </div>
+
+      </a>
+
+
+      <!-- Location -->
+      <a
+        href="https://maps.google.com/?q=Eastern+Cape,+South+Africa"
+        target="_blank"
+        class="contact-item"
+      >
+
+        <span class="contact-number">03</span>
+
+        <div>
+          <h4>
+            <i class="fa-solid fa-location-dot"></i>
+            Location
+          </h4>
+
+          <p>Eastern Cape, South Africa</p>
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- RIGHT SIDE -->
+  <div class="contact-form">
+
+    <div class="form-heading">
+
+      <span>Booking enquiry</span>
+
+      <h3>Tell me about your day.</h3>
+
+      <p>
+        Fill in the details below and I'll get back to you about
+        availability and your photography needs.
+      </p>
+
     </div>
 
 
-    <div class="contact-form">
+    <form>
 
-        <form>
+      <!-- Name + Email -->
+      <div class="form-row">
 
-            <input type="text" placeholder="Your Name" required>
+        <div class="form-field">
+          <label>Your name</label>
+          <input type="text" placeholder="Thando Mbande" required>
+        </div>
 
-            <input type="email" placeholder="Email Address" required>
+        <div class="form-field">
+          <label>Email address</label>
+          <input type="email" placeholder="you@email.com" required>
+        </div>
 
-            <input type="tel" placeholder="Phone Number">
+      </div>
 
-            <select required>
-                <option value="">Select a Service</option>
-                <option>Wedding Photography</option>
-                <option>Graduation Shoot</option>
-                <option>Birthday Shoot</option>
-                <option>Pregnancy Shoot</option>
-                <option>Engagement Shoot</option>
-                <option>Live Performance</option>
-                <option>Corporate Event</option>
-                <option>Other</option>
-            </select>
-            <input type="date" required>
 
-            <textarea placeholder="Tell me about your event..." rows="6"></textarea>
+      <!-- Phone + Date -->
+      <div class="form-row">
 
-            <button type="submit">Send Enquiry</button>
+        <div class="form-field">
+          <label>Phone number</label>
+          <input type="tel" placeholder="+27">
+        </div>
 
-        </form>
+        <div class="form-field">
+          <label>Event date</label>
+          <input type="date" required>
+        </div>
 
-    </div>
+      </div>
+
+
+      <!-- Service -->
+      <div class="form-field">
+
+        <label>What are we capturing?</label>
+
+        <select required>
+          <option value="">Select a service</option>
+          <option>Wedding Photography</option>
+          <option>Graduation Shoot</option>
+          <option>Birthday Shoot</option>
+          <option>Pregnancy Shoot</option>
+          <option>Engagement Shoot</option>
+          <option>Live Performance</option>
+          <option>Corporate Event</option>
+          <option>Other</option>
+        </select>
+
+      </div>
+
+
+      <!-- Message -->
+      <div class="form-field">
+
+        <label>Tell me a little more</label>
+
+        <textarea
+          placeholder="Tell me about your event, location, ideas..."
+          rows="5"
+        ></textarea>
+
+      </div>
+
+
+      <button type="submit">
+        Send Enquiry <span>&#8594;</span>
+      </button>
+
+    </form>
+
+  </div>
 
 </section>
 
 <!-- Footer -->
-<footer>
-  <video autoplay muted loop id="footerVideo">
-    <source src="img/vids/footer.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<footer class="site-footer">
 
-  <h1>LOOKING FORWARD TO WORKING WITH YOU!</h1>
-  <div class="footer-middle">
-      <div class="footer-section">
-          <h3>GALLERIES</h3>
-          <ul>
-              <li><a href="#"><i class="fa fa-images"></i> Weddings</a></li>
-              <li><a href="#"><i class="fa fa-images"></i> Pregnancy Shoot</a></li>
-              <li><a href="#"><i class="fa fa-images"></i> Birthdays</a></li>
-              <li><a href="#"><i class="fa fa-images"></i> Live Performances</a></li>
-          </ul>
-      </div>
+  <!-- TOP -->
+  <div class="footer-top">
 
-      <div class="footer-section">
-          <h3>BOOKINGS</h3>
-          <ul>
-              <li><a href="#"><i class="fa fa-calendar-plus"></i>  Weddings</a></li>
-              <li><a href="#"><i class="fa fa-calendar-plus"></i> Pregnancy Shoot</a></li>
-              <li><a href="#"><i class="fa fa-calendar-plus"></i> Birthdays</a></li>
-              <li><a href="#"><i class="fa fa-calendar-plus"></i> Live Performances</a></li>
-              <li><a href="#"><i class="fa fa-calendar-plus"></i> Engagement Shoot</a></li>
-          </ul>
-      </div>
+    <span class="footer-eyebrow">NestaShots Photography</span>
+
+    <h2>
+      Your moments.<br>
+      Your story.
+      <span>Captured forever.</span>
+    </h2>
+
   </div>
 
-  <div class="footer-bottom">
-      <h3>Contact Me</h3>
+
+  <!-- MIDDLE -->
+  <div class="footer-main">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+
+      <a href="#home" class="footer-logo">
+        NestaShots.
+      </a>
+
       <p>
-          <a href="tel:+27845805377"><i class="fab fa-whatsapp"></i> +27 84 580 5377</a> &nbsp; | &nbsp;
-          <a href="tel:+27845805377"><i class="fas fa-phone"></i> +27 84 580 5377</a> &nbsp; | &nbsp;
-          <a href="mailto:info@aiphotography.co.za"><i class="fas fa-envelope"></i> info@nestashots.co.za</a>
+        Capturing weddings, celebrations, portraits and the beautiful
+        moments in between across the Eastern Cape.
       </p>
+
+      <span class="footer-location">
+        Eastern Cape, South Africa
+      </span>
+
+    </div>
+
+
+    <!-- Navigation -->
+    <div class="footer-column">
+
+      <span class="footer-column-title">Explore</span>
+
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Galleries</a>
+      <a href="#testimonial">Kind Words</a>
+      <a href="#contact">Book Me</a>
+
+    </div>
+
+
+    <!-- Contact -->
+    <div class="footer-column">
+
+      <span class="footer-column-title">Contact</span>
+
+      <a href="tel:+27845805377">
+        +27 84 580 5377
+      </a>
+
+      <a href="mailto:info@nestashots.co.za">
+        info@nestashots.co.za
+      </a>
+
+      <a
+        href="https://maps.google.com/?q=Eastern+Cape,+South+Africa"
+        target="_blank"
+      >
+        Eastern Cape, SA
+      </a>
+
+    </div>
+
+
+    <!-- Socials -->
+    <div class="footer-column">
+
+      <span class="footer-column-title">Follow</span>
+
+      <a href="#" target="_blank">
+        Instagram ↗
+      </a>
+
+      <a href="#" target="_blank">
+        Facebook ↗
+      </a>
+
+      <a href="#" target="_blank">
+        TikTok ↗
+      </a>
+
+    </div>
+
   </div>
-  <h5>Copyright © All rights reserved | Nestashots Photography</h5>
+
+
+  <!-- GIANT BRAND NAME -->
+  <div class="footer-signature">
+    NESTASHOTS
+  </div>
+
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 NestaShots Photography
+    </span>
+
+    <span class="footer-made">
+      Made by 
+       <a href="https://yolandambande.github.io/yolanda-dev/" 
+        target="_blank" 
+        rel="noopener noreferrer">
+        Yolanda Mbande ↗
+      </a>
+    </span>
+
+    <a href="#home">
+      Back to top ↑
+    </a>
+
+  </div>
+
 </footer>
 
 <script>
-  const testimonialsContainer = document.querySelector('.testimonials-container');
   const testimonials = document.querySelector('.testimonials');
   const rightArrow = document.querySelector('.arrow-right');
   const leftArrow = document.querySelector('.arrow-left');
-  
-  let scrollAmount = 0;
-  const testimonialBoxes = testimonials.querySelectorAll('.testimonial-box'); 
-  const boxWidth = testimonialBoxes[0].clientWidth; 
-  const visibleTestimonials = 2; 
-  const maxScroll = (testimonialBoxes.length - visibleTestimonials) * boxWidth; 
+
+  function getTestimonialScrollAmount() {
+    const card = testimonials.querySelector('.testimonial-box');
+    const gap = parseFloat(getComputedStyle(testimonials).gap) || 0;
+
+    return card.offsetWidth + gap;
+  }
+
+
+  /* ---------- NEXT ---------- */
 
   rightArrow.addEventListener('click', () => {
-    if (scrollAmount < maxScroll) {
-      scrollAmount += boxWidth * visibleTestimonials; 
-      testimonials.style.transform = `translateX(-${scrollAmount}px)`;
-    }
 
-    
-    if (scrollAmount >= maxScroll) {
-      rightArrow.style.display = 'none';
-    }
+    const amount = getTestimonialScrollAmount();
 
-    leftArrow.style.display = 'block';
+    testimonials.scrollBy({
+      left: amount,
+      behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+
+      const firstCard = testimonials.firstElementChild;
+
+      testimonials.appendChild(firstCard);
+
+      testimonials.scrollLeft -= amount;
+
+    }, 400);
+
   });
 
+
+  /* ---------- PREVIOUS ---------- */
+
   leftArrow.addEventListener('click', () => {
-    if (scrollAmount > 0) {
-      scrollAmount -= boxWidth * visibleTestimonials; 
-      testimonials.style.transform = `translateX(-${scrollAmount}px)`;
-    }
 
-    // Hide left arrow when at the start
-    if (scrollAmount <= 0) {
-      leftArrow.style.display = 'none';
-    }
+    const amount = getTestimonialScrollAmount();
 
-    rightArrow.style.display = 'block'; 
+    const lastCard = testimonials.lastElementChild;
+
+    testimonials.prepend(lastCard);
+
+    testimonials.scrollLeft += amount;
+
+    testimonials.scrollBy({
+      left: -amount,
+      behavior: 'smooth'
+    });
+
   });
 </script>
 
+<script>
+const galleryData = {
 
+  weddings: {
+    images: [
+      "img/wedding_package.png",
+      "img/wedding_package.png",
+      "img/wedding_package.png",
+      "img/wedding_package.png",
+      "img/wedding_package.png"
+    ],
+    gallery: "galleries/weddings_gallery.html",
+    packages: "galleries/weddings_packages.html"
+  },
+
+  matric: {
+    images: [
+      "img/matric_dance.png",
+      "img/matric_dance.png",
+      "img/matric_dance.png",
+      "img/matric_dance.png",
+      "img/matric_dance.png"
+    ],
+    gallery: "galleries/matric_gallery.html",
+    packages: "galleries/weddings_packages.html"
+  },
+
+  maternity: {
+    images: [
+      "img/maternity_shoot.png",
+      "img/maternity_shoot.png",
+      "img/maternity_shoot.png",
+      "img/maternity_shoot.png",
+      "img/maternity_shoot.png"
+    ],
+    gallery: "galleries/pregnancy_gallery.html",
+    packages: "galleries/pregnancy_packages.html"
+  },
+
+  birthdays: {
+    images: [
+      "img/birthday_package.png",
+      "img/birthday_package.png",
+      "img/birthday_package.png",
+      "img/birthday_package.png",
+      "img/birthday_package.png"
+    ],
+    gallery: "galleries/birthdays_gallery.html",
+    packages: "galleries/birthdays_packages.html"
+  },
+
+  graduation: {
+    images: [
+      "img/graduation_shoot.png",
+      "img/graduation_shoot.png",
+      "img/graduation_shoot.png",
+      "img/graduation_shoot.png",
+      "img/graduation_shoot.png"
+    ],
+    gallery: "galleries/graduation_gallery.html",
+    packages: "galleries/graduation_packages.html"
+  },
+
+  events: {
+    images: [
+      "img/outdoor_events.png",
+      "img/outdoor_events.png",
+      "img/outdoor_events.png",
+      "img/outdoor_events.png",
+      "img/outdoor_events.png"
+    ],
+    gallery: "galleries/outdooor_events_gallery.html",
+    packages: "galleries/outdoor_events_packages.html"
+  },
+
+  business: {
+    images: [
+      "img/business_promos.png",
+      "img/business_promos.png",
+      "img/business_promos.png",
+      "img/business_promos.png",
+      "img/business_promos.png"
+    ],
+    gallery: "#",
+    packages: "#"
+  },
+
+  family: {
+    images: [
+      "img/family_potraits.png",
+      "img/family_potraits.png",
+      "img/family_potraits.png",
+      "img/family_potraits.png",
+      "img/family_potraits.png"
+    ],
+    gallery: "galleries/family_potraits_gallery.html",
+    packages: "galleries/family_potraits_packages.html"
+  }
+
+};
+
+
+const filters = document.querySelectorAll(".gallery-filter");
+const galleryImages = document.querySelectorAll(".gallery-photo img");
+const galleryActions = document.querySelectorAll(".gallery-actions a");
+
+
+filters.forEach(filter => {
+
+  filter.addEventListener("click", () => {
+
+    const category = filter.dataset.category;
+    const selectedGallery = galleryData[category];
+
+
+    /* Change active category */
+
+    filters.forEach(button => {
+      button.classList.remove("active");
+    });
+
+    filter.classList.add("active");
+
+
+    /* Fade photos out */
+
+    galleryImages.forEach(image => {
+      image.classList.add("gallery-changing");
+    });
+
+
+    /* Change photos */
+
+    setTimeout(() => {
+
+      galleryImages.forEach((image, index) => {
+        image.src = selectedGallery.images[index];
+      });
+
+
+      /* Change links */
+
+      galleryActions[0].href = selectedGallery.gallery;
+      galleryActions[1].href = selectedGallery.packages;
+
+
+      /* Fade photos back in */
+
+      galleryImages.forEach(image => {
+        image.classList.remove("gallery-changing");
+      });
+
+    }, 250);
+
+  });
+
+});
+</script>
 </body>
 </html>
