@@ -1,104 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Contact | Nestashots Photography</title>
+<head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | NestaShots Photography</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&amp;display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/contact_me.css">
 
-    <link rel="stylesheet" href="css/contact_me.css" />
-  </head>
+</head>
 
-  <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="../img/logo.png" alt="Nestashots"></a>
-        </div>
-    </nav>
-    <section class="contact-page">
-      <div class="contact-header">
-        <h1>Let's Create Something Beautiful</h1>
 
-        <p>
-          Whether you're planning a wedding, graduation, birthday or any special occasion, I'd love to hear all about
-          it.
+<body>
+
+
+<!-- =================================
+     NAVIGATION
+================================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="img/logo.png"
+                alt="NestaShots Photography"
+            >
+
+        </a>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="index.html#portfolio">Galleries</a>
+        </li>
+
+        <li>
+            <a href="index.html#testimonial">Kind Words</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =================================
+     CONTACT / BOOKING PAGE
+================================= -->
+
+<main class="contact-page">
+
+
+    <!-- LEFT SIDE -->
+
+    <aside class="contact-intro">
+
+        <span class="contact-eyebrow">
+            Start a conversation
+        </span>
+
+
+        <h1>
+            Tell Me<br>
+            About Your <em>Story.</em>
+        </h1>
+
+
+        <p class="contact-description">
+            Whether you're planning a wedding, graduation, birthday or
+            another special occasion, I'd love to hear what you have
+            in mind.
         </p>
-      </div>
 
-      <form class="contact-form">
-        <h2>Your Details</h2>
 
-        <div class="form-grid">
-          <input type="text" placeholder="Full Name" required="" />
+        <div class="contact-note">
 
-          <input type="email" placeholder="Email Address" required="" />
+            <span class="note-number">01</span>
 
-          <input type="tel" placeholder="Phone Number" />
+            <p>
+                Share as much detail as you'd like. The more I know about
+                your day, the better I can understand what you're looking for.
+            </p>
+
         </div>
 
-        <hr />
 
-        <h2>Event Details</h2>
+        <!-- CONTACT DETAILS -->
 
-        <div class="form-grid">
-          <select required="">
-            <option selected="" disabled="">Select Service</option>
+        <div class="direct-contact">
 
-            <option>Wedding</option>
+            <span class="direct-title">
+                Prefer to talk directly?
+            </span>
 
-            <option>Graduation</option>
 
-            <option>Birthday</option>
+            <a href="tel:+27845805377">
 
-            <option>Matric Dance</option>
+                <span>Phone</span>
 
-            <option>Maternity Shoot</option>
+                +27 84 580 5377
 
-            <option>Engagement Shoot</option>
+            </a>
 
-            <option>Corporate Event</option>
 
-            <option>Family Portrait</option>
+            <a href="mailto:hello@nestashots.co.za">
 
-            <option>Other</option>
-          </select>
+                <span>Email</span>
 
-          <input type="date" />
+                hello@nestashots.co.za
 
-          <input type="text" placeholder="Venue / Location" />
+            </a>
 
-          <input type="number" placeholder="Estimated Guests" />
+
+            <a
+                href="https://api.whatsapp.com/send?phone=27845805377"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>WhatsApp</span>
+
+                Start a conversation ↗
+
+            </a>
+
         </div>
 
-        <hr />
+    </aside>
 
-        <h2>Your Vision</h2>
 
-        <textarea
-          rows="8"
-          placeholder="Tell me about your event, ideas, inspiration, preferred style, colours, or anything you'd like me to know..."
-        ></textarea>
 
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" />
+    <!-- RIGHT SIDE / FORM -->
 
-            I'd like to receive a quotation.
-          </label>
+    <section class="booking-form">
+
+        <div class="form-intro">
+
+            <span>Booking enquiry</span>
+
+            <h2>
+                Let's make it happen.
+            </h2>
+
+            <p>
+                Complete the form below and I'll get back to you
+                about availability and the next steps.
+            </p>
+
         </div>
 
-        <button type="submit">Send Enquiry</button>
-      </form>
+
+        <form>
+
+
+            <!-- =========================
+                 YOUR DETAILS
+            ========================== -->
+
+            <fieldset>
+
+                <legend>
+
+                    <span>01</span>
+
+                    Your Details
+
+                </legend>
+
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="full-name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field full-width">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+27"
+                        >
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <!-- =========================
+                 EVENT DETAILS
+            ========================== -->
+
+            <fieldset>
+
+                <legend>
+
+                    <span>02</span>
+
+                    Your Event
+
+                </legend>
+
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="service">
+                            What are we capturing?
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service"
+                            required
+                        >
+
+                            <option value="" selected disabled>
+                                Select a service
+                            </option>
+
+                            <option>Wedding</option>
+
+                            <option>Graduation</option>
+
+                            <option>Birthday</option>
+
+                            <option>Matric Dance</option>
+
+                            <option>Maternity Shoot</option>
+
+                            <option>Engagement Shoot</option>
+
+                            <option>Corporate Event</option>
+
+                            <option>Family Portrait</option>
+
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="event-date">
+                            Event Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="event-date"
+                            name="date"
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="venue">
+                            Venue / Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="venue"
+                            name="venue"
+                            placeholder="Where will it take place?"
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="guests">
+                            Estimated Guests
+                        </label>
+
+                        <input
+                            type="number"
+                            id="guests"
+                            name="guests"
+                            placeholder="Approximate number"
+                            min="1"
+                        >
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <!-- =========================
+                 YOUR VISION
+            ========================== -->
+
+            <fieldset>
+
+                <legend>
+
+                    <span>03</span>
+
+                    Your Vision
+
+                </legend>
+
+
+                <div class="form-field">
+
+                    <label for="message">
+                        Tell me about your day
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell me about your event, ideas, inspiration, preferred style, colours, or anything you'd like me to know..."
+                    ></textarea>
+
+                </div>
+
+
+                <label class="quotation-check">
+
+                    <input
+                        type="checkbox"
+                        name="quotation"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    I'd like to receive a quotation.
+
+                </label>
+
+            </fieldset>
+
+
+
+            <!-- SUBMIT -->
+
+            <div class="form-submit">
+
+                <button type="submit">
+
+                    Send My Enquiry
+
+                    <span>→</span>
+
+                </button>
+
+
+                <p>
+                    Your details will only be used to respond
+                    to your enquiry.
+                </p>
+
+            </div>
+
+
+        </form>
+
     </section>
-  </body>
+
+</main>
+
+
+<!-- =================================
+     CLOSING
+================================= -->
+
+<section class="contact-closing">
+
+    <span>NestaShots Photography</span>
+
+    <p>
+        Your moments deserve<br>
+        to be <em>remembered.</em>
+    </p>
+
+    <a href="index.html">
+        Back Home →
+    </a>
+
+</section>
+
+
+</body>
+
 </html>

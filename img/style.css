@@ -19,111 +19,99 @@ body {
   background-color: #fff;
 }
 
-/* Navigation Bar */
+/* ---------- NAVIGATION BAR ---------- */
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
+  height: 90px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+
+  padding: 0 55px;
+
   background-color: #fff;
-  color: #1b1a1a;
-  height: 60px;
+  border-bottom: 1px solid #eeeeee;
+
   z-index: 1000;
-  border-bottom: 1px solid #ddd;
 }
+
+
+/* LOGO */
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+
+/* NAVIGATION LINKS */
 
 nav ul {
   list-style: none;
+
   display: flex;
-  margin: 10;
+  align-items: center;
+  gap: 40px;
+
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  margin-left: 40px;
-  position: relative;
+  margin: 0;
 }
 
 nav ul li a {
+  position: relative;
+
   text-decoration: none;
+
   color: #1b1a1a;
+
   font-size: 1rem;
-  font-weight: 90px;
-  transition: color 0.3s;
+  font-weight: 400;
+
+  letter-spacing: 0.5px;
+
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #666;
-  text-decoration: underline;
+  color: #777;
 }
 
-/* Dropdown content styling */
-nav ul .dropdown-content {
-  display: none;
+
+/* SUBTLE UNDERLINE */
+
+nav ul li a::after {
+  content: "";
+
   position: absolute;
-  top: 100%;
   left: 0;
-  background-color: #fff;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-  z-index: 1;
-  border: 1px solid #ddd;
+  bottom: -6px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #1b1a1a;
+
+  transition: width 0.3s ease;
 }
 
-nav ul .dropdown-content li {
-  display: block;
-  padding: 10px 15px;
-}
-
-nav ul .dropdown-content li a {
-  color: #1b1a1a;
-  text-decoration: none;
-  display: block;
-}
-
-nav ul .dropdown-content li a:hover {
-  background-color: #f2f2f2;
-}
-nav ul li:last-child a {
-    background: #d9d9d9;
-    color: #111;
-    padding: 10px 22px;
-    border-radius: 4px;
-    border: 1px solid #bfbfbf;
-    transition: all 0.3s ease;
-}
-
-nav ul li:last-child a:hover {
-    background: #111;
-    color: #fff;
-    border-color: #111;
-    text-decoration: none;
-}
-
-/* Show dropdown on hover */
-nav ul li:hover .dropdown-content {
-  display: block;
-}
-
-/* Optional: Make dropdown appear on click as well */
-nav ul li:focus-within .dropdown-content {
-  display: block;
-}
-
-.logo img {
-  height: 55px;
-  width: auto;
-  max-height: 60%;
-}
- 
-.cart a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 /* Hero Section */
@@ -158,85 +146,212 @@ nav ul li:focus-within .dropdown-content {
 }
 
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 5px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .hero-buttons a {
   text-decoration: none;
+
   color: #1b1a1a;
-  background-color: #fff;
-  padding: 12px 25px;
-  border: 2px solid #1b1a1a;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  padding: 11px 24px;
+
+  border: 1px solid #fff;
   border-radius: 0;
-  transition: background-color 0.3s, border-color 0.3s;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  transition: all 0.3s ease;
 }
 
 .hero-buttons a:hover {
-  background-color: #eee;
-  border-color: #ddd;
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
 }
 
-/* Intro Section */
+/* ---------- INTRO SECTION ---------- */
+
 .intro {
   background-color: #f8f8f8;
   color: #1c1c1c;
-  padding: 80px 20px;
+
+  min-height: 75vh;
+
+  padding: 110px 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
 }
 
+
+/* Heading */
+
 .intro h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 1px;
+
+  margin: 0 0 35px;
+
   color: #1c1c1c;
 }
 
+
+/* Paragraphs */
+
 .intro p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #1c1c1c;
+  width: 100%;
+  max-width: 900px;
+
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.9;
+  letter-spacing: 0.2px;
+
+  margin: 0 0 22px;
+
+  color: #444;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
 }
 
 /* Photographer Section */
 .photographer {
   display: flex;
-  align-items: center;
-  padding: 50px 20px;
+  align-items: stretch;
+
+  padding: 120px 50px;
+
   background-color: #fff;
   color: #333;
-  height: 100vh;
+
+  min-height: 100vh;
+  height: auto;
+
   box-sizing: border-box;
 }
 
 /* Photographer Section Video */
-.photographer video {
-  width: 30%;
+
+.photographer-video-wrap {
+  width: 34%;
   max-width: 420px;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
 }
+
+.video-frame {
+  position: relative;
+  padding: 10px;
+
+  background-color: #f4f4f4;
+  border: 1px solid #e2e2e2;
+}
+
+.video-frame video {
+  display: block;
+
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+}
+
+
+/* Small detail over the video */
+
+.video-frame::after {
+  content: "01";
+
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  color: #fff;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+
+/* Caption underneath */
+
+.video-caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 14px;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.caption-line {
+  width: 35px;
+  height: 1px;
+  background-color: #999;
+}
+
 .photographer-card {
   width: 60%;
-  margin-left: 90px;
+
   background: #ededed;
   padding: 45px;
+
   border-radius: 8px;
   border: 1px solid #e8e8e8;
   box-shadow: 0 10px 30px rgba(0,0,0,.20);
+
+  align-self: stretch;
+}
+
+.photographer-layout {
+  width: 100%;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  gap: 40px;
 }
 
 .photographer-content {
@@ -244,26 +359,57 @@ nav ul li:focus-within .dropdown-content {
     padding-left: 0;
 }
 
+/* Photographer Heading */
+
 .photographer h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
   color: #333;
 }
+
+
+/* Photographer Name / Subtitle */
 
 .photographer h4 {
-  font-family: 'Coax';
-  background-color: #D3D3D3;
-  color: #333;
-  padding: 15px;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+  font-family: 'DM Sans', sans-serif;
+
+  background-color: transparent;
+
+  color: #666;
+
+  padding: 0;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
 }
 
+
+/* Photographer Paragraphs */
+
 .photographer p {
+  font-family: 'DM Sans', sans-serif;
+
   font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  font-weight: 300;
+
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+
+  color: #444;
+
+  margin-bottom: 18px;
 }
 
 .photographer-buttons {
@@ -285,524 +431,1654 @@ nav ul li:focus-within .dropdown-content {
   color: #fff;
   border-color: #333;
 }
+/* =================================
+   PORTFOLIO / GALLERIES
+================================= */
 
-/* Services Offered Section */
 .services {
-  padding: 80px 130px;
-  background-color: #E7E7E7;
-  color: #333;
+  background-color: #f7f5f2;
+
+  padding: 120px 7% 130px;
+
+  color: #222;
 }
 
+
+/* Heading Area */
+
 .services-content {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
   text-align: center;
+}
+
+.gallery-eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
 }
 
 .services h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  margin: 0 0 25px;
+
+  color: #222;
 }
 
-.services p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #333;
+.gallery-intro {
+  max-width: 650px;
+
+  margin: 0 auto 50px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #666;
 }
 
-.services-list {
+
+/* =================================
+   CATEGORY FILTERS
+================================= */
+
+.gallery-categories {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
+  flex-wrap: wrap;
+
+  gap: 10px 28px;
+
+  margin-bottom: 55px;
 }
 
-.service {
+.gallery-filter {
   position: relative;
-  width: 22%;
-  max-width: 250px;
-}
 
-.service img {
-  width: 100%;
-  height: 250px;
-  border-radius: 10px;
-}
+  background: none;
+  border: none;
 
-.service-info {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: #f7f3f3;
-}
+  padding: 8px 0;
 
-.service-info h3 {
-  font-size: 1.5rem;
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 400;
+
+  letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom: 10px;
-}
 
-.service-links {
-  margin-top: 10px;
-}
+  color: #777;
 
-.service-links a {
-  color: #333;
-  background-color: #fff;
-  border: 2px solid #333;
-  padding: 5px 10px;
-  margin: 0 5px;
-  text-decoration: none;
-  font-size: 0.7rem;
-  border-radius: 4px;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
+  cursor: pointer;
 
-.service-links a:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Hire Me Section */
-.hire_me {
-  background-color: #fff;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  color: #333;
-}
-
-.hire_me .photographer-content {
-  width: 80%;
-  padding-right: 10px;
-}
-
-.hire_me .photographer-content p {
-  font-size: 1.1em;
-  line-height: 1.3; 
-}
-.hire-me-card {
-    width: 70%;
-    background: #ededed;
-    padding: 45px;
-    border-radius: 10px;
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.08),
-        0 2px 6px rgba(0,0,0,0.05);
-}
-
-.hire-me-card h2 {
-    margin-bottom: 25px;
-}
-
-.hire-me-card p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-.hire-me-card .photographer-buttons {
-    margin-top: 30px;
-}
-
-/* Testimonials Section */
-.testimonials-container {
-    position: relative;
-    zoom: 80%;
-    max-width: 100%;
-    height: 120vh;
-    overflow: hidden;
-    text-align: center;
-    padding-top: 80px;
-    background-color: #FFFFFF;
-}
-
-.testimonials-container h1 {
-    font-family: "DM Sans", sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #222;
-    margin-bottom: 5px;
-}
-
-.testimonials-container h4 {
-    font-family: "DM Sans", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #777;
-    margin-bottom: 30px;
-}
-
-.testimonials {
-    display: flex;
-    gap: 20px;
-    padding: 20px 40px;
-    transition: all 0.5s ease;
-}
-
-.testimonial-box {
-    flex: 0 0 40%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #d6d4d4;
-    border-radius: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.testimonial-box p {
-    font-family: "DM Sans", sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #444;
-    text-align: center;
-    margin: 0 0 20px;
-}
-
-.client-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto; /* Push the client info to the bottom of the box */
-}
-
-.client-info img {
-    width: 60px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-
-  .testimonial-button {
-    margin-top: 20px;
-}
-
-.testimonial-button a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    padding: 12px 25px;
-    border: 2px solid #fff;
-    border-radius: 0;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.testimonial-button a:hover {
-    background-color: #555;
-    border-color: #555;
-}
-
-
-  .arrow-right, .arrow-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 2rem;
-    z-index: 1;
-  }
-
-  .arrow-right {
-    right: 0;
-  }
-
-  .arrow-left {
-    left: 0;
-    display: none;
-  }
-  
-
-  /*Enquire Section */
-  .enquire {
-    position: relative;
-    height: 75vh; 
-    background-image: url('enquire.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    color: #fff; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    overflow: hidden; 
-}
-
-.enquire::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(10px);
-    z-index: 1; 
-}
-
-.enquire h1, .enquire p {
-    font-family: 'Playfair Display', serif; 
-    z-index: 2; 
-}
-
-.enquire h1 {
-    font-size: 3rem;
-    margin-bottom: 20px; 
-}
-
-.enquire p {
-    font-size: 1.5rem; 
-    max-width: 600px; 
-    line-height: 1.5;
-    margin-bottom: 30px; 
-    z-index: 2; 
-}
-
-.enquire-button {
-    margin-top: 20px;
-    position: relative; 
-    z-index: 2;
-}
-
-.enquire-button a {
-    text-decoration: none;
-    color: #fff; 
-    background-color: #333; 
-    padding: 12px 25px; 
-    border: 2px solid #fff; 
-    border-radius: 0;
-    transition: background-color 0.3s, border-color 0.3s; 
-}
-
-.enquire-button a:hover {
-    background-color: #555; 
-    border-color: #555;
-}
-
-/* Contact Me*/
-.contact-section{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:80px;
-
-    padding:100px 120px;
-    background:#f8f8f8;
-}
-
-.contact-info{
-    width:75%;
-}
-
-.contact-info h2{
-    font-size:3rem;
-    margin-bottom:20px;
-}
-
-.contact-info>p{
-    font-size:1.1rem;
-    line-height:1.8;
-    margin-bottom:40px;
-    color:#555;
-}
-
-.contact-item{
-    margin-bottom:30px;
-}
-
-.contact-item h4{
-    font-size:1rem;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    color:#999;
-    margin-bottom:6px;
-}
-
-.contact-item p{
-    font-size:1.15rem;
-    color:#222;
-}
-
-.contact-form{
-    width:90%;
-    background:#ededed;
-    padding:45px;
-    border-radius:10px;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.08),
-        0 2px 6px rgba(0,0,0,.05);
-}
-
-.contact-form form{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea{
-
-    width:100%;
-    padding:15px 18px;
-
-    border:1px solid #d6d6d6;
-    border-radius:6px;
-
-    font-family:'DM Sans',sans-serif;
-    font-size:1rem;
-
-    outline:none;
-    transition:.3s;
-}
-
-.contact-info a {
-  color: inherit;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-info a:hover {
+.gallery-filter::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #222;
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+.gallery-filter:hover,
+.gallery-filter.active {
+  color: #222;
+}
+
+.gallery-filter:hover::after,
+.gallery-filter.active::after {
+  width: 100%;
+}
+
+
+/* =================================
+   PHOTO COLLAGE
+================================= */
+
+.gallery-preview {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.8fr 1.1fr;
+  grid-template-rows: 230px 230px;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-bottom: 45px;
+}
+
+.gallery-photo {
+  overflow: hidden;
+}
+
+.gallery-photo:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.gallery-photo:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.gallery-photo:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.gallery-photo:nth-child(4) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.gallery-photo:nth-child(5) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.gallery-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.gallery-photo img {
+  transition:
+    transform 0.7s ease,
+    opacity 0.25s ease;
+}
+
+.gallery-photo img.gallery-changing {
+  opacity: 0;
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.035);
+}
+
+
+/* =================================
+   GALLERY ACTIONS
+================================= */
+
+.gallery-actions {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 35px;
+}
+
+.gallery-actions a {
+  position: relative;
+
+  color: #222;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding-bottom: 6px;
+}
+
+.gallery-actions a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #222;
+
+  transition: width 0.3s ease;
+}
+
+.gallery-actions a:hover::after {
+  width: 35%;
+}
+
+/* =================================
+   HIRE ME SECTION
+================================= */
+
+.hire_me {
+  width: 100%;
+
+  background-color: #fff;
+  color: #333;
+
+  padding: 120px 50px;
+
+  min-height: 100vh;
+
+  box-sizing: border-box;
+}
+
+
+/* =================================
+   LAYOUT
+================================= */
+
+.hire-me-layout {
+  width: 100%;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  gap: 40px;
+}
+
+
+/* =================================
+   LEFT - TEXT CARD
+================================= */
+
+.hire-me-card {
+  width: 60%;
+
+  background: #ededed;
+
+  padding: 45px;
+
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+
+  display: flex;
+  align-items: center;
+}
+
+.hire-me-content {
+  width: 100%;
+}
+
+
+/* Heading */
+
+.hire-me-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2.8rem;
+  font-weight: 500;
+
+  line-height: 1.1;
+  letter-spacing: 1px;
+
+  margin: 0 0 25px;
+
+  color: #333;
+}
+
+
+/* Paragraphs */
+
+.hire-me-card p {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 1rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+
+  color: #444;
+
+  margin-bottom: 18px;
+}
+
+
+/* Button spacing */
+
+.hire-me-card .photographer-buttons {
+  margin-top: 30px;
+}
+
+
+/* =================================
+   RIGHT - IMAGE
+================================= */
+
+.hire-me-image-wrap {
+  width: 34%;
+  max-width: 420px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Image Frame */
+
+.hire-me-image-frame {
+  position: relative;
+
+  flex: 1;
+
+  padding: 10px;
+
+  background-color: #f4f4f4;
+
+  border: 1px solid #e2e2e2;
+}
+
+
+/* Little 02 detail */
+
+.hire-me-image-frame::after {
+  content: "02";
+
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  color: #fff;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1rem;
+
+  letter-spacing: 2px;
+}
+
+
+/* Actual Image */
+
+.hire-me-image-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 520px;
+
+  object-fit: cover;
+}
+
+
+/* =================================
+   IMAGE CAPTION
+================================= */
+
+.hire-me-caption {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 14px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
   color: #777;
+}
+
+.hire-caption-line {
+  width: 35px;
+  height: 1px;
+
+  background-color: #999;
+}
+/* =================================
+   TESTIMONIALS
+================================= */
+
+.testimonials-container {
+  position: relative;
+
+  width: 100%;
+
+  padding: 120px 0 130px;
+
+  overflow: hidden;
+
+  background-color: #f7f5f2;
+
+  color: #222;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.testimonials-heading {
+  text-align: center;
+
+  padding: 0 30px;
+
+  margin-bottom: 65px;
+}
+
+.testimonials-eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.testimonials-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  margin: 0 0 20px;
+
+  color: #222;
+}
+
+.testimonials-heading p {
+  max-width: 550px;
+
+  margin: 0 auto;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =================================
+   CAROUSEL
+================================= */
+
+.testimonials-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+.testimonials {
+  display: flex;
+
+  gap: 24px;
+
+  overflow-x: auto;
+
+  padding: 10px 8% 30px;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.testimonials::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =================================
+   TESTIMONIAL CARD
+================================= */
+
+.testimonial-box {
+  position: relative;
+
+  flex: 0 0 420px;
+
+  min-height: 390px;
+
+  padding: 55px 45px 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+
+  border: 1px solid #e3dfda;
+
+  box-shadow: none;
+}
+
+
+/* Giant editorial quotation mark */
+
+.quote-mark {
+  position: absolute;
+
+  top: 18px;
+  left: 35px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 5rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #d6d0c9;
+}
+
+
+/* Review */
+
+.testimonial-text {
+  margin-top: 35px;
+}
+
+.testimonial-box p {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.35rem;
+  font-weight: 400;
+
+  line-height: 1.55;
+
+  color: #333;
+
+  text-align: left;
+
+  margin: 0 0 18px;
+}
+
+
+/* =================================
+   CLIENT
+================================= */
+
+.client-info {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: auto;
+
+  padding-top: 30px;
+
+  border-top: 1px solid #e6e1dc;
+}
+
+.client-info img {
+  width: 52px;
+  height: 52px;
+
+  margin: 0;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+}
+
+.client-info div {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.client-name {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.78rem;
+  font-weight: 500;
+
+  letter-spacing: 0.8px;
+
+  color: #333;
+}
+
+.client-label {
+  margin-top: 4px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+
+  color: #999;
+}
+
+
+/* =================================
+   ARROWS
+================================= */
+
+.testimonial-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border: 1px solid #d8d3cd;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.95);
+
+  color: #222;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.testimonial-arrow:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.arrow-left {
+  left: 30px;
+}
+
+.arrow-right {
+  right: 30px;
+}
+
+
+/* =================================
+   REVIEWS LINK
+================================= */
+
+.testimonial-button {
+  margin-top: 45px;
+
+  text-align: center;
+}
+
+.testimonial-button a {
+  position: relative;
+
+  padding: 0 0 7px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #222;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.testimonial-button a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #222;
+
+  transition: width 0.3s ease;
+}
+
+.testimonial-button a:hover {
+  background: transparent;
+  color: #222;
+}
+
+.testimonial-button a:hover::after {
+  width: 35%;
+}
+
+  /* =================================
+   ENQUIRE SECTION
+================================= */
+
+.enquire {
+  width: 100%;
+  min-height: 80vh;
+
+  padding: 120px 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 90px;
+
+  background-color: #f1eee9;
+
+  color: #222;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   LEFT - CONTENT
+================================= */
+
+.enquire-content {
+  width: 48%;
+  max-width: 620px;
+}
+
+
+/* Small heading */
+
+.enquire-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+
+/* Main heading */
+
+.enquire h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4.3rem;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  margin: 0 0 35px;
+
+  color: #222;
+}
+
+
+/* Paragraph */
+
+.enquire p {
+  max-width: 540px;
+
+  margin: 0 0 35px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: #555;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.enquire-button {
+  margin-top: 30px;
+}
+
+.enquire-button a {
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  border: 1px solid #222;
+
+  background-color: transparent;
+
+  color: #222;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.enquire-button a:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+
+/* =================================
+   RIGHT - PHOTO COLLAGE
+================================= */
+
+.enquire-collage {
+  position: relative;
+
+  width: 430px;
+  height: 500px;
+
+  flex-shrink: 0;
+}
+
+
+/* All photos */
+
+.enquire-photo {
+  position: absolute;
+
+  padding: 7px;
+
+  background-color: #fff;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.enquire-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* Large back image */
+
+.enquire-photo-one {
+  width: 250px;
+  height: 350px;
+
+  top: 15px;
+  left: 20px;
+
+  transform: rotate(-3deg);
+
+  z-index: 1;
+}
+
+
+/* Smaller top-right image */
+
+.enquire-photo-two {
+  width: 190px;
+  height: 250px;
+
+  top: 65px;
+  right: 0;
+
+  transform: rotate(4deg);
+
+  z-index: 2;
+}
+
+
+/* Bottom image */
+
+.enquire-photo-three {
+  width: 210px;
+  height: 270px;
+
+  bottom: 0;
+  left: 130px;
+
+  transform: rotate(2deg);
+
+  z-index: 3;
+}
+
+
+/* Little editorial note */
+
+.enquire-note {
+  position: absolute;
+
+  right: -25px;
+  bottom: 35px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.62rem;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  letter-spacing: 2px;
+
+  color: #777;
+
+  transform: rotate(90deg);
+
+  transform-origin: bottom right;
+}
+/* =================================
+   CONTACT
+================================= */
+
+.contact-section {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 100px;
+
+  padding: 130px 8%;
+
+  background-color: #fff;
+
+  color: #222;
+}
+
+
+/* =================================
+   LEFT SIDE
+================================= */
+
+.contact-info {
+  width: 38%;
+  max-width: 500px;
+}
+
+
+/* Small label */
+
+.contact-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #888;
+}
+
+
+/* Main heading */
+
+.contact-info h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4.3rem;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  margin: 0 0 35px;
+
+  color: #222;
+}
+
+
+/* Intro paragraph */
+
+.contact-intro {
+  max-width: 450px;
+
+  margin: 0 0 50px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: #555;
+}
+
+
+/* =================================
+   CONTACT DETAILS
+================================= */
+
+.contact-details {
+  border-top: 1px solid #ddd8d2;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid #ddd8d2;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: padding-left 0.3s ease;
+}
+
+.contact-item:hover {
+  padding-left: 8px;
+}
+
+
+/* 01 / 02 / 03 */
+
+.contact-number {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 0.9rem;
+
+  color: #aaa;
+}
+
+
+/* Phone / Email / Location */
+
+.contact-item h4 {
+  margin: 0 0 5px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 400;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+
+  color: #999;
+}
+
+.contact-item h4 i {
+  margin-right: 6px;
+}
+
+
+/* Actual details */
+
+.contact-item p {
+  margin: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+
+  color: #222;
+}
+
+
+/* =================================
+   RIGHT - FORM
+================================= */
+
+.contact-form {
+  width: 55%;
+  max-width: 720px;
+
+  padding: 55px;
+
+  background-color: #f3f0ec;
+
+  border: 1px solid #e5e0da;
+}
+
+
+/* Form heading */
+
+.form-heading {
+  margin-bottom: 45px;
+}
+
+.form-heading > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: #888;
+}
+
+.form-heading h3 {
+  margin: 0 0 12px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  color: #222;
+}
+
+.form-heading p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.85rem;
+  font-weight: 300;
+
+  line-height: 1.7;
+
+  color: #777;
+}
+
+
+/* =================================
+   FORM LAYOUT
+================================= */
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+.form-row {
+  display: flex;
+
+  gap: 25px;
+}
+
+.form-row .form-field {
+  width: 50%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Labels */
+
+.form-field label {
+  margin-bottom: 9px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+
+  color: #666;
+}
+
+
+/* =================================
+   INPUTS
+================================= */
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 12px 0;
+
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid #aaa49d;
+
+  border-radius: 0;
+
+  outline: none;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.9rem;
+
+  color: #222;
+
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
 }
 
 .contact-form input:focus,
 .contact-form select:focus,
-.contact-form textarea:focus{
-
-    border-color:#000;
+.contact-form textarea:focus {
+  border-color: #222;
 }
 
-.contact-form textarea{
-    resize:vertical;
+.contact-form textarea {
+  min-height: 100px;
+
+  resize: vertical;
 }
 
-.contact-form button{
 
-    padding:15px;
+/* =================================
+   SUBMIT BUTTON
+================================= */
 
-    background:#000;
-    color:#fff;
+.contact-form button {
+  align-self: flex-start;
 
-    border:none;
-    border-radius:6px;
+  margin-top: 10px;
 
-    cursor:pointer;
+  padding: 13px 25px;
 
-    font-size:1rem;
-    transition:.3s;
+  background-color: #222;
+
+  border: 1px solid #222;
+  border-radius: 0;
+
+  color: #fff;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-.contact-form button:hover{
+.contact-form button span {
+  display: inline-block;
 
-    background:#333;
+  margin-left: 12px;
+
+  transition: transform 0.3s ease;
 }
 
-/* Footer section */
-footer {
-  position: relative; 
-  background-color: #484848;
-  color: white;
-  font-family: 'Playfair Display', serif;
-  overflow: hidden; 
+.contact-form button:hover {
+  background-color: transparent;
+
+  color: #222;
 }
 
-#footerVideo {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%; 
-  height: 70%;
-  object-fit: cover; 
-  filter: blur(8px); 
-  z-index: 1; 
+.contact-form button:hover span {
+  transform: translateX(5px);
+}
+/* =================================
+   FOOTER
+================================= */
+
+.site-footer {
+  width: 100%;
+
+  padding: 110px 7% 30px;
+
+  background-color: #1d1d1b;
+
+  color: #f4f1ec;
+
+  overflow: hidden;
 }
 
-h1, .footer-middle, .footer-bottom {
-  position: relative; 
-  z-index: 5; 
+
+/* =================================
+   TOP MESSAGE
+================================= */
+
+.footer-top {
+  padding-bottom: 90px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.footer-middle {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  border-top: 1px solid #444;
+.footer-eyebrow {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #9d9a95;
 }
 
-.footer-section {
-  margin: 0 40px;
+.footer-top h2 {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 5rem;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #f4f1ec;
 }
 
-h1 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  text-align: center;
+.footer-top h2 span {
+  color: #8d8984;
+
+  font-style: italic;
 }
 
-.footer-section h3 {
-  margin-bottom: 10px;
-  font-size: 15px;
+
+/* =================================
+   MAIN FOOTER
+================================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1.3fr 1fr;
+
+  gap: 70px;
+
+  padding: 70px 0 90px;
 }
 
-.footer-section ul {
-  list-style-type: none;
-  padding-left: 0;
+
+/* =================================
+   BRAND
+================================= */
+
+.footer-brand {
+  max-width: 350px;
 }
 
-.footer-section ul li {
-  margin-bottom: 2px;
-  font-size: 12px;
-}
+.footer-logo {
+  display: inline-block;
 
-.footer-section ul li a {
-  color: white;
+  margin-bottom: 20px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  color: #f4f1ec;
+
   text-decoration: none;
 }
 
-.footer-section ul li a:hover {
-  text-decoration: underline;
+.footer-brand p {
+  margin: 0 0 25px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.82rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #aaa7a2;
 }
 
-/* Bottom section: Contact Info */
-.footer-bottom {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #444;
+.footer-location {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #777470;
 }
 
-.footer-bottom p {
+
+/* =================================
+   FOOTER COLUMNS
+================================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+.footer-column-title {
+  margin-bottom: 12px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.62rem;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #777470;
+}
+
+.footer-column a {
+  position: relative;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.8rem;
+  font-weight: 300;
+
+  color: #c9c5bf;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footer-column a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #f4f1ec;
+
+  transition: width 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-column a:hover::after {
+  width: 100%;
+}
+
+
+/* =================================
+   HUGE NESTASHOTS WORD
+================================= */
+
+.footer-signature {
+  width: 100%;
+
   margin: 0;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(5rem, 13.5vw, 13rem);
+  font-weight: 400;
+
+  line-height: 0.72;
+
+  letter-spacing: -4px;
+
+  text-align: center;
+
+  color: #f4f1ec;
+
+  white-space: nowrap;
+
+  opacity: 0.95;
+
+  user-select: none;
+}
+
+
+/* =================================
+   BOTTOM
+================================= */
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 55px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.62rem;
+  font-weight: 300;
+
+  letter-spacing: 0.8px;
+
+  color: #777470;
 }
 
 .footer-bottom a {
-  color: white;
+  color: #aaa7a2;
+
   text-decoration: none;
+
+  transition: color 0.3s ease;
 }
 
 .footer-bottom a:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
-h5 {
-  background-color: rgba(28, 28, 28, 0.7); 
-  color: white; 
-  padding: 5px; 
-  text-align: center; 
-  position: relative; 
-  z-index: 2; 
+.footer-made {
+  color: #777470;
 }
 
 /* ==========================================================
@@ -901,411 +2177,1262 @@ h5 {
 /* ==========================================================
    MOBILE
    ========================================================== */
+/* ==========================================================
+   RESPONSIVE DESIGN
+   ========================================================== */
 
-@media (max-width: 600px) {
 
-  /* ---------- GENERAL ---------- */
+/* ==========================================================
+   TABLET
+   ========================================================== */
 
-  body {
-    padding-top: 60px;
-    overflow-x: hidden;
-  }
-
+@media (max-width: 992px) {
 
   /* ---------- NAVIGATION ---------- */
 
   nav {
-    height: 60px;
-    padding: 5px 12px;
+    height: 75px;
+    padding: 0 25px;
+  }
+
+  nav .logo img {
+    width: 115px;
   }
 
   nav ul {
-    gap: 10px;
-    margin: 0;
-  }
-
-  nav ul li {
-    margin-left: 0;
+    gap: 22px;
   }
 
   nav ul li a {
-    font-size: 0.75rem;
-  }
-
-  .logo img {
-    height: 45px;
-  }
-
-  .cart a {
-    font-size: 0.75rem;
+    font-size: 0.82rem;
   }
 
 
   /* ---------- HERO ---------- */
 
   .hero {
-    height: auto;
-    min-height: 75vh;
-    padding: 40px 20px;
+    height: 85vh;
+    min-height: 620px;
   }
 
   .hero-content {
-    width: 100%;
-    padding-top: 180px;
-    transform: scale(1);
-  }
-
-  .hero h1 {
-    font-size: 1.7rem;
-    line-height: 1.3;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .hero-buttons a {
-    width: 80%;
-    max-width: 250px;
-    padding: 10px 20px;
+    padding-top: 290px;
+    transform: scale(0.9);
   }
 
 
   /* ---------- INTRO ---------- */
 
   .intro {
-    padding: 55px 20px;
+    min-height: auto;
+    padding: 90px 10%;
   }
 
   .intro h2 {
-    font-size: 1.6rem;
-    line-height: 1.3;
-  }
-
-  .intro p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 2.7rem;
   }
 
 
   /* ---------- PHOTOGRAPHER ---------- */
 
   .photographer {
-    height: auto;
-    min-height: 0;
-    flex-direction: column;
-    padding: 50px 20px;
-    gap: 25px;
+    min-height: auto;
+    padding: 90px 35px;
   }
 
-  .photographer video {
-    width: 100%;
-    max-width: 450px;
-    max-height: none;
+  .photographer-layout {
+    gap: 30px;
+  }
+
+  .photographer-video-wrap {
+    width: 38%;
   }
 
   .photographer-card {
-    width: 100%;
-    margin-left: 0;
-    padding: 30px 25px;
+    width: 62%;
+    padding: 35px;
   }
 
-  .photographer-content {
-    width: 100%;
+  .video-frame video {
+    height: 500px;
   }
 
   .photographer h2 {
-    font-size: 1.6rem;
-  }
-
-  .photographer h4 {
-    font-size: 1rem;
-    padding: 12px;
-  }
-
-  .photographer p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .photographer-buttons {
-    margin-top: 20px;
-  }
-
-  .photographer-buttons a {
-    display: inline-block;
-    padding: 10px 18px;
+    font-size: 2.5rem;
   }
 
 
-  /* ---------- SERVICES ---------- */
+  /* ---------- PORTFOLIO / GALLERIES ---------- */
 
   .services {
-    padding: 55px 20px;
+    padding: 90px 5%;
   }
 
   .services h2 {
-    font-size: 1.8rem;
+    font-size: 3.5rem;
   }
 
-  .services p {
-    font-size: 1rem;
-    line-height: 1.5;
+  .gallery-preview {
+    grid-template-rows: 190px 190px;
   }
 
-  .services-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .service {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .service img {
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-
-  .service-info h3 {
-    font-size: 1.2rem;
+  .gallery-categories {
+    gap: 10px 20px;
   }
 
 
   /* ---------- HIRE ME ---------- */
 
   .hire_me {
-    height: auto;
-    min-height: 0;
-    padding: 50px 20px;
+    min-height: auto;
+    padding: 90px 35px;
   }
 
-  .hire_me .photographer-content {
-    width: 100%;
-    padding-right: 0;
+  .hire-me-layout {
+    gap: 30px;
   }
 
   .hire-me-card {
-    width: 100%;
-    padding: 30px 25px;
+    width: 62%;
+    padding: 35px;
+  }
+
+  .hire-me-image-wrap {
+    width: 38%;
+  }
+
+  .hire-me-image-frame img {
+    min-height: 500px;
   }
 
   .hire-me-card h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-
-  .hire-me-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 2.5rem;
   }
 
 
   /* ---------- TESTIMONIALS ---------- */
 
   .testimonials-container {
-    zoom: 100%;
-    height: auto;
-    min-height: 0;
-    padding: 55px 15px;
-    overflow: hidden;
+    padding: 90px 0 100px;
   }
 
-  .testimonials-container h1 {
-    font-size: 2rem;
-    letter-spacing: 1px;
+  .testimonials-heading {
+    margin-bottom: 50px;
   }
 
-  .testimonials-container h4 {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-
-  .testimonials {
-    gap: 15px;
-    padding: 20px 5px;
+  .testimonials-heading h2 {
+    font-size: 3.5rem;
   }
 
   .testimonial-box {
-    flex: 0 0 85%;
-    min-height: 200px;
-    padding: 20px;
+    flex: 0 0 380px;
   }
 
-  .testimonial-box p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+  .testimonials {
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
-  .client-info img {
-    width: 50px;
-    height: 40px;
-  }
-
-  .arrow-right,
   .arrow-left {
-    font-size: 1.5rem;
-    padding: 7px;
+    left: 15px;
+  }
+
+  .arrow-right {
+    right: 15px;
   }
 
 
   /* ---------- ENQUIRE ---------- */
 
   .enquire {
-    height: auto;
-    min-height: 70vh;
-    padding: 60px 20px;
+    gap: 45px;
+    padding: 100px 6%;
   }
 
-  .enquire h1 {
-    font-size: 2rem;
+  .enquire-content {
+    width: 50%;
   }
 
-  .enquire p {
-    font-size: 1.1rem;
-    max-width: 90%;
+  .enquire h2 {
+    font-size: 3.6rem;
   }
 
-  .enquire-button {
-    margin-top: 10px;
+  .enquire-collage {
+    width: 360px;
+    height: 450px;
+    transform: scale(0.9);
+    transform-origin: center;
   }
 
 
   /* ---------- CONTACT ---------- */
 
   .contact-section {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 40px;
-    padding: 60px 20px;
+    gap: 50px;
+    padding: 100px 6%;
   }
 
   .contact-info {
-    width: 100%;
-    text-align: center;
+    width: 42%;
   }
 
   .contact-info h2 {
-    font-size: 2rem;
-  }
-
-  .contact-info > p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-
-  .contact-item {
-    margin-bottom: 25px;
-  }
-
-  .contact-item p {
-    font-size: 1rem;
+    font-size: 3.7rem;
   }
 
   .contact-form {
-    width: 100%;
-    padding: 25px 20px;
-  }
-
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    padding: 12px 14px;
-    font-size: 0.95rem;
+    width: 58%;
+    padding: 40px;
   }
 
 
   /* ---------- FOOTER ---------- */
 
-  footer {
-    text-align: center;
+  .site-footer {
+    padding: 90px 6% 30px;
   }
 
-  .footer-middle {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    padding: 25px 15px;
+  .footer-top h2 {
+    font-size: 4.3rem;
   }
 
-  .footer-section {
-    margin: 0;
+  .footer-main {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
   }
 
-  .footer-section h3 {
-    font-size: 14px;
-  }
-
-  .footer-section ul li {
-    font-size: 11px;
-  }
-
-  .footer-bottom {
-    padding: 20px 15px;
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 500px;
   }
 
 }
 
 
+
 /* ==========================================================
-   VERY SMALL PHONES
+   MOBILE
    ========================================================== */
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 
-  nav ul li a {
-    font-size: 0.7rem;
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
-  .logo img {
-    height: 40px;
+  body {
+    padding-top: 60px;
+  }
+
+
+  /* ========================================================
+     NAVIGATION
+     ======================================================== */
+
+  nav {
+    width: 100%;
+    height: 60px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .logo {
+    flex-shrink: 0;
+  }
+
+  nav .logo img {
+    width: 72px;
+    height: auto;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 7px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    font-size: 0.58rem;
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    white-space: nowrap;
+  }
+
+  nav ul li a::after {
+    bottom: -4px;
+  }
+
+
+  /* ========================================================
+     HERO
+     ======================================================== */
+
+  .hero {
+    width: 100%;
+
+    height: calc(100svh - 60px);
+    min-height: 560px;
+
+    padding: 0 20px 50px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background-position: center center;
   }
 
   .hero-content {
-    padding-top: 150px;
+    width: 100%;
+    max-width: 380px;
+
+    padding-top: 0;
+
+    transform: none;
+
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: 1.5rem;
+    max-width: 340px;
+
+    margin: 0 auto 14px;
+
+    font-size: 2rem;
+    font-weight: 500;
+
+    line-height: 1.05;
+    letter-spacing: 1px;
   }
 
   .hero p {
-    font-size: 1rem;
+    max-width: 320px;
+
+    margin: 0 auto 25px;
+
+    font-size: 0.76rem;
+
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .hero-buttons a {
+    width: auto;
+
+    padding: 10px 12px;
+
+    font-size: 0.59rem;
+    letter-spacing: 0.7px;
+
+    white-space: nowrap;
+  }
+
+
+  /* ========================================================
+     INTRO
+     ======================================================== */
+
+  .intro {
+    min-height: auto;
+
+    padding: 80px 24px;
+
+    justify-content: center;
   }
 
   .intro h2 {
-    font-size: 1.4rem;
+    max-width: 330px;
+
+    margin-bottom: 28px;
+
+    font-size: 2.35rem;
+
+    line-height: 1.05;
+  }
+
+  .intro p {
+    max-width: 100%;
+
+    margin-bottom: 18px;
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+
+
+  /* ========================================================
+     ABOUT THE PHOTOGRAPHER
+     ======================================================== */
+
+  .photographer {
+    min-height: auto;
+
+    padding: 75px 20px;
+  }
+
+  .photographer-layout {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .photographer-video-wrap {
+    width: 100%;
+    max-width: none;
+  }
+
+  .video-frame {
+    padding: 7px;
+  }
+
+  .video-frame video {
+    width: 100%;
+    height: 470px;
+
+    object-fit: cover;
+  }
+
+  .video-frame::after {
+    top: 18px;
+    right: 18px;
+
+    font-size: 0.85rem;
+  }
+
+  .video-caption {
+    gap: 10px;
+
+    margin-top: 11px;
+
+    font-size: 0.58rem;
+    letter-spacing: 1.2px;
+  }
+
+  .caption-line {
+    width: 28px;
+  }
+
+  .photographer-card {
+    width: 100%;
+
+    padding: 32px 24px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   }
 
   .photographer h2 {
-    font-size: 1.4rem;
+    margin-bottom: 16px;
+
+    font-size: 2.35rem;
+
+    line-height: 1;
+  }
+
+  .photographer h4 {
+    margin-bottom: 22px;
+
+    font-size: 0.68rem;
+
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+  }
+
+  .photographer p {
+    margin-bottom: 16px;
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+
+  .photographer-buttons {
+    margin-top: 26px;
+  }
+
+  .photographer-buttons a {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    font-size: 0.72rem;
+  }
+
+
+  /* ========================================================
+     PORTFOLIO / GALLERIES
+     ======================================================== */
+
+  .services {
+    padding: 80px 18px 90px;
+  }
+
+  .services-content {
+    width: 100%;
+  }
+
+  .gallery-eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 0.6rem;
+    letter-spacing: 2.3px;
   }
 
   .services h2 {
-    font-size: 1.6rem;
+    margin-bottom: 20px;
+
+    font-size: 2.7rem;
+
+    line-height: 1;
   }
 
-  .enquire h1 {
-    font-size: 1.7rem;
+  .gallery-intro {
+    max-width: 330px;
+
+    margin-bottom: 35px;
+
+    font-size: 0.84rem;
+
+    line-height: 1.75;
   }
 
-  .contact-info h2 {
-    font-size: 1.7rem;
+  .gallery-categories {
+    display: flex;
+    justify-content: center;
+
+    gap: 5px 15px;
+
+    margin-bottom: 35px;
+  }
+
+  .gallery-filter {
+    padding: 6px 0;
+
+    font-size: 0.57rem;
+    letter-spacing: 0.8px;
+  }
+
+
+  /* Photo collage */
+
+  .gallery-preview {
+    width: 100%;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 160px 160px;
+
+    gap: 7px;
+
+    margin-bottom: 35px;
+  }
+
+  .gallery-photo:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .gallery-photo:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .gallery-photo:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .gallery-photo:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .gallery-photo:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .gallery-actions {
+    gap: 22px;
+  }
+
+  .gallery-actions a {
+    font-size: 0.59rem;
+    letter-spacing: 1px;
+  }
+
+
+  /* ========================================================
+     HIRE ME
+     ======================================================== */
+
+  .hire_me {
+    min-height: auto;
+
+    padding: 75px 20px;
+  }
+
+  .hire-me-layout {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .hire-me-card {
+    width: 100%;
+
+    padding: 32px 24px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .hire-me-card h2 {
+    margin-bottom: 22px;
+
+    font-size: 2.35rem;
+
+    line-height: 1.05;
+  }
+
+  .hire-me-card p {
+    margin-bottom: 16px;
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+
+  .hire-me-card .photographer-buttons {
+    margin-top: 26px;
+  }
+
+  .hire-me-image-wrap {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hire-me-image-frame {
+    min-height: 0;
+
+    padding: 7px;
+  }
+
+  .hire-me-image-frame img {
+    width: 100%;
+
+    height: 470px;
+    min-height: 0;
+
+    object-fit: cover;
+  }
+
+  .hire-me-image-frame::after {
+    top: 18px;
+    right: 18px;
+
+    font-size: 0.85rem;
+  }
+
+  .hire-me-caption {
+    gap: 10px;
+
+    margin-top: 11px;
+
+    font-size: 0.58rem;
+    letter-spacing: 1.2px;
+  }
+
+  .hire-caption-line {
+    width: 28px;
+  }
+
+
+  /* ========================================================
+     TESTIMONIALS
+     ======================================================== */
+
+  .testimonials-container {
+    min-height: auto;
+
+    padding: 80px 0 90px;
+  }
+
+  .testimonials-heading {
+    padding: 0 22px;
+
+    margin-bottom: 45px;
+  }
+
+  .testimonials-eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 2.3px;
+  }
+
+  .testimonials-heading h2 {
+    margin-bottom: 18px;
+
+    font-size: 2.8rem;
+  }
+
+  .testimonials-heading p {
+    max-width: 330px;
+
+    font-size: 0.84rem;
+
+    line-height: 1.75;
+  }
+
+  .testimonials {
+    gap: 14px;
+
+    padding: 5px 20px 25px;
   }
 
   .testimonial-box {
-    flex: 0 0 90%;
+    flex: 0 0 calc(100vw - 50px);
+
+    min-height: 390px;
+
+    padding: 50px 27px 30px;
+  }
+
+  .quote-mark {
+    top: 15px;
+    left: 24px;
+
+    font-size: 4.5rem;
+  }
+
+  .testimonial-text {
+    margin-top: 30px;
+  }
+
+  .testimonial-box p {
+    font-size: 1.18rem;
+
+    line-height: 1.5;
+  }
+
+  .client-info {
+    gap: 12px;
+
+    padding-top: 24px;
+  }
+
+  .client-info img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .client-name {
+    font-size: 0.72rem;
+  }
+
+  .client-label {
+    font-size: 0.58rem;
+  }
+
+  .testimonial-arrow {
+    width: 40px;
+    height: 40px;
+
+    top: calc(50% + 20px);
+
+    font-size: 1rem;
+  }
+
+  .arrow-left {
+    left: 7px;
+  }
+
+  .arrow-right {
+    right: 7px;
+  }
+
+  .testimonial-button {
+    margin-top: 35px;
+  }
+
+  .testimonial-button a {
+    font-size: 0.64rem;
+  }
+
+
+  /* ========================================================
+     ENQUIRE
+     ======================================================== */
+
+  .enquire {
+    min-height: auto;
+
+    padding: 80px 22px 90px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 55px;
+
+    text-align: left;
+  }
+
+  .enquire-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .enquire-eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 0.6rem;
+    letter-spacing: 2.3px;
+  }
+
+  .enquire h2 {
+    margin-bottom: 28px;
+
+    font-size: 3.1rem;
+
+    line-height: 0.95;
+  }
+
+  .enquire p {
+    max-width: none;
+
+    margin-bottom: 28px;
+
+    font-size: 0.86rem;
+
+    line-height: 1.8;
+  }
+
+  .enquire-button {
+    margin-top: 25px;
+  }
+
+  .enquire-button a {
+    padding: 11px 20px;
+
+    font-size: 0.64rem;
+  }
+
+
+  /* Photo collage */
+
+  .enquire-collage {
+    width: 100%;
+    max-width: 350px;
+
+    height: 410px;
+
+    margin: 0 auto;
+
+    flex-shrink: 1;
+  }
+
+  .enquire-photo {
+    padding: 5px;
+  }
+
+  .enquire-photo-one {
+    width: 205px;
+    height: 290px;
+
+    top: 5px;
+    left: 5px;
+  }
+
+  .enquire-photo-two {
+    width: 155px;
+    height: 215px;
+
+    top: 55px;
+    right: 0;
+  }
+
+  .enquire-photo-three {
+    width: 175px;
+    height: 225px;
+
+    bottom: 0;
+    left: 95px;
+  }
+
+  .enquire-note {
+    right: -12px;
+    bottom: 28px;
+
+    font-size: 0.5rem;
+    letter-spacing: 1.4px;
+  }
+
+
+  /* ========================================================
+     CONTACT
+     ======================================================== */
+
+  .contact-section {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 55px;
+
+    padding: 85px 20px;
+  }
+
+  .contact-info {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact-eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 0.6rem;
+    letter-spacing: 2.3px;
+  }
+
+  .contact-info h2 {
+    margin-bottom: 28px;
+
+    font-size: 3.1rem;
+
+    line-height: 0.95;
+  }
+
+  .contact-intro {
+    max-width: none;
+
+    margin-bottom: 38px;
+
+    font-size: 0.86rem;
+
+    line-height: 1.8;
+  }
+
+  .contact-item {
+    gap: 16px;
+
+    padding: 18px 0;
+  }
+
+  .contact-number {
+    font-size: 0.8rem;
+  }
+
+  .contact-item h4 {
+    font-size: 0.58rem;
+  }
+
+  .contact-item p {
+    font-size: 0.82rem;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* Contact form */
+
+  .contact-form {
+    width: 100%;
+    max-width: none;
+
+    padding: 32px 22px;
+  }
+
+  .form-heading {
+    margin-bottom: 35px;
+  }
+
+  .form-heading > span {
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+  }
+
+  .form-heading h3 {
+    font-size: 2.1rem;
+
+    line-height: 1.05;
+  }
+
+  .form-heading p {
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+  }
+
+  .contact-form form {
+    gap: 24px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+  }
+
+  .form-row .form-field {
+    width: 100%;
+  }
+
+  .form-field label {
+    font-size: 0.58rem;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 0.84rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    text-align: center;
+  }
+
+
+  /* ========================================================
+     FOOTER
+     ======================================================== */
+
+  .site-footer {
+    padding: 75px 22px 25px;
+  }
+
+  .footer-top {
+    padding-bottom: 55px;
+  }
+
+  .footer-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 0.56rem;
+    letter-spacing: 2.2px;
+  }
+
+  .footer-top h2 {
+    font-size: 3.1rem;
+
+    line-height: 0.95;
+  }
+
+  .footer-main {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px 25px;
+
+    padding: 55px 0 65px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    margin-bottom: 15px;
+
+    font-size: 1.8rem;
+  }
+
+  .footer-brand p {
+    max-width: 330px;
+
+    margin-bottom: 20px;
+
+    font-size: 0.76rem;
+  }
+
+  .footer-location {
+    font-size: 0.57rem;
+  }
+
+  .footer-column {
+    gap: 11px;
+  }
+
+  .footer-column-title {
+    margin-bottom: 8px;
+
+    font-size: 0.55rem;
+  }
+
+  .footer-column a {
+    font-size: 0.72rem;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* Big NESTASHOTS word */
+
+  .footer-signature {
+    font-size: 16vw;
+
+    line-height: 0.8;
+    letter-spacing: -2px;
+
+    white-space: nowrap;
+  }
+
+
+  /* Footer bottom */
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 40px;
+    padding-top: 22px;
+
+    font-size: 0.56rem;
+  }
+
+
+}
+
+
+
+/* ==========================================================
+   EXTRA SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 390px) {
+
+  /* ---------- NAV ---------- */
+
+  nav {
+    padding: 0 7px;
+  }
+
+  nav .logo img {
+    width: 62px;
+  }
+
+  nav ul {
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 0.53rem;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.7rem;
+  }
+
+  .hero-buttons a {
+    padding: 9px 9px;
+
+    font-size: 0.54rem;
+  }
+
+
+  /* ---------- GALLERY FILTERS ---------- */
+
+  .gallery-categories {
+    gap: 4px 11px;
+  }
+
+  .gallery-filter {
+    font-size: 0.53rem;
+  }
+
+
+  /* ---------- ENQUIRE COLLAGE ---------- */
+
+  .enquire-collage {
+    max-width: 310px;
+
+    height: 380px;
+  }
+
+  .enquire-photo-one {
+    width: 185px;
+    height: 265px;
+  }
+
+  .enquire-photo-two {
+    width: 140px;
+    height: 195px;
+  }
+
+  .enquire-photo-three {
+    width: 160px;
+    height: 205px;
+
+    left: 80px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-top h2 {
+    font-size: 2.7rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
   }
 
 }
