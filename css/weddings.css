@@ -2289,3 +2289,221 @@ nav ul li a:hover::after {
     }
 
 }
+
+
+/* =========================================
+   NESTASHOTS — REFINED WEDDING GALLERY
+========================================= */
+
+.gallery-feature {
+  padding: 65px 6% 35px;
+}
+
+.feature-image {
+  max-width: 1150px;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.feature-image:hover img {
+  transform: scale(1.025);
+}
+
+/* Gallery container */
+.gallery-journal {
+  max-width: 1200px;
+  padding: 35px 5% 100px;
+  margin: 0 auto;
+}
+
+/* Consistent photographs */
+.journal-photo {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.journal-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease,
+              filter 0.5s ease;
+}
+
+.journal-photo:hover img {
+  transform: scale(1.035);
+  filter: brightness(0.96);
+}
+
+.journal-photo figcaption {
+  padding-top: 12px;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+}
+
+/* Balanced two-column rows */
+.journal-row,
+.row-one,
+.row-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: center;
+  margin: 0 0 65px;
+}
+
+.row-one .portrait,
+.row-two .portrait,
+.journal-offset,
+.final-middle {
+  margin-top: 0;
+}
+
+.row-one .portrait img,
+.row-one .landscape img,
+.row-two .portrait img,
+.row-two .landscape img {
+  aspect-ratio: 4 / 5;
+}
+
+/* Elegant quote */
+.gallery-quote {
+  max-width: 650px;
+  margin: 85px auto;
+  padding: 0 20px;
+}
+
+.gallery-quote p {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+/* Wide photographs */
+.full-photo,
+.second-feature {
+  width: 100%;
+  margin: 0 auto 65px;
+}
+
+.full-photo img,
+.second-feature img {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Matching photo pair */
+.journal-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  width: 100%;
+  margin: 0 auto 65px;
+}
+
+.journal-pair img {
+  aspect-ratio: 4 / 5;
+}
+
+/* Final three images */
+.journal-final {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.journal-final img {
+  aspect-ratio: 3 / 4;
+}
+
+/* Scroll reveal animation */
+.gallery-feature,
+.gallery-journal .journal-photo,
+.gallery-journal .gallery-quote {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s cubic-bezier(.2,.7,.2,1);
+}
+
+.gallery-feature.is-visible,
+.gallery-journal .journal-photo.is-visible,
+.gallery-journal .gallery-quote.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .gallery-feature {
+    padding: 35px 16px 20px;
+  }
+
+  .gallery-journal {
+    padding: 20px 16px 70px;
+  }
+
+  .journal-row,
+  .row-one,
+  .row-two,
+  .journal-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  .row-one .portrait,
+  .row-one .landscape,
+  .row-two .portrait,
+  .row-two .landscape,
+  .journal-pair .journal-photo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .gallery-quote {
+    margin: 60px auto;
+  }
+
+  .full-photo,
+  .second-feature {
+    margin-bottom: 35px;
+  }
+
+  .journal-final {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .journal-final .journal-photo:last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 0;
+  }
+
+  .final-middle {
+    margin-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-feature,
+  .gallery-journal .journal-photo,
+  .gallery-journal .gallery-quote {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

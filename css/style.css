@@ -1,250 +1,3 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
 /* General Reset */
 * {
   margin: 0;
@@ -252,76 +5,126 @@ textarea {
   box-sizing: border-box;
 }
 
-/* Body Styling */
-body {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  padding-top: 60px; /* Adjusted for fixed navbar */
+html {
+  scroll-behavior: smooth;
+  zoom: 100%;
 }
 
-/* Navigation Bar */
+/* Body Styling */
+body {
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding-top: 60px;
+  background-color: #fff;
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
+  height: 90px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
-  background-color: #000;
-  color: #fff;
-  height: 60px;
+
+  padding: 0 55px;
+
+  background-color: #fff;
+  border-bottom: 1px solid #eeeeee;
+
   z-index: 1000;
 }
 
+
+/* LOGO */
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+
+/* NAVIGATION LINKS */
+
 nav ul {
   list-style: none;
+
   display: flex;
+  align-items: center;
+  gap: 40px;
+
   margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  margin-left: 50px;
+  margin: 0;
 }
 
 nav ul li a {
+  position: relative;
+
   text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 350;
-  transition: color 0.3s;
+
+  color: #1b1a1a;
+
+  font-size: 1rem;
+  font-weight: 400;
+
+  letter-spacing: 0.5px;
+
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ff9f00;
+  color: #777;
 }
 
-.logo img {
-  height: 65px;
-  width: auto;
-  max-height: 60%;
+
+/* SUBTLE UNDERLINE */
+
+nav ul li a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #1b1a1a;
+
+  transition: width 0.3s ease;
 }
 
-.cart a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 400;
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 /* Hero Section */
 .hero {
   height: 90vh;
-  background: url('img/1.jpg') no-repeat center center/cover;
+  background: url('../img/1.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
   color: #fff;
   position: relative;
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 .hero::before {
@@ -331,107 +134,282 @@ nav ul li a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding-top: 200px;
+  padding-top: 340px;
+  transform: scale(0.80);
+  transform-origin: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  font-family: 'Georgia', serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .hero-buttons a {
   text-decoration: none;
-  color: #fff;
-  background-color: #333;
-  padding: 12px 25px;
-  border: 2px solid #fff;
+
+  color: #1b1a1a;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  padding: 11px 24px;
+
+  border: 1px solid #fff;
   border-radius: 0;
-  transition: background-color 0.3s, border-color 0.3s;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  transition: all 0.3s ease;
 }
 
 .hero-buttons a:hover {
-  background-color: #555;
-  border-color: #555;
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
 }
 
-/* Intro Section */
+/* ---------- INTRO SECTION ---------- */
+
 .intro {
-  background-color: #1c1c1c;
-  color: #fff;
-  padding: 50px 20px;
+  background-color: #f8f8f8;
+  color: #1c1c1c;
+
+  min-height: 75vh;
+
+  padding: 110px 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
 }
 
+
+/* Heading */
+
 .intro h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 1px;
+
+  margin: 0 0 35px;
+
+  color: #1c1c1c;
 }
 
+
+/* Paragraphs */
+
 .intro p {
-  font-size: 1rem;
-  line-height: 1.6;
+  width: 100%;
+  max-width: 900px;
+
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.9;
+  letter-spacing: 0.2px;
+
+  margin: 0 0 22px;
+
+  color: #444;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
 }
 
 /* Photographer Section */
 .photographer {
   display: flex;
-  align-items: center;
-  padding: 50px 20px;
-  background-color: #333; 
-  color: #fff;
+  align-items: stretch;
+
+  padding: 120px 50px;
+
+  background-color: #fff;
+  color: #333;
+
+  min-height: 100vh;
+  height: auto;
+
+  box-sizing: border-box;
 }
 
 /* Photographer Section Video */
-.photographer {
+
+.photographer-video-wrap {
+  width: 34%;
+  max-width: 420px;
+
   display: flex;
-  align-items: center;
-  padding: 50px 20px;
-  background-color: #333; /* Slightly lighter dark background */
-  color: #fff;
-  height: 100vh; /* Full height of the viewport */
-  box-sizing: border-box; /* Ensure padding is included in the height */
+  flex-direction: column;
 }
 
-.photographer video {
-  width: 50%;
-  max-width: 480px;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain; 
-  border-radius: 8px; 
+.video-frame {
+  position: relative;
+  padding: 10px;
+
+  background-color: #f4f4f4;
+  border: 1px solid #e2e2e2;
+}
+
+.video-frame video {
+  display: block;
+
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+}
+
+
+/* Small detail over the video */
+
+.video-frame::after {
+  content: "01";
+
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  color: #fff;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+
+/* Caption underneath */
+
+.video-caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 14px;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.caption-line {
+  width: 35px;
+  height: 1px;
+  background-color: #999;
+}
+
+.photographer-card {
+  width: 60%;
+
+  background: #ededed;
+  padding: 45px;
+
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 10px 30px rgba(0,0,0,.20);
+
+  align-self: stretch;
+}
+
+.photographer-layout {
+  width: 100%;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  gap: 40px;
 }
 
 .photographer-content {
-  width: 50%;
-  padding-left: 80px; 
+    width: 100%;
+    padding-left: 0;
 }
+
+/* Photographer Heading */
 
 .photographer h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
+  color: #333;
 }
 
+
+/* Photographer Name / Subtitle */
+
+.photographer h4 {
+  font-family: 'DM Sans', sans-serif;
+
+  background-color: transparent;
+
+  color: #666;
+
+  padding: 0;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+}
+
+
+/* Photographer Paragraphs */
+
 .photographer p {
+  font-family: 'DM Sans', sans-serif;
+
   font-size: 1rem;
-  line-height: 1.6;
+  font-weight: 300;
+
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+
+  color: #444;
+
+  margin-bottom: 18px;
 }
 
 .photographer-buttons {
@@ -440,119 +418,1674 @@ nav ul li a:hover {
 
 .photographer-buttons a {
   text-decoration: none;
-  color: #fff;
-  background-color: #333;
+  color: #333;
+  background-color: #fff;
   padding: 12px 25px;
-  border: 2px solid #fff;
+  border: 2px solid #333;
   border-radius: 0;
-  transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 .photographer-buttons a:hover {
-  background-color: #555;
-  border-color: #555;
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+/* =================================
+   PORTFOLIO / GALLERIES
+================================= */
+
+.services {
+  background-color: #f7f5f2;
+
+  padding: 120px 7% 130px;
+
+  color: #222;
 }
 
-/* Services Offered Section */
-.services {
-  padding: 50px 20px;
-  background-color: #f4f4f4; /* Light background color */
-  color: #333;
-}
+
+/* Heading Area */
 
 .services-content {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
   text-align: center;
+}
+
+.gallery-eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
 }
 
 .services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  margin: 0 0 25px;
+
+  color: #222;
 }
 
-.services p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.gallery-intro {
+  max-width: 650px;
+
+  margin: 0 auto 50px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #666;
 }
 
-.services-list {
+
+/* =================================
+   CATEGORY FILTERS
+================================= */
+
+.gallery-categories {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+
+  gap: 10px 28px;
+
+  margin-bottom: 55px;
 }
 
-.service {
+.gallery-filter {
   position: relative;
-  width: 22%;
-  max-width: 300px;
-}
 
-.service img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+  background: none;
+  border: none;
 
-.service-info {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: #fff;
-}
+  padding: 8px 0;
 
-.service-info h3 {
-  font-size: 1.5rem;
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 400;
+
+  letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+
+  color: #777;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease;
 }
 
-.service-links {
-  margin-top: 10px;
+.gallery-filter::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #222;
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
 }
 
-.service-links a {
-  color: #fff;
-  background-color: #333;
-  padding: 5px 10px;
-  margin: 0 5px;
+.gallery-filter:hover,
+.gallery-filter.active {
+  color: #222;
+}
+
+.gallery-filter:hover::after,
+.gallery-filter.active::after {
+  width: 100%;
+}
+
+
+/* =================================
+   PHOTO COLLAGE
+================================= */
+
+.gallery-preview {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.8fr 1.1fr;
+  grid-template-rows: 230px 230px;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-bottom: 45px;
+}
+
+.gallery-photo {
+  overflow: hidden;
+}
+
+.gallery-photo:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.gallery-photo:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.gallery-photo:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.gallery-photo:nth-child(4) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.gallery-photo:nth-child(5) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.gallery-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.gallery-photo img {
+  transition:
+    transform 0.7s ease,
+    opacity 0.25s ease;
+}
+
+.gallery-photo img.gallery-changing {
+  opacity: 0;
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.035);
+}
+
+
+/* =================================
+   GALLERY ACTIONS
+================================= */
+
+.gallery-actions {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 35px;
+}
+
+.gallery-actions a {
+  position: relative;
+
+  color: #222;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
   text-decoration: none;
-  font-size: 0.9rem;
-  border-radius: 4px;
-  display: inline-block;
+  text-transform: uppercase;
+
+  padding-bottom: 6px;
 }
 
-.service-links a:hover {
-  background-color: #555;
+.gallery-actions a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #222;
+
+  transition: width 0.3s ease;
 }
 
-/* Hire Me Section */
+.gallery-actions a:hover::after {
+  width: 35%;
+}
+
+/* =================================
+   HIRE ME SECTION
+================================= */
+
 .hire_me {
-  background-color: #444;
-  height: 100vh;
+  width: 100%;
+
+  background-color: #fff;
+  color: #333;
+
+  padding: 120px 50px;
+
+  min-height: 100vh;
+
+  box-sizing: border-box;
+}
+
+
+/* =================================
+   LAYOUT
+================================= */
+
+.hire-me-layout {
+  width: 100%;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  gap: 40px;
+}
+
+
+/* =================================
+   LEFT - TEXT CARD
+================================= */
+
+.hire-me-card {
+  width: 60%;
+
+  background: #ededed;
+
+  padding: 45px;
+
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+
   display: flex;
   align-items: center;
-  padding: 20px;
+}
+
+.hire-me-content {
+  width: 100%;
+}
+
+
+/* Heading */
+
+.hire-me-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2.8rem;
+  font-weight: 500;
+
+  line-height: 1.1;
+  letter-spacing: 1px;
+
+  margin: 0 0 25px;
+
+  color: #333;
+}
+
+
+/* Paragraphs */
+
+.hire-me-card p {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 1rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+
+  color: #444;
+
+  margin-bottom: 18px;
+}
+
+
+/* Button spacing */
+
+.hire-me-card .photographer-buttons {
+  margin-top: 30px;
+}
+
+
+/* =================================
+   RIGHT - IMAGE
+================================= */
+
+.hire-me-image-wrap {
+  width: 34%;
+  max-width: 420px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Image Frame */
+
+.hire-me-image-frame {
+  position: relative;
+
+  flex: 1;
+
+  padding: 10px;
+
+  background-color: #f4f4f4;
+
+  border: 1px solid #e2e2e2;
+}
+
+
+/* Little 02 detail */
+
+.hire-me-image-frame::after {
+  content: "02";
+
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  color: #fff;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1rem;
+
+  letter-spacing: 2px;
+}
+
+
+/* Actual Image */
+
+.hire-me-image-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 520px;
+
+  object-fit: cover;
+}
+
+
+/* =================================
+   IMAGE CAPTION
+================================= */
+
+.hire-me-caption {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 14px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.hire-caption-line {
+  width: 35px;
+  height: 1px;
+
+  background-color: #999;
+}
+/* =================================
+   TESTIMONIALS
+================================= */
+
+.testimonials-container {
+  position: relative;
+
+  width: 100%;
+
+  padding: 120px 0 130px;
+
+  overflow: hidden;
+
+  background-color: #f7f5f2;
+
+  color: #222;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.testimonials-heading {
+  text-align: center;
+
+  padding: 0 30px;
+
+  margin-bottom: 65px;
+}
+
+.testimonials-eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.testimonials-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  margin: 0 0 20px;
+
+  color: #222;
+}
+
+.testimonials-heading p {
+  max-width: 550px;
+
+  margin: 0 auto;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =================================
+   CAROUSEL
+================================= */
+
+.testimonials-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+.testimonials {
+  display: flex;
+
+  gap: 24px;
+
+  overflow-x: auto;
+
+  padding: 10px 8% 30px;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.testimonials::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =================================
+   TESTIMONIAL CARD
+================================= */
+
+.testimonial-box {
+  position: relative;
+
+  flex: 0 0 420px;
+
+  min-height: 390px;
+
+  padding: 55px 45px 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+
+  border: 1px solid #e3dfda;
+
+  box-shadow: none;
+}
+
+
+/* Giant editorial quotation mark */
+
+.quote-mark {
+  position: absolute;
+
+  top: 18px;
+  left: 35px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 5rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #d6d0c9;
+}
+
+
+/* Review */
+
+.testimonial-text {
+  margin-top: 35px;
+}
+
+.testimonial-box p {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.35rem;
+  font-weight: 400;
+
+  line-height: 1.55;
+
+  color: #333;
+
+  text-align: left;
+
+  margin: 0 0 18px;
+}
+
+
+/* =================================
+   CLIENT
+================================= */
+
+.client-info {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: auto;
+
+  padding-top: 30px;
+
+  border-top: 1px solid #e6e1dc;
+}
+
+.client-info img {
+  width: 52px;
+  height: 52px;
+
+  margin: 0;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+}
+
+.client-info div {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.client-name {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.78rem;
+  font-weight: 500;
+
+  letter-spacing: 0.8px;
+
+  color: #333;
+}
+
+.client-label {
+  margin-top: 4px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+
+  color: #999;
+}
+
+
+/* =================================
+   ARROWS
+================================= */
+
+.testimonial-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border: 1px solid #d8d3cd;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.95);
+
+  color: #222;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.testimonial-arrow:hover {
+  background-color: #222;
   color: #fff;
 }
 
-.hire_me .photographer-content {
-  width: 70%;
-  padding-right: 10px;
+.arrow-left {
+  left: 30px;
 }
 
-.hire_me .photographer-content p {
-  font-size: 1.1em;
-  line-height: 1.5; 
+.arrow-right {
+  right: 30px;
 }
 
+
+/* =================================
+   REVIEWS LINK
+================================= */
+
+.testimonial-button {
+  margin-top: 45px;
+
+  text-align: center;
+}
+
+.testimonial-button a {
+  position: relative;
+
+  padding: 0 0 7px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #222;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.testimonial-button a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #222;
+
+  transition: width 0.3s ease;
+}
+
+.testimonial-button a:hover {
+  background: transparent;
+  color: #222;
+}
+
+.testimonial-button a:hover::after {
+  width: 35%;
+}
+
+  /* =================================
+   ENQUIRE SECTION
+================================= */
+
+.enquire {
+  width: 100%;
+  min-height: 80vh;
+
+  padding: 120px 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 90px;
+
+  background-color: #f1eee9;
+
+  color: #222;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   LEFT - CONTENT
+================================= */
+
+.enquire-content {
+  width: 48%;
+  max-width: 620px;
+}
+
+
+/* Small heading */
+
+.enquire-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+
+/* Main heading */
+
+.enquire h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4.3rem;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  margin: 0 0 35px;
+
+  color: #222;
+}
+
+
+/* Paragraph */
+
+.enquire p {
+  max-width: 540px;
+
+  margin: 0 0 35px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: #555;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.enquire-button {
+  margin-top: 30px;
+}
+
+.enquire-button a {
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  border: 1px solid #222;
+
+  background-color: transparent;
+
+  color: #222;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.enquire-button a:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+
+/* =================================
+   RIGHT - PHOTO COLLAGE
+================================= */
+
+.enquire-collage {
+  position: relative;
+
+  width: 430px;
+  height: 500px;
+
+  flex-shrink: 0;
+}
+
+
+/* All photos */
+
+.enquire-photo {
+  position: absolute;
+
+  padding: 7px;
+
+  background-color: #fff;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.enquire-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* Large back image */
+
+.enquire-photo-one {
+  width: 250px;
+  height: 350px;
+
+  top: 15px;
+  left: 20px;
+
+  transform: rotate(-3deg);
+
+  z-index: 1;
+}
+
+
+/* Smaller top-right image */
+
+.enquire-photo-two {
+  width: 190px;
+  height: 250px;
+
+  top: 65px;
+  right: 0;
+
+  transform: rotate(4deg);
+
+  z-index: 2;
+}
+
+
+/* Bottom image */
+
+.enquire-photo-three {
+  width: 210px;
+  height: 270px;
+
+  bottom: 0;
+  left: 130px;
+
+  transform: rotate(2deg);
+
+  z-index: 3;
+}
+
+
+/* Little editorial note */
+
+.enquire-note {
+  position: absolute;
+
+  right: -25px;
+  bottom: 35px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.62rem;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  letter-spacing: 2px;
+
+  color: #777;
+
+  transform: rotate(90deg);
+
+  transform-origin: bottom right;
+}
+/* =================================
+   CONTACT
+================================= */
+
+.contact-section {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 100px;
+
+  padding: 130px 8%;
+
+  background-color: #fff;
+
+  color: #222;
+}
+
+
+/* =================================
+   LEFT SIDE
+================================= */
+
+.contact-info {
+  width: 38%;
+  max-width: 500px;
+}
+
+
+/* Small label */
+
+.contact-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #888;
+}
+
+
+/* Main heading */
+
+.contact-info h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4.3rem;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  margin: 0 0 35px;
+
+  color: #222;
+}
+
+
+/* Intro paragraph */
+
+.contact-intro {
+  max-width: 450px;
+
+  margin: 0 0 50px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: #555;
+}
+
+
+/* =================================
+   CONTACT DETAILS
+================================= */
+
+.contact-details {
+  border-top: 1px solid #ddd8d2;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid #ddd8d2;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: padding-left 0.3s ease;
+}
+
+.contact-item:hover {
+  padding-left: 8px;
+}
+
+
+/* 01 / 02 / 03 */
+
+.contact-number {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 0.9rem;
+
+  color: #aaa;
+}
+
+
+/* Phone / Email / Location */
+
+.contact-item h4 {
+  margin: 0 0 5px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 400;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+
+  color: #999;
+}
+
+.contact-item h4 i {
+  margin-right: 6px;
+}
+
+
+/* Actual details */
+
+.contact-item p {
+  margin: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+
+  color: #222;
+}
+
+
+/* =================================
+   RIGHT - FORM
+================================= */
+
+.contact-form {
+  width: 55%;
+  max-width: 720px;
+
+  padding: 55px;
+
+  background-color: #f3f0ec;
+
+  border: 1px solid #e5e0da;
+}
+
+
+/* Form heading */
+
+.form-heading {
+  margin-bottom: 45px;
+}
+
+.form-heading > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: #888;
+}
+
+.form-heading h3 {
+  margin: 0 0 12px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  color: #222;
+}
+
+.form-heading p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.85rem;
+  font-weight: 300;
+
+  line-height: 1.7;
+
+  color: #777;
+}
+
+
+/* =================================
+   FORM LAYOUT
+================================= */
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+.form-row {
+  display: flex;
+
+  gap: 25px;
+}
+
+.form-row .form-field {
+  width: 50%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Labels */
+
+.form-field label {
+  margin-bottom: 9px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+
+  color: #666;
+}
+
+
+/* =================================
+   INPUTS
+================================= */
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 12px 0;
+
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid #aaa49d;
+
+  border-radius: 0;
+
+  outline: none;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.9rem;
+
+  color: #222;
+
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #222;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+
+  resize: vertical;
+}
+
+
+/* =================================
+   SUBMIT BUTTON
+================================= */
+
+.contact-form button {
+  align-self: flex-start;
+
+  margin-top: 10px;
+
+  padding: 13px 25px;
+
+  background-color: #222;
+
+  border: 1px solid #222;
+  border-radius: 0;
+
+  color: #fff;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-form button span {
+  display: inline-block;
+
+  margin-left: 12px;
+
+  transition: transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: transparent;
+
+  color: #222;
+}
+
+.contact-form button:hover span {
+  transform: translateX(5px);
+}
+/* =================================
+   FOOTER
+================================= */
+
+.site-footer {
+  width: 100%;
+
+  padding: 110px 7% 30px;
+
+  background-color: #1d1d1b;
+
+  color: #f4f1ec;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   TOP MESSAGE
+================================= */
+
+.footer-top {
+  padding-bottom: 90px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-eyebrow {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #9d9a95;
+}
+
+.footer-top h2 {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 5rem;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #f4f1ec;
+}
+
+.footer-top h2 span {
+  color: #8d8984;
+
+  font-style: italic;
+}
+
+
+/* =================================
+   MAIN FOOTER
+================================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1.3fr 1fr;
+
+  gap: 70px;
+
+  padding: 70px 0 90px;
+}
+
+
+/* =================================
+   BRAND
+================================= */
+
+.footer-brand {
+  max-width: 350px;
+}
+
+.footer-logo {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  color: #f4f1ec;
+
+  text-decoration: none;
+}
+
+.footer-brand p {
+  margin: 0 0 25px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.82rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #aaa7a2;
+}
+
+.footer-location {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #777470;
+}
+
+
+/* =================================
+   FOOTER COLUMNS
+================================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+.footer-column-title {
+  margin-bottom: 12px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.62rem;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #777470;
+}
+
+.footer-column a {
+  position: relative;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.8rem;
+  font-weight: 300;
+
+  color: #c9c5bf;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footer-column a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #f4f1ec;
+
+  transition: width 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-column a:hover::after {
+  width: 100%;
+}
+
+
+/* =================================
+   HUGE NESTASHOTS WORD
+================================= */
+
+.footer-signature {
+  width: 100%;
+
+  margin: 0;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(5rem, 13.5vw, 13rem);
+  font-weight: 400;
+
+  line-height: 0.72;
+
+  letter-spacing: -4px;
+
+  text-align: center;
+
+  color: #f4f1ec;
+
+  white-space: nowrap;
+
+  opacity: 0.95;
+
+  user-select: none;
+}
+
+
+/* =================================
+   BOTTOM
+================================= */
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 55px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.62rem;
+  font-weight: 300;
+
+  letter-spacing: 0.8px;
+
+  color: #777470;
+}
+
+.footer-bottom a {
+  color: #aaa7a2;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+.footer-made {
+  color: #777470;
+}
 
 /* ==========================================================
    RESPONSIVE DESIGN
    ========================================================== */
 
-/* Tablets and smaller laptops */
+/* ---------- TABLETS ---------- */
 @media (max-width: 992px) {
 
   /* Navigation */
@@ -561,63 +2094,48 @@ nav ul li a:hover {
   }
 
   nav ul li {
-    margin-left: 20px;
+    margin-left: 15px;
   }
 
   nav ul li a {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   /* Hero */
   .hero {
-    height: auto;
-    min-height: 80vh;
-    padding: 40px 20px;
+    height: 80vh;
+    min-height: 600px;
   }
 
   .hero-content {
-    padding-top: 150px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.3rem;
+    padding-top: 250px;
+    transform: scale(0.9);
   }
 
   /* Photographer */
   .photographer {
     height: auto;
     min-height: 80vh;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 30px;
+    gap: 30px;
   }
 
   .photographer video {
-    width: 70%;
-    max-width: 500px;
-    margin-bottom: 30px;
+    width: 40%;
   }
 
-  .photographer-content {
-    width: 100%;
-    padding-left: 0;
+  .photographer-card {
+    width: 55%;
+    margin-left: 20px;
+    padding: 30px;
   }
 
   /* Services */
+  .services {
+    padding: 70px 40px;
+  }
+
   .service {
     width: 45%;
-  }
-
-  .services h2 {
-    font-size: 2.2rem;
-  }
-
-  .services p {
-    font-size: 1.1rem;
   }
 
   /* Hire Me */
@@ -626,9 +2144,32 @@ nav ul li a:hover {
     min-height: 70vh;
   }
 
-  .hire_me .photographer-content {
+  .hire-me-card {
+    width: 80%;
+  }
+
+  /* Testimonials */
+  .testimonials-container {
+    height: auto;
+    min-height: 90vh;
+  }
+
+  .testimonial-box {
+    flex: 0 0 60%;
+  }
+
+  /* Contact */
+  .contact-section {
+    padding: 80px 50px;
+    gap: 40px;
+  }
+
+  .contact-info {
+    width: 50%;
+  }
+
+  .contact-form {
     width: 100%;
-    padding-right: 0;
   }
 }
 
@@ -636,197 +2177,1262 @@ nav ul li a:hover {
 /* ==========================================================
    MOBILE
    ========================================================== */
+/* ==========================================================
+   RESPONSIVE DESIGN
+   ========================================================== */
 
-@media (max-width: 600px) {
-    body {
-        background: red !important;
-    }
 
-  /* Navigation */
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+  /* ---------- NAVIGATION ---------- */
+
   nav {
-    height: 55px;
-    padding: 5px 15px;
+    height: 75px;
+    padding: 0 25px;
+  }
+
+  nav .logo img {
+    width: 115px;
   }
 
   nav ul {
-    gap: 10px;
-  }
-
-  nav ul li {
-    margin-left: 0;
+    gap: 22px;
   }
 
   nav ul li a {
-    font-size: 0.85rem;
-  }
-
-  .logo img {
-    height: 45px;
-  }
-
-  .cart a {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
   }
 
 
-  /* Hero */
+  /* ---------- HERO ---------- */
+
   .hero {
-    min-height: 75vh;
-    padding: 30px 15px;
+    height: 85vh;
+    min-height: 620px;
   }
 
   .hero-content {
-    padding-top: 120px;
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .hero-buttons a {
-    width: 80%;
-    max-width: 250px;
-    padding: 10px 20px;
+    padding-top: 290px;
+    transform: scale(0.9);
   }
 
 
-  /* Intro */
+  /* ---------- INTRO ---------- */
+
   .intro {
-    padding: 40px 20px;
+    min-height: auto;
+    padding: 90px 10%;
   }
 
   .intro h2 {
-    font-size: 1.6rem;
-  }
-
-  .intro p {
-    font-size: 0.95rem;
+    font-size: 2.7rem;
   }
 
 
-  /* Photographer */
+  /* ---------- PHOTOGRAPHER ---------- */
+
   .photographer {
     min-height: auto;
-    padding: 40px 20px;
+    padding: 90px 35px;
   }
 
-  .photographer video {
-    width: 100%;
-    max-width: 450px;
-    margin-bottom: 25px;
+  .photographer-layout {
+    gap: 30px;
   }
 
-  .photographer-content {
-    width: 100%;
-    padding-left: 0;
+  .photographer-video-wrap {
+    width: 38%;
+  }
+
+  .photographer-card {
+    width: 62%;
+    padding: 35px;
+  }
+
+  .video-frame video {
+    height: 500px;
   }
 
   .photographer h2 {
-    font-size: 1.6rem;
-  }
-
-  .photographer p {
-    font-size: 0.95rem;
-  }
-
-  .photographer-buttons {
-    margin-top: 20px;
-  }
-
-  .photographer-buttons a {
-    display: inline-block;
-    padding: 10px 20px;
+    font-size: 2.5rem;
   }
 
 
-  /* Services */
+  /* ---------- PORTFOLIO / GALLERIES ---------- */
+
   .services {
-    padding: 40px 15px;
+    padding: 90px 5%;
   }
 
   .services h2 {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 
-  .services p {
-    font-size: 1rem;
+  .gallery-preview {
+    grid-template-rows: 190px 190px;
   }
 
-  .services-list {
-    gap: 25px;
-  }
-
-  .service {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .service-info h3 {
-    font-size: 1.2rem;
+  .gallery-categories {
+    gap: 10px 20px;
   }
 
 
-  /* Hire Me */
+  /* ---------- HIRE ME ---------- */
+
   .hire_me {
-    height: auto;
-    min-height: 60vh;
-    padding: 40px 20px;
-    text-align: center;
+    min-height: auto;
+    padding: 90px 35px;
   }
 
-  .hire_me .photographer-content {
-    width: 100%;
-    padding-right: 0;
+  .hire-me-layout {
+    gap: 30px;
   }
 
-  .hire_me .photographer-content p {
-    font-size: 1rem;
+  .hire-me-card {
+    width: 62%;
+    padding: 35px;
+  }
+
+  .hire-me-image-wrap {
+    width: 38%;
+  }
+
+  .hire-me-image-frame img {
+    min-height: 500px;
+  }
+
+  .hire-me-card h2 {
+    font-size: 2.5rem;
+  }
+
+
+  /* ---------- TESTIMONIALS ---------- */
+
+  .testimonials-container {
+    padding: 90px 0 100px;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 50px;
+  }
+
+  .testimonials-heading h2 {
+    font-size: 3.5rem;
+  }
+
+  .testimonial-box {
+    flex: 0 0 380px;
+  }
+
+  .testimonials {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .arrow-left {
+    left: 15px;
+  }
+
+  .arrow-right {
+    right: 15px;
+  }
+
+
+  /* ---------- ENQUIRE ---------- */
+
+  .enquire {
+    gap: 45px;
+    padding: 100px 6%;
+  }
+
+  .enquire-content {
+    width: 50%;
+  }
+
+  .enquire h2 {
+    font-size: 3.6rem;
+  }
+
+  .enquire-collage {
+    width: 360px;
+    height: 450px;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-section {
+    gap: 50px;
+    padding: 100px 6%;
+  }
+
+  .contact-info {
+    width: 42%;
+  }
+
+  .contact-info h2 {
+    font-size: 3.7rem;
+  }
+
+  .contact-form {
+    width: 58%;
+    padding: 40px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .site-footer {
+    padding: 90px 6% 30px;
+  }
+
+  .footer-top h2 {
+    font-size: 4.3rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 500px;
   }
 
 }
 
 
+
 /* ==========================================================
-   VERY SMALL PHONES
+   MOBILE
    ========================================================== */
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 
-  .hero h1 {
-    font-size: 1.7rem;
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
-  .hero p {
-    font-size: 1rem;
+  body {
+    padding-top: 60px;
   }
 
-  .intro h2,
-  .photographer h2 {
-    font-size: 1.4rem;
+
+  /* ========================================================
+     NAVIGATION
+     ======================================================== */
+
+  nav {
+    width: 100%;
+    height: 60px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .services h2 {
-    font-size: 1.7rem;
+  nav .logo {
+    flex-shrink: 0;
+  }
+
+  nav .logo img {
+    width: 72px;
+    height: auto;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 7px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0;
   }
 
   nav ul li a {
-    font-size: 0.75rem;
+    font-size: 0.58rem;
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    white-space: nowrap;
+  }
+
+  nav ul li a::after {
+    bottom: -4px;
+  }
+
+
+  /* ========================================================
+     HERO
+     ======================================================== */
+
+  .hero {
+    width: 100%;
+
+    height: calc(100svh - 60px);
+    min-height: 560px;
+
+    padding: 0 20px 50px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background-position: center center;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 380px;
+
+    padding-top: 0;
+
+    transform: none;
+
+    text-align: center;
+  }
+
+  .hero h1 {
+    max-width: 340px;
+
+    margin: 0 auto 14px;
+
+    font-size: 2rem;
+    font-weight: 500;
+
+    line-height: 1.05;
+    letter-spacing: 1px;
+  }
+
+  .hero p {
+    max-width: 320px;
+
+    margin: 0 auto 25px;
+
+    font-size: 0.76rem;
+
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
   }
 
   .hero-buttons a {
-    width: 90%;
+    width: auto;
+
+    padding: 10px 12px;
+
+    font-size: 0.59rem;
+    letter-spacing: 0.7px;
+
+    white-space: nowrap;
   }
+
+
+  /* ========================================================
+     INTRO
+     ======================================================== */
+
+  .intro {
+    min-height: auto;
+
+    padding: 80px 24px;
+
+    justify-content: center;
+  }
+
+  .intro h2 {
+    max-width: 330px;
+
+    margin-bottom: 28px;
+
+    font-size: 2.35rem;
+
+    line-height: 1.05;
+  }
+
+  .intro p {
+    max-width: 100%;
+
+    margin-bottom: 18px;
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+
+
+  /* ========================================================
+     ABOUT THE PHOTOGRAPHER
+     ======================================================== */
+
+  .photographer {
+    min-height: auto;
+
+    padding: 75px 20px;
+  }
+
+  .photographer-layout {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .photographer-video-wrap {
+    width: 100%;
+    max-width: none;
+  }
+
+  .video-frame {
+    padding: 7px;
+  }
+
+  .video-frame video {
+    width: 100%;
+    height: 470px;
+
+    object-fit: cover;
+  }
+
+  .video-frame::after {
+    top: 18px;
+    right: 18px;
+
+    font-size: 0.85rem;
+  }
+
+  .video-caption {
+    gap: 10px;
+
+    margin-top: 11px;
+
+    font-size: 0.58rem;
+    letter-spacing: 1.2px;
+  }
+
+  .caption-line {
+    width: 28px;
+  }
+
+  .photographer-card {
+    width: 100%;
+
+    padding: 32px 24px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .photographer h2 {
+    margin-bottom: 16px;
+
+    font-size: 2.35rem;
+
+    line-height: 1;
+  }
+
+  .photographer h4 {
+    margin-bottom: 22px;
+
+    font-size: 0.68rem;
+
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+  }
+
+  .photographer p {
+    margin-bottom: 16px;
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+
+  .photographer-buttons {
+    margin-top: 26px;
+  }
+
+  .photographer-buttons a {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    font-size: 0.72rem;
+  }
+
+
+  /* ========================================================
+     PORTFOLIO / GALLERIES
+     ======================================================== */
+
+  .services {
+    padding: 80px 18px 90px;
+  }
+
+  .services-content {
+    width: 100%;
+  }
+
+  .gallery-eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 0.6rem;
+    letter-spacing: 2.3px;
+  }
+
+  .services h2 {
+    margin-bottom: 20px;
+
+    font-size: 2.7rem;
+
+    line-height: 1;
+  }
+
+  .gallery-intro {
+    max-width: 330px;
+
+    margin-bottom: 35px;
+
+    font-size: 0.84rem;
+
+    line-height: 1.75;
+  }
+
+  .gallery-categories {
+    display: flex;
+    justify-content: center;
+
+    gap: 5px 15px;
+
+    margin-bottom: 35px;
+  }
+
+  .gallery-filter {
+    padding: 6px 0;
+
+    font-size: 0.57rem;
+    letter-spacing: 0.8px;
+  }
+
+
+  /* Photo collage */
+
+  .gallery-preview {
+    width: 100%;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 160px 160px;
+
+    gap: 7px;
+
+    margin-bottom: 35px;
+  }
+
+  .gallery-photo:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .gallery-photo:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .gallery-photo:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .gallery-photo:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .gallery-photo:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .gallery-actions {
+    gap: 22px;
+  }
+
+  .gallery-actions a {
+    font-size: 0.59rem;
+    letter-spacing: 1px;
+  }
+
+
+  /* ========================================================
+     HIRE ME
+     ======================================================== */
+
+  .hire_me {
+    min-height: auto;
+
+    padding: 75px 20px;
+  }
+
+  .hire-me-layout {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .hire-me-card {
+    width: 100%;
+
+    padding: 32px 24px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .hire-me-card h2 {
+    margin-bottom: 22px;
+
+    font-size: 2.35rem;
+
+    line-height: 1.05;
+  }
+
+  .hire-me-card p {
+    margin-bottom: 16px;
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+
+  .hire-me-card .photographer-buttons {
+    margin-top: 26px;
+  }
+
+  .hire-me-image-wrap {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hire-me-image-frame {
+    min-height: 0;
+
+    padding: 7px;
+  }
+
+  .hire-me-image-frame img {
+    width: 100%;
+
+    height: 470px;
+    min-height: 0;
+
+    object-fit: cover;
+  }
+
+  .hire-me-image-frame::after {
+    top: 18px;
+    right: 18px;
+
+    font-size: 0.85rem;
+  }
+
+  .hire-me-caption {
+    gap: 10px;
+
+    margin-top: 11px;
+
+    font-size: 0.58rem;
+    letter-spacing: 1.2px;
+  }
+
+  .hire-caption-line {
+    width: 28px;
+  }
+
+
+  /* ========================================================
+     TESTIMONIALS
+     ======================================================== */
+
+  .testimonials-container {
+    min-height: auto;
+
+    padding: 80px 0 90px;
+  }
+
+  .testimonials-heading {
+    padding: 0 22px;
+
+    margin-bottom: 45px;
+  }
+
+  .testimonials-eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 2.3px;
+  }
+
+  .testimonials-heading h2 {
+    margin-bottom: 18px;
+
+    font-size: 2.8rem;
+  }
+
+  .testimonials-heading p {
+    max-width: 330px;
+
+    font-size: 0.84rem;
+
+    line-height: 1.75;
+  }
+
+  .testimonials {
+    gap: 14px;
+
+    padding: 5px 20px 25px;
+  }
+
+  .testimonial-box {
+    flex: 0 0 calc(100vw - 50px);
+
+    min-height: 390px;
+
+    padding: 50px 27px 30px;
+  }
+
+  .quote-mark {
+    top: 15px;
+    left: 24px;
+
+    font-size: 4.5rem;
+  }
+
+  .testimonial-text {
+    margin-top: 30px;
+  }
+
+  .testimonial-box p {
+    font-size: 1.18rem;
+
+    line-height: 1.5;
+  }
+
+  .client-info {
+    gap: 12px;
+
+    padding-top: 24px;
+  }
+
+  .client-info img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .client-name {
+    font-size: 0.72rem;
+  }
+
+  .client-label {
+    font-size: 0.58rem;
+  }
+
+  .testimonial-arrow {
+    width: 40px;
+    height: 40px;
+
+    top: calc(50% + 20px);
+
+    font-size: 1rem;
+  }
+
+  .arrow-left {
+    left: 7px;
+  }
+
+  .arrow-right {
+    right: 7px;
+  }
+
+  .testimonial-button {
+    margin-top: 35px;
+  }
+
+  .testimonial-button a {
+    font-size: 0.64rem;
+  }
+
+
+  /* ========================================================
+     ENQUIRE
+     ======================================================== */
+
+  .enquire {
+    min-height: auto;
+
+    padding: 80px 22px 90px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 55px;
+
+    text-align: left;
+  }
+
+  .enquire-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .enquire-eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 0.6rem;
+    letter-spacing: 2.3px;
+  }
+
+  .enquire h2 {
+    margin-bottom: 28px;
+
+    font-size: 3.1rem;
+
+    line-height: 0.95;
+  }
+
+  .enquire p {
+    max-width: none;
+
+    margin-bottom: 28px;
+
+    font-size: 0.86rem;
+
+    line-height: 1.8;
+  }
+
+  .enquire-button {
+    margin-top: 25px;
+  }
+
+  .enquire-button a {
+    padding: 11px 20px;
+
+    font-size: 0.64rem;
+  }
+
+
+  /* Photo collage */
+
+  .enquire-collage {
+    width: 100%;
+    max-width: 350px;
+
+    height: 410px;
+
+    margin: 0 auto;
+
+    flex-shrink: 1;
+  }
+
+  .enquire-photo {
+    padding: 5px;
+  }
+
+  .enquire-photo-one {
+    width: 205px;
+    height: 290px;
+
+    top: 5px;
+    left: 5px;
+  }
+
+  .enquire-photo-two {
+    width: 155px;
+    height: 215px;
+
+    top: 55px;
+    right: 0;
+  }
+
+  .enquire-photo-three {
+    width: 175px;
+    height: 225px;
+
+    bottom: 0;
+    left: 95px;
+  }
+
+  .enquire-note {
+    right: -12px;
+    bottom: 28px;
+
+    font-size: 0.5rem;
+    letter-spacing: 1.4px;
+  }
+
+
+  /* ========================================================
+     CONTACT
+     ======================================================== */
+
+  .contact-section {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 55px;
+
+    padding: 85px 20px;
+  }
+
+  .contact-info {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact-eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 0.6rem;
+    letter-spacing: 2.3px;
+  }
+
+  .contact-info h2 {
+    margin-bottom: 28px;
+
+    font-size: 3.1rem;
+
+    line-height: 0.95;
+  }
+
+  .contact-intro {
+    max-width: none;
+
+    margin-bottom: 38px;
+
+    font-size: 0.86rem;
+
+    line-height: 1.8;
+  }
+
+  .contact-item {
+    gap: 16px;
+
+    padding: 18px 0;
+  }
+
+  .contact-number {
+    font-size: 0.8rem;
+  }
+
+  .contact-item h4 {
+    font-size: 0.58rem;
+  }
+
+  .contact-item p {
+    font-size: 0.82rem;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* Contact form */
+
+  .contact-form {
+    width: 100%;
+    max-width: none;
+
+    padding: 32px 22px;
+  }
+
+  .form-heading {
+    margin-bottom: 35px;
+  }
+
+  .form-heading > span {
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+  }
+
+  .form-heading h3 {
+    font-size: 2.1rem;
+
+    line-height: 1.05;
+  }
+
+  .form-heading p {
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+  }
+
+  .contact-form form {
+    gap: 24px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+  }
+
+  .form-row .form-field {
+    width: 100%;
+  }
+
+  .form-field label {
+    font-size: 0.58rem;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 0.84rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    text-align: center;
+  }
+
+
+  /* ========================================================
+     FOOTER
+     ======================================================== */
+
+  .site-footer {
+    padding: 75px 22px 25px;
+  }
+
+  .footer-top {
+    padding-bottom: 55px;
+  }
+
+  .footer-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 0.56rem;
+    letter-spacing: 2.2px;
+  }
+
+  .footer-top h2 {
+    font-size: 3.1rem;
+
+    line-height: 0.95;
+  }
+
+  .footer-main {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px 25px;
+
+    padding: 55px 0 65px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    margin-bottom: 15px;
+
+    font-size: 1.8rem;
+  }
+
+  .footer-brand p {
+    max-width: 330px;
+
+    margin-bottom: 20px;
+
+    font-size: 0.76rem;
+  }
+
+  .footer-location {
+    font-size: 0.57rem;
+  }
+
+  .footer-column {
+    gap: 11px;
+  }
+
+  .footer-column-title {
+    margin-bottom: 8px;
+
+    font-size: 0.55rem;
+  }
+
+  .footer-column a {
+    font-size: 0.72rem;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* Big NESTASHOTS word */
+
+  .footer-signature {
+    font-size: 16vw;
+
+    line-height: 0.8;
+    letter-spacing: -2px;
+
+    white-space: nowrap;
+  }
+
+
+  /* Footer bottom */
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 40px;
+    padding-top: 22px;
+
+    font-size: 0.56rem;
+  }
+
+
+}
+
+
+
+/* ==========================================================
+   EXTRA SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 390px) {
+
+  /* ---------- NAV ---------- */
+
+  nav {
+    padding: 0 7px;
+  }
+
+  nav .logo img {
+    width: 62px;
+  }
+
+  nav ul {
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 0.53rem;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.7rem;
+  }
+
+  .hero-buttons a {
+    padding: 9px 9px;
+
+    font-size: 0.54rem;
+  }
+
+
+  /* ---------- GALLERY FILTERS ---------- */
+
+  .gallery-categories {
+    gap: 4px 11px;
+  }
+
+  .gallery-filter {
+    font-size: 0.53rem;
+  }
+
+
+  /* ---------- ENQUIRE COLLAGE ---------- */
+
+  .enquire-collage {
+    max-width: 310px;
+
+    height: 380px;
+  }
+
+  .enquire-photo-one {
+    width: 185px;
+    height: 265px;
+  }
+
+  .enquire-photo-two {
+    width: 140px;
+    height: 195px;
+  }
+
+  .enquire-photo-three {
+    width: 160px;
+    height: 205px;
+
+    left: 80px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-top h2 {
+    font-size: 2.7rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
 }
