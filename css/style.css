@@ -22,6 +22,7 @@ body {
 /* ---------- NAVIGATION BAR ---------- */
 
 nav {
+  font-family: 'DM Sans', sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -80,6 +81,7 @@ nav ul li a {
 
   color: #1b1a1a;
 
+  font-family: 'DM Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
 
@@ -2019,7 +2021,7 @@ nav ul li a:hover::after {
   font-family: 'Cormorant Garamond', serif;
 
   font-size: clamp(5rem, 13.5vw, 13rem);
-  font-weight: 400;
+  font-weight: 300;
 
   line-height: 0.72;
 
@@ -3435,4 +3437,308 @@ nav ul li a:hover::after {
     grid-template-columns: 1fr;
   }
 
+}
+
+/* =====================================
+   NESTASHOTS — EDITORIAL SIDE NAVIGATION
+===================================== */
+
+.editorial-nav {
+  height: 76px;
+  padding: 0 5%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1200;
+}
+
+.editorial-nav .logo img {
+  width: 125px;
+}
+
+/* Hamburger / X */
+
+.menu-toggle {
+  position: relative;
+  z-index: 1400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 27px;
+  height: 1px;
+  background: #242321;
+  transition:
+    transform 0.45s ease,
+    opacity 0.25s ease;
+  transform-origin: center;
+}
+
+.menu-toggle.is-open span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Dark background overlay */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 19, 18, 0.42);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1090;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+.menu-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Sliding panel */
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(480px, 100%);
+  height: 100vh;
+  height: 100dvh;
+  padding: 110px 55px 35px;
+  background: #f7f5f1;
+  z-index: 1150;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateX(105%);
+  visibility: hidden;
+  transition:
+    transform 0.65s cubic-bezier(.76, 0, .24, 1),
+    visibility 0.65s;
+  overflow-y: auto;
+}
+
+.side-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.side-menu-header,
+.side-menu-footer,
+.menu-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #88837c;
+}
+
+.side-menu-header {
+  border-bottom: 1px solid #d9d5cf;
+  padding-bottom: 22px;
+}
+
+.side-menu-content {
+  padding: 45px 0;
+}
+
+.menu-eyebrow {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.side-menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.side-menu-links li {
+  overflow: hidden;
+}
+
+.side-menu-links a {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #292724;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 5vw, 65px);
+  font-weight: 400;
+  line-height: 1.08;
+  transition:
+    color 0.3s ease,
+    transform 0.4s ease;
+}
+
+.side-menu-links a:hover {
+  color: #93877b;
+  transform: translateX(9px);
+}
+
+.side-menu-links sup {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #aaa39b;
+  margin-top: 12px;
+}
+
+.side-menu-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid #d9d5cf;
+  padding-top: 25px;
+}
+
+/* Small screens */
+
+@media (max-width: 600px) {
+  .editorial-nav {
+    height: 65px;
+    padding: 0 20px;
+  }
+
+  .editorial-nav .logo img {
+    width: 100px;
+  }
+
+  .side-menu {
+    width: min(100%, 390px);
+    padding: 100px 28px 30px;
+  }
+
+  .side-menu-links a {
+    font-size: clamp(43px, 12vw, 56px);
+  }
+
+  .side-menu-content {
+    padding: 30px 0;
+  }
+
+  .side-menu-footer {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  body {
+    padding-top: 65px;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.menu-toggle:focus-visible,
+.side-menu a:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle span,
+  .side-menu,
+  .menu-overlay,
+  .side-menu-links a {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* DESKTOP — Keep original navbar */
+@media (min-width: 601px) {
+  .editorial-nav,
+  .side-menu,
+  .menu-overlay {
+    display: none !important;
+  }
+}
+
+/* MOBILE — Show Zara-inspired navigation */
+@media (max-width: 600px) {
+  .editorial-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1200;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+  }
+}
+
+
+/* DESKTOP */
+@media (min-width: 601px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+
+  .editorial-nav,
+  .side-menu,
+  .menu-overlay {
+    display: none !important;
+  }
+
+  body {
+    padding-top: 90px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .editorial-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  body {
+    padding-top: 65px;
+  }
+}
+.desktop-nav ul li a {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1.2px;
 }

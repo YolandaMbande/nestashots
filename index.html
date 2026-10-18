@@ -8,28 +8,74 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
   <link href="css/style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 <!-- Navigation -->
-<nav>
-  <div class="logo">
-    <a href="#home">
-      <img src="img/logo.png" alt="NestaShots Photography">
-    </a>
-  </div>
+
+<!-- DESKTOP NAVBAR -->
+<nav class="desktop-nav">
+  <a href="index.html" class="logo">
+    <img src="img/logo.png" alt="NestaShots">
+  </a>
 
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#testimonial">Testimonials</a></li>
-    <li><a href="#contact">Book Me</a></li>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="index.html#testimonial">Kind Words</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
   </ul>
 </nav>
+
+<!-- MOBILE NAVBAR -->
+<nav class="editorial-nav">
+  <a href="index.html" class="logo" aria-label="NestaShots home">
+    <img src="img/logo.png" alt="NestaShots">
+  </a>
+
+  <button class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="side-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay"></div>
+
+<aside class="side-menu" id="side-menu"
+       aria-label="Main navigation"
+       aria-hidden="true" inert>
+
+  <div class="side-menu-header">
+    <span>NESTASHOTS / MENU</span>
+  </div>
+
+  <div class="side-menu-content">
+    <span class="menu-eyebrow">EXPLORE</span>
+
+    <ul class="side-menu-links">
+      <li><a href="index.html">Home <sup>01</sup></a></li>
+      <li><a href="index.html#about">About <sup>02</sup></a></li>
+      <li><a href="index.html#portfolio">Portfolio <sup>03</sup></a></li>
+      <li><a href="index.html#testimonials">Kind Words <sup>04</sup></a></li>
+      <li><a href="index.html#contact">Contact <sup>05</sup></a></li>
+    </ul>
+  </div>
+
+  <div class="side-menu-footer">
+    <span>PHOTOGRAPHY & STORIES</span>
+    <span>EST. WITH LOVE</span>
+  </div>
+</aside>
+
 
 <!-- Hero Section -->
 <section class="hero" id="home">
@@ -75,7 +121,7 @@
 
       <h2>About the Photographer</h2>
 
-      <h4>Thando Mbande — All Round Photographer in Eastern Cape</h4>
+      <h4>Manelisi Mbande — All Round Photographer in Eastern Cape</h4>
 
       <p>
         With a keen eye for detail and a passion for capturing life's most precious moments, our lead photographer brings artistry and professionalism to every shoot. Their unique perspective and creative approach ensure that every image tells a compelling story, making your special occasions truly unforgettable.
@@ -603,7 +649,7 @@
 
         <div class="form-field">
           <label>Your name</label>
-          <input type="text" placeholder="Thando Mbande" required>
+          <input type="text" placeholder="Your Name" required>
         </div>
 
         <div class="form-field">
@@ -1015,6 +1061,77 @@ filters.forEach(filter => {
   });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".side-menu");
+  const overlay = document.querySelector(".menu-overlay");
+
+  if (!toggle || !menu || !overlay) return;
+
+  let lastFocused = null;
+
+  function setMenu(open) {
+    if (open) lastFocused = document.activeElement;
+
+    toggle.classList.toggle("is-open", open);
+    menu.classList.toggle("is-open", open);
+    overlay.classList.toggle("is-open", open);
+    document.body.classList.toggle("menu-open", open);
+
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute(
+      "aria-label",
+      open ? "Close navigation" : "Open navigation"
+    );
+
+    menu.setAttribute("aria-hidden", String(!open));
+    menu.inert = !open;
+
+    if (open) {
+      menu.querySelector("a")?.focus({ preventScroll: true });
+    } else if (lastFocused) {
+      lastFocused.focus({ preventScroll: true });
+    }
+  }
+
+  toggle.addEventListener("click", () => {
+    setMenu(!menu.classList.contains("is-open"));
+  });
+
+  overlay.addEventListener("click", () => setMenu(false));
+
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+
+  document.addEventListener("keydown", event => {
+    if (!menu.classList.contains("is-open")) return;
+
+    if (event.key === "Escape") {
+      setMenu(false);
+    }
+
+    if (event.key === "Tab") {
+      const focusable = [
+        toggle,
+        ...menu.querySelectorAll("a")
+      ];
+      const index = focusable.indexOf(document.activeElement);
+
+      if (event.shiftKey && index <= 0) {
+        event.preventDefault();
+        focusable[focusable.length - 1].focus();
+      } else if (!event.shiftKey &&
+                 index === focusable.length - 1) {
+        event.preventDefault();
+        focusable[0].focus();
+      }
+    }
+  });
+});
+
 </script>
 </body>
 </html>
