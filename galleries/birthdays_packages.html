@@ -8,12 +8,13 @@
 
     <title>Birthday Packages | Nestashots</title>
 
-    <link rel="stylesheet" href="../css/weddings.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/packages.css">
 
 </head>
 
@@ -22,37 +23,69 @@
 
 
 <!-- =================================
-     NAVIGATION
+     NAVIGATION (same as the welcome page)
 ================================= -->
 
-<nav>
+<!-- DESKTOP NAVBAR -->
+<nav class="desktop-nav">
+  <a href="../index.html" class="logo">
+    <img src="../img/logo.png" alt="NestaShots">
+  </a>
 
-    <div class="logo">
-
-        <a href="index.html">
-            <img src="../img/logo.png" alt="Nestashots">
-        </a>
-
-    </div>
-
-
-    <ul>
-
-        <li>
-            <a href="../index.html">Home</a>
-        </li>
-
-        <li>
-            <a href="../galleries/birthdays_gallery.html">Gallery</a>
-        </li>
-
-        <li>
-            <a href="../contact_me.html">Contact Me</a>
-        </li>
-
-    </ul>
-
+<ul>
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../about_me.html">ABOUT</a></li>
+    <li><a href="#">PORTFOLIO</a></li>
+    <li><a href="index.html#contact">INVESTMENT</a></li>
+    <li><a href="index.html#contact">CLIENT ARCHIVE</a></li>
+    <li><a href="../contact_me.html">CONTACT</a></li>
+</ul>
 </nav>
+
+<!-- MOBILE NAVBAR -->
+<nav class="editorial-nav">
+  <a href="../index.html" class="logo" aria-label="NestaShots home">
+    <img src="../img/logo.png" alt="NestaShots">
+  </a>
+
+  <button class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="side-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay"></div>
+
+<aside class="side-menu" id="side-menu"
+       aria-label="Main navigation"
+       aria-hidden="true" inert>
+
+  <div class="side-menu-header">
+    <span>NESTASHOTS / MENU</span>
+  </div>
+
+  <div class="side-menu-content">
+    <span class="menu-eyebrow">EXPLORE</span>
+
+    <ul class="side-menu-links">
+      <li><a href="../index.html">Home <sup>01</sup></a></li>
+      <li><a href="../index.html#about">About <sup>02</sup></a></li>
+      <li><a href="../index.html#portfolio">Portfolio <sup>03</sup></a></li>
+      <li><a href="../index.html#testimonial">Kind Words <sup>04</sup></a></li>
+      <li><a href="../index.html#contact">Contact <sup>05</sup></a></li>
+    </ul>
+  </div>
+
+  <div class="side-menu-footer">
+    <span>PHOTOGRAPHY & STORIES</span>
+    <span>EST. WITH LOVE</span>
+  </div>
+</aside>
 
 
 
@@ -61,6 +94,12 @@
 ================================= -->
 
 <section class="packages-hero">
+
+    <img
+        class="packages-hero-bg"
+        src="../img/birthdays/cover.jpg"
+        alt="Birthday photography"
+    >
 
     <div class="packages-hero-content">
 
@@ -86,29 +125,13 @@
     </div>
 
 
-    <div class="packages-cover">
+    <div class="packages-cover-caption">
 
-        <div class="packages-cover-frame">
+        <span>Birthday Collections</span>
 
-            <img
-                src="../img/birthdays/cover.jpg"
-                alt="Birthday photography"
-            >
+        <span class="packages-caption-line"></span>
 
-            <span>01</span>
-
-        </div>
-
-
-        <div class="packages-cover-caption">
-
-            <span>Birthday Collections</span>
-
-            <span class="packages-caption-line"></span>
-
-            <span>NestaShots</span>
-
-        </div>
+        <span>NestaShots</span>
 
     </div>
 
@@ -129,8 +152,7 @@
         </span>
 
         <h2>
-            Birthday<br>
-            Collections.
+            Birthday Collections.
         </h2>
 
         <p>
@@ -396,6 +418,18 @@
 
 </section>
 
+
+<script>
+
+/* Navbar: transparent on top, glass after scrolling */
+const desktopNav = document.querySelector('.desktop-nav');
+const toggleNav = () =>
+  desktopNav.classList.toggle('scrolled', window.scrollY > 60);
+
+window.addEventListener('scroll', toggleNav);
+toggleNav();
+
+</script>
 
 </body>
 

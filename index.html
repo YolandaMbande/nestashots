@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photography Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">  
   <link href="css/style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,10 +25,11 @@
 
   <ul>
     <li><a href="index.html">HOME</a></li>
-    <li><a href="index.html#about">ABOUT</a></li>
+    <li><a href="about_me.html">ABOUT</a></li>
     <li><a href="index.html#portfolio">PORTFOLIO</a></li>
-    <li><a href="index.html#testimonial">KIND WORDS</a></li>
-    <li><a href="index.html#contact">CONTACT</a></li>
+    <li><a href="investment.html">INVESTMENT</a></li>
+    <li><a href="client_arhive.html">CLIENT ARCHIVE</a></li>
+    <li><a href="contact_me.html">CONTACT</a></li>
   </ul>
 </nav>
 
@@ -80,13 +82,16 @@
 <!-- Hero Section -->
 <section class="hero" id="home">
   <div class="hero-content">
-    <h1>MULTI-GENRE PHOTOGRAPHER IN EASTERN CAPE</h1>
-    <p>Weddings | Graduations | Pregnancy | Birthdays | Live Performances</p>
+    <h1>Multi-genre photographer in Eastern Cape</h1>
     <div class="hero-buttons">
-      <a href="#contact">Get a Quote</a>
+      <a href="#contact" class="primary">Get a Quote</a>
       <a href="#portfolio">Explore Portfolio</a>
     </div>
   </div>
+
+  <p class="hero-genres">
+    Weddings · Graduations · Pregnancy · Birthdays · Live Performances
+  </p>
 </section>
 
 <!-- Intro Section -->
@@ -312,11 +317,6 @@
 
   <div class="testimonials-wrapper">
 
-    <button class="testimonial-arrow arrow-left" aria-label="Previous testimonial">
-      &#8592;
-    </button>
-
-
     <div class="testimonials">
 
       <!-- Testimonial 1 -->
@@ -476,11 +476,6 @@
 
     </div>
 
-
-    <button class="testimonial-arrow arrow-right" aria-label="Next testimonial">
-      &#8594;
-    </button>
-
   </div>
 
 
@@ -491,6 +486,26 @@
   </div>
 
 </section>
+
+
+<script>
+/* Endless testimonial scroll: copies the cards once so the loop never has a gap */
+(function () {
+  const track = document.querySelector('.testimonials');
+  if (!track) return;
+
+  Array.from(track.children).forEach(card => {
+    const copy = card.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    track.appendChild(copy);
+  });
+
+  /* speed: pixels per second */
+  const speed = 40;
+  const oneSetWidth = track.scrollWidth / 2;
+  track.style.setProperty('--marquee-duration', (oneSetWidth / speed) + 's');
+})();
+</script>
 
 <!-- Enquire Section -->
 <section class="enquire">
@@ -544,176 +559,33 @@
 </section>
 
 <!-- Contact Section -->
-<section class="contact-section" id="contact">
+<!-- Contact Section -->
+<section class="contact-cta" id="contact">
 
-  <!-- LEFT SIDE -->
-  <div class="contact-info">
+  <div class="contact-cta-inner">
 
-    <span class="contact-eyebrow">Get in touch</span>
+    <div class="contact-cta-text">
 
-    <h2>
-      Let's Work<br>
-      Together.
-    </h2>
+      <span class="contact-cta-eyebrow">Get in touch</span>
 
-    <p class="contact-intro">
-      Let's create memories you'll treasure forever. Whether it's your
-      wedding, graduation, birthday or any special event, I'd love to
-      capture every moment.
-    </p>
+      <h2>
+        Let's Work <em>Together.</em>
+      </h2>
 
-
-    <div class="contact-details">
-
-      <!-- Phone -->
-      <a href="tel:+27845805377" class="contact-item">
-
-        <span class="contact-number">01</span>
-
-        <div>
-          <h4>
-            <i class="fa-solid fa-phone"></i>
-            Phone
-          </h4>
-
-          <p>+27 84 580 5377</p>
-        </div>
-
-      </a>
-
-
-      <!-- Email -->
-      <a href="mailto:hello@nestashots.co.za" class="contact-item">
-
-        <span class="contact-number">02</span>
-
-        <div>
-          <h4>
-            <i class="fa-solid fa-envelope"></i>
-            Email
-          </h4>
-
-          <p>hello@nestashots.co.za</p>
-        </div>
-
-      </a>
-
-
-      <!-- Location -->
-      <a
-        href="https://maps.google.com/?q=Eastern+Cape,+South+Africa"
-        target="_blank"
-        class="contact-item"
-      >
-
-        <span class="contact-number">03</span>
-
-        <div>
-          <h4>
-            <i class="fa-solid fa-location-dot"></i>
-            Location
-          </h4>
-
-          <p>Eastern Cape, South Africa</p>
-        </div>
-
-      </a>
+      <!-- Quick links -->
+      <div class="cta-quick">
+        <a href="https://api.whatsapp.com/send?phone=27845805377" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+27845805377">Call</a>
+        <a href="mailto:hello@nestashots.co.za">Email</a>
+      </div>
 
     </div>
 
-  </div>
-
-
-
-  <!-- RIGHT SIDE -->
-  <div class="contact-form">
-
-    <div class="form-heading">
-
-      <span>Booking enquiry</span>
-
-      <h3>Tell me about your day.</h3>
-
-      <p>
-        Fill in the details below and I'll get back to you about
-        availability and your photography needs.
-      </p>
-
-    </div>
-
-
-    <form>
-
-      <!-- Name + Email -->
-      <div class="form-row">
-
-        <div class="form-field">
-          <label>Your name</label>
-          <input type="text" placeholder="Your Name" required>
-        </div>
-
-        <div class="form-field">
-          <label>Email address</label>
-          <input type="email" placeholder="you@email.com" required>
-        </div>
-
-      </div>
-
-
-      <!-- Phone + Date -->
-      <div class="form-row">
-
-        <div class="form-field">
-          <label>Phone number</label>
-          <input type="tel" placeholder="+27">
-        </div>
-
-        <div class="form-field">
-          <label>Event date</label>
-          <input type="date" required>
-        </div>
-
-      </div>
-
-
-      <!-- Service -->
-      <div class="form-field">
-
-        <label>What are we capturing?</label>
-
-        <select required>
-          <option value="">Select a service</option>
-          <option>Wedding Photography</option>
-          <option>Graduation Shoot</option>
-          <option>Birthday Shoot</option>
-          <option>Pregnancy Shoot</option>
-          <option>Engagement Shoot</option>
-          <option>Live Performance</option>
-          <option>Corporate Event</option>
-          <option>Other</option>
-        </select>
-
-      </div>
-
-
-      <!-- Message -->
-      <div class="form-field">
-
-        <label>Tell me a little more</label>
-
-        <textarea
-          placeholder="Tell me about your event, location, ideas..."
-          rows="5"
-        ></textarea>
-
-      </div>
-
-
-      <button type="submit">
-        Send Enquiry <span>&#8594;</span>
-      </button>
-
-    </form>
+    <!-- Round button -->
+    <a href="contact_me.html" class="cta-circle">
+      <span>Book your date</span>
+      <span class="cta-arrow">&#8594;</span>
+    </a>
 
   </div>
 
@@ -1132,6 +1004,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+</script>
+
+<script>
+  const desktopNav = document.querySelector('.desktop-nav');
+  const toggleNav = () =>
+    desktopNav.classList.toggle('scrolled', window.scrollY > 60);
+
+  window.addEventListener('scroll', toggleNav);
+  toggleNav();
 </script>
 </body>
 </html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Archive | NestaShots Photography</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/client_archive.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     NAVIGATION (same as the welcome page)
+================================= -->
+
+<!-- DESKTOP NAVBAR -->
+<nav class="desktop-nav">
+  <a href="index.html" class="logo">
+    <img src="img/logo.png" alt="NestaShots">
+  </a>
+
+ <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="about_me.html">ABOUT</a></li>
+    <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+    <li><a href="index.html#contact">INVESTMENT</a></li>
+    <li><a href="#">CLIENT ARCHIVE</a></li>
+    <li><a href="contact_me.html">CONTACT</a></li>
+  </ul>
+</nav>
+
+<!-- MOBILE NAVBAR -->
+<nav class="editorial-nav">
+  <a href="index.html" class="logo" aria-label="NestaShots home">
+    <img src="img/logo.png" alt="NestaShots">
+  </a>
+
+  <button class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="side-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay"></div>
+
+<aside class="side-menu" id="side-menu"
+       aria-label="Main navigation"
+       aria-hidden="true" inert>
+
+  <div class="side-menu-header">
+    <span>NESTASHOTS / MENU</span>
+  </div>
+
+  <div class="side-menu-content">
+    <span class="menu-eyebrow">EXPLORE</span>
+
+    <ul class="side-menu-links">
+      <li><a href="index.html">Home <sup>01</sup></a></li>
+      <li><a href="about_me.html">About <sup>02</sup></a></li>
+      <li><a href="index.html#portfolio">Portfolio <sup>03</sup></a></li>
+      <li><a href="client_archive.html">Client Archive <sup>04</sup></a></li>
+      <li><a href="index.html#testimonial">Kind Words <sup>05</sup></a></li>
+      <li><a href="contact_me.html">Contact <sup>06</sup></a></li>
+    </ul>
+  </div>
+
+  <div class="side-menu-footer">
+    <span>PHOTOGRAPHY & STORIES</span>
+    <span>EST. WITH LOVE</span>
+  </div>
+</aside>
+
+
+
+<!-- =================================
+     ARCHIVE HERO
+================================= -->
+
+<section class="archive-hero">
+
+    <img
+        class="archive-hero-bg"
+        src="img/wedding/1.jpg"
+        alt="NestaShots Photography"
+    >
+
+    <div class="archive-hero-content">
+
+        <span class="archive-eyebrow">
+            Client Archive
+        </span>
+
+        <h1>
+            Every Story,<br>
+            <em>Remembered.</em>
+        </h1>
+
+        <p>
+            A look back at the people and celebrations I've had the
+            honour of photographing. Tap a collection to open it.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     COLLECTIONS
+================================= -->
+
+<section class="archive-section" id="collections">
+
+    <!-- filter chips (built automatically) -->
+    <div class="archive-filters" id="archive-filters"></div>
+
+    <!-- client cards (built automatically) -->
+    <div class="archive-grid" id="archive-grid"></div>
+
+</section>
+
+
+
+<!-- =================================
+     CLOSING
+================================= -->
+
+<section class="archive-closing">
+
+    <span>Your story could be next</span>
+
+    <p>
+        Let's add <em>yours.</em>
+    </p>
+
+    <a href="contact_me.html">
+        Book Your Date →
+    </a>
+
+</section>
+
+
+
+<!-- =================================
+     COLLECTION VIEWER
+================================= -->
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true"
+     aria-label="Client collection" aria-hidden="true">
+
+    <div class="viewer-top">
+
+        <div class="viewer-title">
+            <span id="viewer-type"></span>
+            <h3 id="viewer-name"></h3>
+        </div>
+
+        <button type="button" class="viewer-close" id="viewer-close"
+                aria-label="Close collection">
+            Close ✕
+        </button>
+
+    </div>
+
+    <button type="button" class="viewer-arrow viewer-prev" id="viewer-prev"
+            aria-label="Previous photo">←</button>
+
+    <div class="viewer-stage">
+        <img id="viewer-img" src="" alt="">
+    </div>
+
+    <button type="button" class="viewer-arrow viewer-next" id="viewer-next"
+            aria-label="Next photo">→</button>
+
+    <div class="viewer-count" id="viewer-count"></div>
+
+</div>
+
+
+<script>
+
+/* Navbar: transparent on top, glass after scrolling */
+const desktopNav = document.querySelector('.desktop-nav');
+const toggleNav = () =>
+  desktopNav.classList.toggle('scrolled', window.scrollY > 60);
+
+window.addEventListener('scroll', toggleNav);
+toggleNav();
+
+
+/* =================================
+   YOUR CLIENT COLLECTIONS
+   One block per client:
+   - name:   shown on the card and in the viewer
+   - type:   Wedding, Graduation, etc. (the filter chips are
+             made from these automatically)
+   - cover:  the photo shown on the card
+   - photos: every photo in their collection, in order
+
+   The names and photos below are placeholders using
+   your existing folders. Replace them with real clients.
+================================= */
+
+const collections = [
+  {
+    name: "Client Name 01",
+    type: "Wedding",
+    cover: "img/wedding/4.jpg",
+    photos: [
+      "img/wedding/4.jpg",
+      "img/wedding/5.jpg",
+      "img/wedding/6.jpg",
+      "img/wedding/7.jpg",
+      "img/wedding/8.jpg",
+      "img/wedding/9.jpg"
+    ]
+  },
+  {
+    name: "Client Name 02",
+    type: "Matric Dance",
+    cover: "img/matric_dance/1.jpg",
+    photos: [
+      "img/matric_dance/1.jpg",
+      "img/matric_dance/2.jpg",
+      "img/matric_dance/3.jpg",
+      "img/matric_dance/4.jpg",
+      "img/matric_dance/5.jpg",
+      "img/matric_dance/6.jpg"
+    ]
+  },
+  {
+    name: "Client Name 03",
+    type: "Birthday",
+    cover: "img/birthdays/4.jpg",
+    photos: [
+      "img/birthdays/4.jpg",
+      "img/birthdays/5.jpg",
+      "img/birthdays/6.jpg",
+      "img/birthdays/7.jpg",
+      "img/birthdays/8.jpg",
+      "img/birthdays/9.jpg"
+    ]
+  },
+  {
+    name: "Client Name 04",
+    type: "Wedding",
+    cover: "img/wedding/10.jpg",
+    photos: [
+      "img/wedding/10.jpg",
+      "img/wedding/11.jpg",
+      "img/wedding/12.jpg",
+      "img/wedding/2.jpg",
+      "img/wedding/3.jpg"
+    ]
+  },
+  {
+    name: "Client Name 05",
+    type: "Matric Dance",
+    cover: "img/matric_dance/7.jpg",
+    photos: [
+      "img/matric_dance/7.jpg",
+      "img/matric_dance/8.jpg",
+      "img/matric_dance/9.jpg",
+      "img/matric_dance/10.jpg",
+      "img/matric_dance/11.jpg",
+      "img/matric_dance/12.jpg"
+    ]
+  },
+  {
+    name: "Client Name 06",
+    type: "Birthday",
+    cover: "img/birthdays/10.jpg",
+    photos: [
+      "img/birthdays/10.jpg",
+      "img/birthdays/11.jpg",
+      "img/birthdays/12.jpg",
+      "img/birthdays/2.jfif",
+      "img/birthdays/3.jfif"
+    ]
+  }
+];
+
+
+/* =================================
+   FILTERS + GRID
+================================= */
+
+const filtersBox = document.getElementById('archive-filters');
+const grid = document.getElementById('archive-grid');
+
+let currentFilter = 'All';
+
+function renderFilters() {
+  const types = ['All', ...new Set(collections.map(c => c.type))];
+
+  filtersBox.innerHTML = '';
+
+  types.forEach(type => {
+    const chip = document.createElement('button');
+
+    chip.type = 'button';
+    chip.className = 'filter-chip' + (type === currentFilter ? ' active' : '');
+    chip.textContent = type;
+
+    chip.addEventListener('click', () => {
+      currentFilter = type;
+      renderFilters();
+      renderGrid();
+    });
+
+    filtersBox.appendChild(chip);
+  });
+}
+
+function renderGrid() {
+  grid.innerHTML = '';
+
+  let shown = 0;
+
+  collections.forEach((collection, index) => {
+    if (currentFilter !== 'All' && collection.type !== currentFilter) return;
+
+    const card = document.createElement('button');
+
+    card.type = 'button';
+    card.className = 'archive-card';
+    card.style.animationDelay = (shown * 70) + 'ms';
+
+    card.innerHTML = `
+      <img src="${collection.cover}"
+           alt="${collection.name} - ${collection.type}"
+           loading="lazy">
+
+      <span class="card-caption">
+        <span class="card-type">${collection.type}</span>
+        <span class="card-name">${collection.name}</span>
+        <span class="card-view">View collection →</span>
+      </span>`;
+
+    card.addEventListener('click', () => openViewer(index, card));
+
+    grid.appendChild(card);
+    shown++;
+  });
+}
+
+renderFilters();
+renderGrid();
+
+
+/* =================================
+   COLLECTION VIEWER
+================================= */
+
+const viewer = document.getElementById('viewer');
+const viewerImg = document.getElementById('viewer-img');
+const viewerName = document.getElementById('viewer-name');
+const viewerType = document.getElementById('viewer-type');
+const viewerCount = document.getElementById('viewer-count');
+const closeBtn = document.getElementById('viewer-close');
+
+let activeCollection = null;
+let activePhoto = 0;
+let lastFocused = null;
+
+function showPhoto() {
+  const collection = collections[activeCollection];
+  const total = collection.photos.length;
+
+  viewerImg.style.opacity = 0;
+  viewerImg.onload = () => { viewerImg.style.opacity = 1; };
+
+  viewerImg.src = collection.photos[activePhoto];
+  viewerImg.alt = collection.name + ' - photo ' + (activePhoto + 1);
+
+  viewerCount.textContent =
+    String(activePhoto + 1).padStart(2, '0') + ' / ' +
+    String(total).padStart(2, '0');
+}
+
+function openViewer(index, trigger) {
+  activeCollection = index;
+  activePhoto = 0;
+  lastFocused = trigger;
+
+  viewerName.textContent = collections[index].name;
+  viewerType.textContent = collections[index].type;
+
+  showPhoto();
+
+  viewer.classList.add('open');
+  viewer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+
+  closeBtn.focus();
+}
+
+function closeViewer() {
+  viewer.classList.remove('open');
+  viewer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+
+  if (lastFocused) lastFocused.focus();
+}
+
+function nextPhoto() {
+  const total = collections[activeCollection].photos.length;
+  activePhoto = (activePhoto + 1) % total;
+  showPhoto();
+}
+
+function prevPhoto() {
+  const total = collections[activeCollection].photos.length;
+  activePhoto = (activePhoto - 1 + total) % total;
+  showPhoto();
+}
+
+closeBtn.addEventListener('click', closeViewer);
+document.getElementById('viewer-next').addEventListener('click', nextPhoto);
+document.getElementById('viewer-prev').addEventListener('click', prevPhoto);
+
+/* clicking the dark space around the photo closes it */
+viewer.addEventListener('click', (e) => {
+  if (e.target === viewer || e.target.classList.contains('viewer-stage')) {
+    closeViewer();
+  }
+});
+
+/* keyboard */
+document.addEventListener('keydown', (e) => {
+  if (!viewer.classList.contains('open')) return;
+
+  if (e.key === 'Escape') closeViewer();
+  if (e.key === 'ArrowRight') nextPhoto();
+  if (e.key === 'ArrowLeft') prevPhoto();
+});
+
+</script>
+
+</body>
+
+</html>

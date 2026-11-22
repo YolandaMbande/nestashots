@@ -1,0 +1,257 @@
+/* =================================
+   WEDDING GALLERY
+================================= */
+
+body {
+  margin: 0;
+  padding-top: 0;
+
+  background-color: #f3efe9;
+
+  font-family: 'DM Sans', sans-serif;
+}
+
+
+
+/* =================================
+   FEATURED IMAGE (full screen,
+   the nav sits on top of it)
+================================= */
+
+.gallery-feature {
+  position: relative;
+
+  height: 100vh;
+  min-height: 560px;
+
+  margin-bottom: 8px;
+}
+
+.feature-image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.feature-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* soft dark fade at the top so the nav links stay readable */
+
+.feature-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0) 28%
+  );
+
+  pointer-events: none;
+}
+
+
+
+/* =================================
+   PHOTO GALLERY
+   (14px from the browser sides, 8px gaps)
+================================= */
+
+.gallery-journal {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 0 14px;
+}
+
+.journal-row,
+.journal-pair,
+.journal-final {
+  display: grid;
+
+  gap: 8px;
+}
+
+.journal-photo {
+  position: relative;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  background: #eae4dc;
+}
+
+.journal-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 30%;
+
+  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.journal-photo:hover img {
+  transform: scale(1.04);
+}
+
+
+/* Row 1: small + wide */
+
+.row-one {
+  grid-template-columns: 1fr 1.6fr;
+
+  height: clamp(360px, 42vw, 820px);
+}
+
+
+/* Row 2: wide + small */
+
+.row-two {
+  grid-template-columns: 1.6fr 1fr;
+
+  height: clamp(360px, 42vw, 820px);
+}
+
+
+/* Large single images */
+
+.full-photo {
+  height: clamp(420px, 56vw, 1000px);
+}
+
+
+/* Two vertical photos */
+
+.journal-pair {
+  grid-template-columns: 1fr 1fr;
+
+  height: clamp(480px, 64vw, 1200px);
+}
+
+
+/* Final three */
+
+.journal-final {
+  grid-template-columns: repeat(3, 1fr);
+
+  height: clamp(380px, 46vw, 900px);
+}
+
+
+/* Fade in on scroll */
+
+.gallery-journal .journal-photo {
+  opacity: 0;
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gallery-journal .journal-photo.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-journal .journal-photo {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+
+/* =================================
+   GALLERY END
+================================= */
+
+.gallery-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 28px;
+
+  padding: 90px 24px 110px;
+}
+
+.gallery-btn {
+  text-decoration: none;
+
+  color: #333;
+  background-color: transparent;
+
+  padding: 14px 30px;
+
+  border: 2px solid #333;
+  border-radius: 0;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.gallery-btn:hover {
+  background-color: #333;
+  border-color: #333;
+
+  color: #fff;
+}
+
+.packages-link {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #555;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.packages-link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #555;
+
+  transition: width 0.3s ease;
+}
+
+.packages-link:hover::after {
+  width: 35%;
+}

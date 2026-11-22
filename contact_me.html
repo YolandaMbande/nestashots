@@ -13,10 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact_me.css">
 
 </head>
@@ -26,72 +27,159 @@
 
 
 <!-- =================================
-     NAVIGATION
+     NAVIGATION (same as the welcome page)
 ================================= -->
 
-<nav>
+<!-- DESKTOP NAVBAR -->
+<nav class="desktop-nav">
+  <a href="index.html" class="logo">
+    <img src="img/logo_white.png" alt="NestaShots">
+  </a>
 
-    <div class="logo">
-
-        <a href="index.html">
-
-            <img
-                src="img/logo.png"
-                alt="NestaShots Photography"
-            >
-
-        </a>
-
-    </div>
-
-
-    <ul>
-
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-
-        <li>
-            <a href="index.html#portfolio">Galleries</a>
-        </li>
-
-        <li>
-            <a href="index.html#testimonial">Kind Words</a>
-        </li>
-
-    </ul>
-
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="index.html#about">ABOUT</a></li>
+    <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+    <li><a href="index.html#testimonial">KIND WORDS</a></li>
+    <li><a href="contact_me.html">CONTACT</a></li>
+  </ul>
 </nav>
+
+<!-- MOBILE NAVBAR -->
+<nav class="editorial-nav">
+  <a href="index.html" class="logo" aria-label="NestaShots home">
+    <img src="img/logo.png" alt="NestaShots">
+  </a>
+
+  <button class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="side-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay"></div>
+
+<aside class="side-menu" id="side-menu"
+       aria-label="Main navigation"
+       aria-hidden="true" inert>
+
+  <div class="side-menu-header">
+    <span>NESTASHOTS / MENU</span>
+  </div>
+
+  <div class="side-menu-content">
+    <span class="menu-eyebrow">EXPLORE</span>
+
+    <ul class="side-menu-links">
+      <li><a href="index.html">Home <sup>01</sup></a></li>
+      <li><a href="index.html#about">About <sup>02</sup></a></li>
+      <li><a href="index.html#portfolio">Portfolio <sup>03</sup></a></li>
+      <li><a href="index.html#testimonial">Kind Words <sup>04</sup></a></li>
+      <li><a href="contact_me.html">Contact <sup>05</sup></a></li>
+    </ul>
+  </div>
+
+  <div class="side-menu-footer">
+    <span>PHOTOGRAPHY & STORIES</span>
+    <span>EST. WITH LOVE</span>
+  </div>
+</aside>
 
 
 
 <!-- =================================
-     CONTACT / BOOKING PAGE
+     CONTACT HERO
 ================================= -->
 
-<main class="contact-page">
+<section class="contact-hero">
 
+    <img
+        class="contact-hero-bg"
+        src="img/hire_me_section.jpg"
+        alt="NestaShots Photography"
+    >
 
-    <!-- LEFT SIDE -->
-
-    <aside class="contact-intro">
+    <div class="contact-hero-content">
 
         <span class="contact-eyebrow">
             Start a conversation
         </span>
-
 
         <h1>
             Tell Me<br>
             About Your <em>Story.</em>
         </h1>
 
-
-        <p class="contact-description">
+        <p>
             Whether you're planning a wedding, graduation, birthday or
             another special occasion, I'd love to hear what you have
             in mind.
         </p>
+
+        <a href="#enquiry" class="contact-scroll">
+            Start Your Enquiry ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     CONTACT / BOOKING
+================================= -->
+
+<main class="contact-page" id="enquiry">
+
+
+    <!-- LEFT SIDE -->
+
+    <aside class="contact-side">
+
+        <span class="contact-eyebrow dark">
+            Prefer to talk directly?
+        </span>
+
+        <h2>
+            Say <em>hello.</em>
+        </h2>
+
+
+        <div class="direct-contact">
+
+            <a href="https://api.whatsapp.com/send?phone=27845805377"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span>WhatsApp</span>
+
+                Start a conversation ↗
+
+            </a>
+
+            <a href="tel:+27845805377">
+
+                <span>Phone</span>
+
+                +27 84 580 5377
+
+            </a>
+
+            <a href="mailto:hello@nestashots.co.za">
+
+                <span>Email</span>
+
+                hello@nestashots.co.za
+
+            </a>
+
+        </div>
 
 
         <div class="contact-note">
@@ -102,48 +190,6 @@
                 Share as much detail as you'd like. The more I know about
                 your day, the better I can understand what you're looking for.
             </p>
-
-        </div>
-
-
-        <!-- CONTACT DETAILS -->
-
-        <div class="direct-contact">
-
-            <span class="direct-title">
-                Prefer to talk directly?
-            </span>
-
-
-            <a href="tel:+27845805377">
-
-                <span>Phone</span>
-
-                +27 84 580 5377
-
-            </a>
-
-
-            <a href="mailto:hello@nestashots.co.za">
-
-                <span>Email</span>
-
-                hello@nestashots.co.za
-
-            </a>
-
-
-            <a
-                href="https://api.whatsapp.com/send?phone=27845805377"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <span>WhatsApp</span>
-
-                Start a conversation ↗
-
-            </a>
 
         </div>
 
@@ -164,8 +210,9 @@
             </h2>
 
             <p>
-                Complete the form below and I'll get back to you
-                about availability and the next steps.
+                Complete the form below and your details will be sent to me
+                on WhatsApp, ready for me to reply about availability and
+                the next steps.
             </p>
 
         </div>
@@ -181,11 +228,8 @@
             <fieldset>
 
                 <legend>
-
                     <span>01</span>
-
                     Your Details
-
                 </legend>
 
 
@@ -193,9 +237,7 @@
 
                     <div class="form-field">
 
-                        <label for="full-name">
-                            Full Name
-                        </label>
+                        <label for="full-name">Full Name</label>
 
                         <input
                             type="text"
@@ -210,9 +252,7 @@
 
                     <div class="form-field">
 
-                        <label for="email">
-                            Email Address
-                        </label>
+                        <label for="email">Email Address</label>
 
                         <input
                             type="email"
@@ -227,9 +267,7 @@
 
                     <div class="form-field full-width">
 
-                        <label for="phone">
-                            Phone Number
-                        </label>
+                        <label for="phone">Phone Number</label>
 
                         <input
                             type="tel"
@@ -253,60 +291,72 @@
             <fieldset>
 
                 <legend>
-
                     <span>02</span>
-
                     Your Event
-
                 </legend>
 
 
-                <div class="form-grid">
+                <div class="form-field">
 
-                    <div class="form-field">
+                    <span class="field-label">What are we capturing?</span>
 
-                        <label for="service">
-                            What are we capturing?
+                    <div class="chip-group">
+
+                        <label class="chip">
+                            <input type="radio" name="service" value="Wedding" required>
+                            <span>Wedding</span>
                         </label>
 
-                        <select
-                            id="service"
-                            name="service"
-                            required
-                        >
+                        <label class="chip">
+                            <input type="radio" name="service" value="Graduation" required>
+                            <span>Graduation</span>
+                        </label>
 
-                            <option value="" selected disabled>
-                                Select a service
-                            </option>
+                        <label class="chip">
+                            <input type="radio" name="service" value="Birthday" required>
+                            <span>Birthday</span>
+                        </label>
 
-                            <option>Wedding</option>
+                        <label class="chip">
+                            <input type="radio" name="service" value="Matric Dance" required>
+                            <span>Matric Dance</span>
+                        </label>
 
-                            <option>Graduation</option>
+                        <label class="chip">
+                            <input type="radio" name="service" value="Maternity Shoot" required>
+                            <span>Maternity Shoot</span>
+                        </label>
 
-                            <option>Birthday</option>
+                        <label class="chip">
+                            <input type="radio" name="service" value="Engagement Shoot" required>
+                            <span>Engagement Shoot</span>
+                        </label>
 
-                            <option>Matric Dance</option>
+                        <label class="chip">
+                            <input type="radio" name="service" value="Corporate Event" required>
+                            <span>Corporate Event</span>
+                        </label>
 
-                            <option>Maternity Shoot</option>
+                        <label class="chip">
+                            <input type="radio" name="service" value="Family Portrait" required>
+                            <span>Family Portrait</span>
+                        </label>
 
-                            <option>Engagement Shoot</option>
-
-                            <option>Corporate Event</option>
-
-                            <option>Family Portrait</option>
-
-                            <option>Other</option>
-
-                        </select>
+                        <label class="chip">
+                            <input type="radio" name="service" value="Other" required>
+                            <span>Other</span>
+                        </label>
 
                     </div>
 
+                </div>
+
+
+                <div class="form-grid event-grid">
 
                     <div class="form-field">
 
-                        <label for="event-date">
-                            Event Date
-                        </label>
+                        <label for="event-date">Event Date</label>
 
                         <input
                             type="date"
@@ -319,25 +369,7 @@
 
                     <div class="form-field">
 
-                        <label for="venue">
-                            Venue / Location
-                        </label>
-
-                        <input
-                            type="text"
-                            id="venue"
-                            name="venue"
-                            placeholder="Where will it take place?"
-                        >
-
-                    </div>
-
-
-                    <div class="form-field">
-
-                        <label for="guests">
-                            Estimated Guests
-                        </label>
+                        <label for="guests">Estimated Guests</label>
 
                         <input
                             type="number"
@@ -345,6 +377,20 @@
                             name="guests"
                             placeholder="Approximate number"
                             min="1"
+                        >
+
+                    </div>
+
+
+                    <div class="form-field full-width">
+
+                        <label for="venue">Venue / Location</label>
+
+                        <input
+                            type="text"
+                            id="venue"
+                            name="venue"
+                            placeholder="Where will it take place?"
                         >
 
                     </div>
@@ -362,19 +408,14 @@
             <fieldset>
 
                 <legend>
-
                     <span>03</span>
-
                     Your Vision
-
                 </legend>
 
 
                 <div class="form-field">
 
-                    <label for="message">
-                        Tell me about your day
-                    </label>
+                    <label for="message">Tell me about your day</label>
 
                     <textarea
                         id="message"
@@ -415,13 +456,17 @@
 
                 </button>
 
-
-                <p>
-                    Your details will only be used to respond
-                    to your enquiry.
-                </p>
+                <button type="button" id="email-btn" class="email-link">
+                    or send by email instead
+                </button>
 
             </div>
+
+            <p class="form-note">
+                This opens WhatsApp with your details already filled in,
+                so you only need to press send. Your details are only used
+                to respond to your enquiry.
+            </p>
 
 
         </form>
@@ -429,6 +474,7 @@
     </section>
 
 </main>
+
 
 
 <!-- =================================
@@ -450,6 +496,78 @@
 
 </section>
 
+
+<script>
+
+/* Navbar: transparent on top, glass after scrolling */
+const desktopNav = document.querySelector('.desktop-nav');
+const toggleNav = () =>
+  desktopNav.classList.toggle('scrolled', window.scrollY > 60);
+
+window.addEventListener('scroll', toggleNav);
+toggleNav();
+
+
+/* Enquiry form: sends the details by WhatsApp (or email) */
+const form = document.querySelector('.booking-form form');
+const dateInput = document.getElementById('event-date');
+
+/* no dates in the past */
+dateInput.min = new Date().toISOString().split('T')[0];
+
+function buildMessage() {
+  const data = new FormData(form);
+  const get = (key) => (data.get(key) || '').toString().trim();
+
+  const lines = ['Hi NestaShots! I would like to enquire about a booking.', ''];
+  const add = (label, value) => { if (value) lines.push(label + ': ' + value); };
+
+  add('Name', get('name'));
+  add('Email', get('email'));
+  add('Phone', get('phone'));
+  add('Occasion', get('service'));
+
+  const date = get('date');
+  if (date) {
+    add('Date', new Date(date + 'T00:00:00').toLocaleDateString('en-ZA', {
+      day: 'numeric', month: 'long', year: 'numeric'
+    }));
+  }
+
+  add('Venue', get('venue'));
+  add('Guests', get('guests'));
+
+  if (data.get('quotation')) lines.push('Quotation: Yes please');
+
+  const message = get('message');
+  if (message) lines.push('', 'About my day:', message);
+
+  return lines.join('\n');
+}
+
+/* main button: WhatsApp */
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const url = 'https://api.whatsapp.com/send?phone=27845805377&text='
+    + encodeURIComponent(buildMessage());
+
+  window.open(url, '_blank', 'noopener');
+});
+
+/* secondary: email */
+document.getElementById('email-btn').addEventListener('click', () => {
+  if (!form.reportValidity()) return;
+
+  const service = new FormData(form).get('service') || 'NestaShots';
+  const subject = 'Booking enquiry - ' + service;
+
+  window.location.href = 'mailto:hello@nestashots.co.za'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body=' + encodeURIComponent(buildMessage());
+});
+
+</script>
 
 </body>
 
