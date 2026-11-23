@@ -2,23 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
-        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/about_me.css" rel="stylesheet">
     </head>
 <body>
     <!-- Navigation -->
-    
+
 <nav class="about-nav">
   <a href="index.html" class="logo">
     <img src="img/logo.png" alt="NestaShots">
@@ -26,7 +23,7 @@
 
   <a href="index.html" class="back-home">
     <span class="back-arrow">←</span>
-    <span>BACK TO HOME</span>
+    <span class="back-label">Back to home</span>
   </a>
 </nav>
 
@@ -35,7 +32,13 @@
      ABOUT HERO
 ================================= -->
 
-<section class="about-hero">
+<section class="about-hero" id="about-hero">
+
+    <img
+        class="about-hero-bg"
+        src="img/about_me/about_me_picture.jpg"
+        alt="NestaShots Photographer"
+    >
 
     <div class="about-hero-left">
 
@@ -69,26 +72,10 @@
 
     </div>
 
-
-    <div class="about-hero-image">
-
-        <div class="about-hero-frame">
-
-            <img
-                src="img/about_me/about_me_picture.jpg"
-                alt="NestaShots Photographer"
-            >
-
-            <span class="about-image-number">01</span>
-
-        </div>
-
-        <div class="about-image-caption">
-            <span>Behind the lens</span>
-            <span class="about-caption-line"></span>
-            <span>Eastern Cape</span>
-        </div>
-
+    <div class="about-image-caption">
+        <span>Behind the lens</span>
+        <span class="about-caption-line"></span>
+        <span>Eastern Cape</span>
     </div>
 
 </section>
@@ -282,7 +269,7 @@
             collaborate with other creative professionals.
         </p>
 
-        <a href="contact_me.html">
+        <a href="contact_me.html" class="goals-button">
             Let's Create Something Together →
         </a>
 
@@ -313,7 +300,7 @@
     <!-- Brand -->
     <div class="footer-brand">
 
-      <a href="#home" class="footer-logo">
+      <a href="index.html" class="footer-logo">
         NestaShots.
       </a>
 
@@ -334,11 +321,11 @@
 
       <span class="footer-column-title">Explore</span>
 
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Galleries</a>
-      <a href="#testimonial">Kind Words</a>
-      <a href="#contact">Book Me</a>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#portfolio">Galleries</a>
+      <a href="index.html#testimonial">Kind Words</a>
+      <a href="index.html#contact">Book Me</a>
 
     </div>
 
@@ -402,9 +389,9 @@
     </span>
 
     <span class="footer-made">
-      Made by 
-       <a href="https://yolandambande.github.io/yolanda-dev/" 
-        target="_blank" 
+      Made by
+       <a href="https://yolandambande.github.io/yolanda-dev/"
+        target="_blank"
         rel="noopener noreferrer">
         Yolanda Mbande ↗
       </a>
@@ -417,6 +404,15 @@
   </div>
 
 </footer>
-    
+
+<script>
+  const aboutNav = document.querySelector('.about-nav');
+  const toggleAboutNav = () =>
+    aboutNav.classList.toggle('scrolled', window.scrollY > 60);
+
+  window.addEventListener('scroll', toggleAboutNav);
+  toggleAboutNav();
+</script>
+
 </body>
 </html>

@@ -1,0 +1,687 @@
+/* =================================
+   WEDDING PACKAGES
+================================= */
+
+body {
+  margin: 0;
+  padding-top: 0;
+
+  background-color: #fff;
+
+  font-family: 'DM Sans', sans-serif;
+}
+
+
+/* Shared little editorial heading */
+
+.packages-eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+
+
+/* =================================
+   PACKAGE INTRO  (full photo)
+================================= */
+
+.packages-hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+
+  padding: 150px 8% 70px;
+
+  background-color: #1d1d1b;
+
+  color: #fff;
+
+  overflow: hidden;
+}
+
+
+/* Photo */
+
+.packages-hero-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 30%;
+
+  z-index: 0;
+}
+
+
+/* Soft gradients: dark at the bottom for the words,
+   a little at the top for the nav */
+
+.packages-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(to top,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0) 70%),
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0) 25%);
+}
+
+
+/* Words */
+
+.packages-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 720px;
+}
+
+.packages-hero .packages-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 26px;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.packages-hero .packages-eyebrow::before {
+  content: "";
+
+  width: 35px;
+  height: 1px;
+
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.packages-hero h1 {
+  margin: 0 0 32px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(3.4rem, 7vw, 6.5rem);
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #fff;
+
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.packages-hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.packages-hero-content > p {
+  max-width: 480px;
+
+  margin: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 1rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.packages-scroll {
+  position: relative;
+
+  display: inline-block;
+
+  margin-top: 40px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #fff;
+
+  text-decoration: none;
+}
+
+.packages-scroll::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #fff;
+
+  transition: width 0.3s ease;
+}
+
+.packages-scroll:hover::after {
+  width: 100%;
+}
+
+
+/* Caption, bottom right */
+
+.packages-cover-caption {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 6px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.packages-caption-line {
+  width: 35px;
+  height: 1px;
+
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+/* =================================
+   PACKAGES  (cream)
+================================= */
+
+.packages-section {
+  padding: 120px 7% 130px;
+
+  background-color: #f3efe9;
+
+  color: #222;
+}
+
+.packages-heading {
+  max-width: 650px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.packages-heading h2 {
+  margin: 0 0 25px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #222;
+}
+
+.packages-heading p {
+  margin: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* Cards */
+
+.package-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: stretch;
+
+  gap: 24px;
+
+  max-width: 1300px;
+
+  margin: 0 auto;
+}
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 48px 40px 44px;
+
+  background-color: #fff;
+
+  border: 1px solid #ddd6cb;
+
+  color: #222;
+
+  transition: border-color 0.3s ease;
+}
+
+.package-card:hover {
+  border-color: #aaa196;
+}
+
+.package-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+}
+
+.package-number {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1rem;
+
+  letter-spacing: 2px;
+
+  color: #999;
+}
+
+.package-label {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.package-card h3 {
+  margin: 0 0 10px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 3.2rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #222;
+}
+
+.price {
+  display: block;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.9rem;
+  font-weight: 400;
+
+  color: #8c8781;
+}
+
+.package-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 32px 0 10px;
+
+  background-color: #e4ded5;
+}
+
+.package-card ul {
+  flex: 1;
+
+  list-style: none;
+
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+.package-card li {
+  display: flex;
+  align-items: baseline;
+
+  gap: 18px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #eee8e1;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.92rem;
+  font-weight: 300;
+
+  color: #444;
+}
+
+.package-card li span {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 1px;
+
+  color: #aaa;
+}
+
+
+/* Enquire button (same as the index buttons) */
+
+.package-enquire {
+  display: block;
+
+  padding: 14px 20px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: #333;
+  background-color: transparent;
+
+  border: 2px solid #333;
+  border-radius: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 400;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.package-enquire:hover {
+  background-color: #333;
+  border-color: #333;
+
+  color: #fff;
+}
+
+
+/* Featured (Silver): dark card */
+
+.package-card.featured {
+  background-color: #1d1d1b;
+
+  border-color: #1d1d1b;
+
+  color: #f4f1ec;
+
+  transform: translateY(-14px);
+}
+
+.package-card.featured:hover {
+  border-color: #1d1d1b;
+}
+
+.package-card.featured .package-number {
+  color: #777;
+}
+
+.package-card.featured .package-label {
+  color: #c9b99f;
+}
+
+.package-card.featured h3 {
+  color: #f4f1ec;
+}
+
+.package-card.featured .price {
+  color: #aaa7a2;
+}
+
+.package-card.featured .package-divider {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.package-card.featured li {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+
+  color: #d6d2cb;
+}
+
+.package-card.featured li span {
+  color: #777;
+}
+
+.package-card.featured .package-enquire {
+  color: #1d1d1b;
+  background-color: #f4f1ec;
+
+  border-color: #f4f1ec;
+}
+
+.package-card.featured .package-enquire:hover {
+  color: #f4f1ec;
+  background-color: transparent;
+}
+
+
+
+/* =================================
+   CUSTOM PACKAGE  (white)
+================================= */
+
+.custom-package {
+  display: grid;
+
+  grid-template-columns: auto 1fr 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 130px 8%;
+
+  background-color: #fff;
+
+  color: #222;
+}
+
+.custom-package-number {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 7rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #ddd6cb;
+}
+
+.custom-package-heading h2 {
+  margin: 0;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 4rem;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #222;
+}
+
+.custom-package-heading h2 em {
+  font-style: italic;
+
+  color: #8c8781;
+}
+
+.custom-package-content {
+  max-width: 500px;
+}
+
+.custom-package-content p {
+  margin: 0 0 35px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: #555;
+}
+
+.custom-package-content a {
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: #333;
+  background-color: transparent;
+
+  padding: 12px 25px;
+
+  border: 2px solid #333;
+  border-radius: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.85rem;
+  font-weight: 400;
+
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.custom-package-content a:hover {
+  background-color: #333;
+  border-color: #333;
+
+  color: #fff;
+}
+
+
+
+/* =================================
+   BACK TO GALLERY  (dark)
+================================= */
+
+.packages-gallery-link {
+  padding: 130px 24px 140px;
+
+  background-color: #1d1d1b;
+
+  text-align: center;
+
+  color: #f4f1ec;
+}
+
+.packages-gallery-link span {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.packages-gallery-link h2 {
+  margin: 0 0 50px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #f4f1ec;
+}
+
+.packages-gallery-link h2 em {
+  font-style: italic;
+
+  color: #aaa7a2;
+}
+
+.packages-gallery-link a {
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: #f4f1ec;
+  background-color: transparent;
+
+  padding: 14px 30px;
+
+  border: 2px solid #f4f1ec;
+  border-radius: 0;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.packages-gallery-link a:hover {
+  background-color: #f4f1ec;
+
+  color: #1d1d1b;
+}

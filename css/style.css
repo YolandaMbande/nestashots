@@ -36,7 +36,7 @@ nav {
 
   padding: 0 55px;
 
-  background-color: #fff;
+ background: transparent;
   border-bottom: 1px solid #eeeeee;
 
   z-index: 1000;
@@ -118,80 +118,82 @@ nav ul li a:hover::after {
 
 /* Hero Section */
 .hero {
-  height: 90vh;
+  height: 100vh;
+  min-height: 600px;
   background: url('../img/1.jpg') no-repeat center center/cover;
+
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;  
+  align-items: center;
   text-align: center;
   color: #fff;
   position: relative;
-  padding: 60px 0;
+  padding: 0 24px 22px;
 }
 
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0) 38%),
+    linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 25%);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding-top: 340px;
-  transform: scale(0.80);
-  transform-origin: center;
 }
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 1.1;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .hero-buttons a {
   text-decoration: none;
-
-  color: #1b1a1a;
-  background-color: rgba(255, 255, 255, 0.95);
-
-  padding: 11px 24px;
-
-  border: 1px solid #fff;
-  border-radius: 0;
-
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 1px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.8);
+  padding: 10px 22px;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-
   transition: all 0.3s ease;
 }
 
+.hero-buttons a.primary {
+  background: #fff;
+  color: #1b1a1a;
+}
+
 .hero-buttons a:hover {
-  color: #fff;
-  background-color: transparent;
-  border-color: #fff;
+  background: #fff;
+  color: #1b1a1a;
+}
+
+.hero-genres {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  font-size: 0.64rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
 }
 
 /* ---------- INTRO SECTION ---------- */
@@ -250,17 +252,12 @@ nav ul li a:hover::after {
 }
 
 /* Photographer Section */
-.photographer {
-  display: flex;
-  align-items: stretch;
 
+.photographer {
   padding: 120px 50px;
 
   background-color: #fff;
   color: #333;
-
-  min-height: 100vh;
-  height: auto;
 
   box-sizing: border-box;
 }
@@ -268,8 +265,7 @@ nav ul li a:hover::after {
 /* Photographer Section Video */
 
 .photographer-video-wrap {
-  width: 34%;
-  max-width: 420px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -277,10 +273,10 @@ nav ul li a:hover::after {
 
 .video-frame {
   position: relative;
-  padding: 10px;
+  padding: 12px;
 
-  background-color: #f4f4f4;
-  border: 1px solid #e2e2e2;
+  background-color: #f7f5f2;
+  border: 1px solid #ddd6cb;
 }
 
 .video-frame video {
@@ -299,8 +295,8 @@ nav ul li a:hover::after {
   content: "01";
 
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 26px;
+  right: 26px;
 
   color: #fff;
 
@@ -333,32 +329,33 @@ nav ul li a:hover::after {
   background-color: #999;
 }
 
+/* Text sits straight on the section, no card */
+
 .photographer-card {
-  width: 60%;
+  width: auto;
 
-  background: #ededed;
-  padding: 45px;
+  padding: 0;
+  background: none;
 
-  border-radius: 8px;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0 10px 30px rgba(0,0,0,.20);
-
-  align-self: stretch;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .photographer-layout {
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-
-  gap: 40px;
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 90px;
+  align-items: center;
 }
 
 .photographer-content {
-    width: 100%;
-    padding-left: 0;
+  width: 100%;
+  max-width: 560px;
+  padding-left: 0;
 }
 
 /* Photographer Heading */
@@ -421,7 +418,7 @@ nav ul li a:hover::after {
 .photographer-buttons a {
   text-decoration: none;
   color: #333;
-  background-color: #fff;
+  background-color: transparent;
   padding: 12px 25px;
   border: 2px solid #333;
   border-radius: 0;
@@ -433,12 +430,13 @@ nav ul li a:hover::after {
   color: #fff;
   border-color: #333;
 }
+
 /* =================================
    PORTFOLIO / GALLERIES
 ================================= */
 
 .services {
-  background-color: #f7f5f2;
+  background-color: #f3efe9;
 
   padding: 120px 7% 130px;
 
@@ -574,11 +572,16 @@ nav ul li a:hover::after {
 .gallery-preview {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr 1fr;
-  grid-template-rows: 420px 320px;
-  gap: 20px;
-  width: 100%;
-  max-width: 1900px;
-  margin: 0 auto 85px;
+  grid-template-rows:
+    clamp(400px, 31vw, 680px)
+    clamp(300px, 23vw, 500px);
+  gap: 8px;
+
+  /* breaks out of the section padding so the collage
+     runs almost edge to edge (14px from the browser sides) */
+  width: auto;
+  max-width: none;
+  margin: 0 calc(50% - 50vw + 14px) 85px;
 }
 
 .gallery-photo {
@@ -633,7 +636,7 @@ nav ul li a:hover::after {
 @media (max-width: 900px) {
   .gallery-preview {
     grid-template-rows: 360px 280px;
-    gap: 14px;
+    gap: 8px;
     margin-bottom: 60px;
   }
 }
@@ -643,7 +646,7 @@ nav ul li a:hover::after {
   .gallery-preview {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 360px 240px 240px;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 50px;
   }
 
@@ -677,10 +680,9 @@ nav ul li a:hover::after {
 @media (max-width: 480px) {
   .gallery-preview {
     grid-template-rows: 300px 190px 190px;
-    gap: 9px;
+    gap: 6px;
   }
 }
-
 
 /* =================================
    GALLERY ACTIONS
@@ -933,7 +935,7 @@ nav ul li a:hover::after {
 
   width: 100%;
 
-  padding: 120px 0 130px;
+  padding: 85px 0 95px;
 
   overflow: hidden;
 
@@ -952,7 +954,7 @@ nav ul li a:hover::after {
 
   padding: 0 30px;
 
-  margin-bottom: 65px;
+  margin-bottom: 40px;
 }
 
 .testimonials-eyebrow {
@@ -974,24 +976,24 @@ nav ul li a:hover::after {
 .testimonials-heading h2 {
   font-family: 'Cormorant Garamond', serif;
 
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 400;
 
   line-height: 1;
 
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 
   color: #222;
 }
 
 .testimonials-heading p {
-  max-width: 550px;
+  max-width: 500px;
 
   margin: 0 auto;
 
   font-family: 'DM Sans', sans-serif;
 
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 300;
 
   line-height: 1.8;
@@ -1001,31 +1003,53 @@ nav ul li a:hover::after {
 
 
 /* =================================
-   CAROUSEL
+   AUTO-SCROLLING ROW
 ================================= */
 
 .testimonials-wrapper {
   position: relative;
 
   width: 100%;
+
+  overflow: hidden;
+
+  /* soft fade at both edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
 }
 
 .testimonials {
   display: flex;
 
-  gap: 24px;
+  width: max-content;
 
-  overflow-x: auto;
+  padding: 10px 0 20px;
 
-  padding: 10px 8% 30px;
+  will-change: transform;
 
-  scroll-behavior: smooth;
-
-  scrollbar-width: none;
+  animation: testimonials-scroll var(--marquee-duration, 60s) linear infinite;
 }
 
-.testimonials::-webkit-scrollbar {
-  display: none;
+@keyframes testimonials-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* pauses while someone is reading */
+.testimonials-wrapper:hover .testimonials {
+  animation-play-state: paused;
 }
 
 
@@ -1036,11 +1060,13 @@ nav ul li a:hover::after {
 .testimonial-box {
   position: relative;
 
-  flex: 0 0 420px;
+  flex: 0 0 340px;
 
-  min-height: 390px;
+  min-height: 280px;
 
-  padding: 55px 45px 40px;
+  margin-right: 24px;
+
+  padding: 40px 30px 28px;
 
   display: flex;
   flex-direction: column;
@@ -1053,17 +1079,17 @@ nav ul li a:hover::after {
 }
 
 
-/* Giant editorial quotation mark */
+/* Editorial quotation mark */
 
 .quote-mark {
   position: absolute;
 
-  top: 18px;
-  left: 35px;
+  top: 12px;
+  left: 24px;
 
   font-family: 'Cormorant Garamond', serif;
 
-  font-size: 5rem;
+  font-size: 3.4rem;
   font-weight: 400;
 
   line-height: 1;
@@ -1075,22 +1101,22 @@ nav ul li a:hover::after {
 /* Review */
 
 .testimonial-text {
-  margin-top: 35px;
+  margin-top: 24px;
 }
 
 .testimonial-box p {
   font-family: 'Cormorant Garamond', serif;
 
-  font-size: 1.35rem;
+  font-size: 1.05rem;
   font-weight: 400;
 
-  line-height: 1.55;
+  line-height: 1.5;
 
   color: #333;
 
   text-align: left;
 
-  margin: 0 0 18px;
+  margin: 0 0 12px;
 }
 
 
@@ -1102,18 +1128,18 @@ nav ul li a:hover::after {
   display: flex;
   align-items: center;
 
-  gap: 14px;
+  gap: 12px;
 
   margin-top: auto;
 
-  padding-top: 30px;
+  padding-top: 20px;
 
   border-top: 1px solid #e6e1dc;
 }
 
 .client-info img {
-  width: 52px;
-  height: 52px;
+  width: 42px;
+  height: 42px;
 
   margin: 0;
 
@@ -1134,7 +1160,7 @@ nav ul li a:hover::after {
 .client-name {
   font-family: 'DM Sans', sans-serif;
 
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 500;
 
   letter-spacing: 0.8px;
@@ -1143,11 +1169,11 @@ nav ul li a:hover::after {
 }
 
 .client-label {
-  margin-top: 4px;
+  margin-top: 3px;
 
   font-family: 'DM Sans', sans-serif;
 
-  font-size: 0.65rem;
+  font-size: 0.6rem;
 
   letter-spacing: 1.3px;
   text-transform: uppercase;
@@ -1157,61 +1183,11 @@ nav ul li a:hover::after {
 
 
 /* =================================
-   ARROWS
-================================= */
-
-.testimonial-arrow {
-  position: absolute;
-
-  top: 50%;
-
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: translateY(-50%);
-
-  border: 1px solid #d8d3cd;
-  border-radius: 50%;
-
-  background-color: rgba(255, 255, 255, 0.95);
-
-  color: #222;
-
-  font-size: 1.2rem;
-
-  cursor: pointer;
-
-  z-index: 5;
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-.testimonial-arrow:hover {
-  background-color: #222;
-  color: #fff;
-}
-
-.arrow-left {
-  left: 30px;
-}
-
-.arrow-right {
-  right: 30px;
-}
-
-
-/* =================================
    REVIEWS LINK
 ================================= */
 
 .testimonial-button {
-  margin-top: 45px;
+  margin-top: 30px;
 
   text-align: center;
 }
@@ -1261,6 +1237,29 @@ nav ul li a:hover::after {
 
 .testimonial-button a:hover::after {
   width: 35%;
+}
+
+
+/* =================================
+   REDUCED MOTION
+   (people who turned animations off can scroll it by hand)
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-wrapper {
+    overflow-x: auto;
+
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .testimonials {
+    animation: none;
+  }
+
+  .testimonial-box[aria-hidden="true"] {
+    display: none;
+  }
 }
 
   /* =================================
@@ -1494,43 +1493,52 @@ nav ul li a:hover::after {
 
   transform-origin: bottom right;
 }
+
 /* =================================
-   CONTACT
+   CONTACT CALL TO ACTION
 ================================= */
 
-.contact-section {
+.contact-cta {
   width: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 110px 28%;
 
-  gap: 100px;
+  /* dark on the left where the words are, lighter on the right */
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    url('../img/wedding/4.jpg') center 30% / cover no-repeat;
 
-  padding: 130px 8%;
+  color: #fff;
 
-  background-color: #fff;
-
-  color: #222;
+  overflow: hidden;
 }
 
+.contact-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-/* =================================
-   LEFT SIDE
-================================= */
+  gap: 60px;
 
-.contact-info {
-  width: 38%;
-  max-width: 500px;
+  max-width: 1200px;
+
+  margin: 0 auto;
 }
 
 
 /* Small label */
 
-.contact-eyebrow {
-  display: block;
+.contact-cta-eyebrow {
+  display: flex;
+  align-items: center;
 
-  margin-bottom: 18px;
+  gap: 14px;
+
+  margin-bottom: 22px;
 
   font-family: 'DM Sans', sans-serif;
 
@@ -1540,324 +1548,153 @@ nav ul li a:hover::after {
   letter-spacing: 3px;
   text-transform: uppercase;
 
-  color: #888;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-cta-eyebrow::before {
+  content: "";
+
+  width: 35px;
+  height: 1px;
+
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 
-/* Main heading */
+/* Statement */
 
-.contact-info h2 {
+.contact-cta h2 {
+  margin: 0 0 34px;
+
   font-family: 'Cormorant Garamond', serif;
 
-  font-size: 4.3rem;
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
   font-weight: 400;
 
-  line-height: 0.95;
+  line-height: 1;
 
-  margin: 0 0 35px;
+  color: #fff;
 
-  color: #222;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
 }
 
+.contact-cta h2 em {
+  font-style: italic;
+  font-weight: 400;
 
-/* Intro paragraph */
-
-.contact-intro {
-  max-width: 450px;
-
-  margin: 0 0 50px;
-
-  font-family: 'DM Sans', sans-serif;
-
-  font-size: 0.95rem;
-  font-weight: 300;
-
-  line-height: 1.9;
-
-  color: #555;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 
 /* =================================
-   CONTACT DETAILS
+   QUICK LINKS
 ================================= */
 
-.contact-details {
-  border-top: 1px solid #ddd8d2;
+.cta-quick {
+  display: flex;
+
+  gap: 32px;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
+.cta-quick a {
+  position: relative;
 
-  gap: 22px;
+  font-family: 'DM Sans', sans-serif;
 
-  padding: 22px 0;
+  font-size: 0.72rem;
 
-  border-bottom: 1px solid #ddd8d2;
-
-  color: inherit;
-
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   text-decoration: none;
 
-  transition: padding-left 0.3s ease;
+  color: rgba(255, 255, 255, 0.85);
+
+  transition: color 0.3s ease;
 }
 
-.contact-item:hover {
-  padding-left: 8px;
+.cta-quick a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #fff;
+
+  transition: width 0.3s ease;
 }
 
-
-/* 01 / 02 / 03 */
-
-.contact-number {
-  font-family: 'Cormorant Garamond', serif;
-
-  font-size: 0.9rem;
-
-  color: #aaa;
+.cta-quick a:hover {
+  color: #fff;
 }
 
-
-/* Phone / Email / Location */
-
-.contact-item h4 {
-  margin: 0 0 5px;
-
-  font-family: 'DM Sans', sans-serif;
-
-  font-size: 0.65rem;
-  font-weight: 400;
-
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-
-  color: #999;
-}
-
-.contact-item h4 i {
-  margin-right: 6px;
-}
-
-
-/* Actual details */
-
-.contact-item p {
-  margin: 0;
-
-  font-family: 'DM Sans', sans-serif;
-
-  font-size: 0.95rem;
-
-  color: #222;
-}
-
-
-/* =================================
-   RIGHT - FORM
-================================= */
-
-.contact-form {
-  width: 55%;
-  max-width: 720px;
-
-  padding: 55px;
-
-  background-color: #f3f0ec;
-
-  border: 1px solid #e5e0da;
-}
-
-
-/* Form heading */
-
-.form-heading {
-  margin-bottom: 45px;
-}
-
-.form-heading > span {
-  display: block;
-
-  margin-bottom: 10px;
-
-  font-family: 'DM Sans', sans-serif;
-
-  font-size: 0.65rem;
-
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-
-  color: #888;
-}
-
-.form-heading h3 {
-  margin: 0 0 12px;
-
-  font-family: 'Cormorant Garamond', serif;
-
-  font-size: 2.4rem;
-  font-weight: 400;
-
-  color: #222;
-}
-
-.form-heading p {
-  max-width: 500px;
-
-  margin: 0;
-
-  font-family: 'DM Sans', sans-serif;
-
-  font-size: 0.85rem;
-  font-weight: 300;
-
-  line-height: 1.7;
-
-  color: #777;
-}
-
-
-/* =================================
-   FORM LAYOUT
-================================= */
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-
-  gap: 28px;
-}
-
-.form-row {
-  display: flex;
-
-  gap: 25px;
-}
-
-.form-row .form-field {
-  width: 50%;
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-}
-
-
-/* Labels */
-
-.form-field label {
-  margin-bottom: 9px;
-
-  font-family: 'DM Sans', sans-serif;
-
-  font-size: 0.65rem;
-  font-weight: 500;
-
-  letter-spacing: 1.3px;
-  text-transform: uppercase;
-
-  color: #666;
-}
-
-
-/* =================================
-   INPUTS
-================================= */
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.cta-quick a:hover::after {
   width: 100%;
-
-  padding: 12px 0;
-
-  background: transparent;
-
-  border: none;
-  border-bottom: 1px solid #aaa49d;
-
-  border-radius: 0;
-
-  outline: none;
-
-  font-family: 'DM Sans', sans-serif;
-
-  font-size: 0.9rem;
-
-  color: #222;
-
-  transition: border-color 0.3s ease;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  border-color: #222;
-}
-
-.contact-form textarea {
-  min-height: 100px;
-
-  resize: vertical;
 }
 
 
 /* =================================
-   SUBMIT BUTTON
+   ROUND BUTTON
 ================================= */
 
-.contact-form button {
-  align-self: flex-start;
+.cta-circle {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  margin-top: 10px;
+  flex-shrink: 0;
 
-  padding: 13px 25px;
+  gap: 10px;
 
-  background-color: #222;
+  width: 150px;
+  height: 150px;
 
-  border: 1px solid #222;
-  border-radius: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
 
   color: #fff;
 
   font-family: 'DM Sans', sans-serif;
 
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 400;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-
-  cursor: pointer;
+  text-decoration: none;
 
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+    background-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
 }
 
-.contact-form button span {
-  display: inline-block;
+.cta-arrow {
+  display: block;
 
-  margin-left: 12px;
+  font-size: 1.4rem;
+  letter-spacing: 0;
 
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
-.contact-form button:hover {
-  background-color: transparent;
+.cta-circle:hover {
+  background-color: #fff;
 
-  color: #222;
+  color: #1b1a1a;
+
+  transform: scale(1.06);
 }
 
-.contact-form button:hover span {
-  transform: translateX(5px);
+.cta-circle:hover .cta-arrow {
+  transform: translateX(8px);
 }
+
 /* =================================
    FOOTER
 ================================= */
@@ -2054,36 +1891,6 @@ nav ul li a:hover::after {
 
 
 /* =================================
-   HUGE NESTASHOTS WORD
-================================= */
-
-.footer-signature {
-  width: 100%;
-
-  margin: 0;
-
-  font-family: 'Cormorant Garamond', serif;
-
-  font-size: clamp(5rem, 13.5vw, 13rem);
-  font-weight: 300;
-
-  line-height: 0.72;
-
-  letter-spacing: -4px;
-
-  text-align: center;
-
-  color: #f4f1ec;
-
-  white-space: nowrap;
-
-  opacity: 0.95;
-
-  user-select: none;
-}
-
-
-/* =================================
    BOTTOM
 ================================= */
 
@@ -2095,7 +1902,7 @@ nav ul li a:hover::after {
 
   gap: 30px;
 
-  margin-top: 55px;
+  margin-top: 25px;
 
   padding-top: 25px;
 
@@ -3785,4 +3592,101 @@ body.menu-open {
     font-weight: 400;
     font-size: 13px;
     letter-spacing: 1.2px;
+}
+
+
+
+
+
+body {
+  padding-top: 0;
+}
+
+nav.desktop-nav {
+  position: fixed;
+  transition: background-color 0.4s ease, height 0.4s ease;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 0 65px;
+
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  z-index: 1000;
+}
+
+nav.desktop-nav .logo img {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+nav.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 42px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.desktop-nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+nav.desktop-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav.desktop-nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* when scrolled */
+nav.desktop-nav.scrolled {
+  height: 85px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+nav.desktop-nav.scrolled ul li a {
+  color: #1b1a1a;
+}
+
+nav.desktop-nav.scrolled ul li a::after {
+  background-color: #1b1a1a;
 }

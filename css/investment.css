@@ -1,0 +1,515 @@
+/* =================================
+   INVESTMENT
+================================= */
+
+body {
+  margin: 0;
+  padding-top: 0;
+
+  background-color: #f3efe9;
+
+  color: #222;
+
+  font-family: 'DM Sans', sans-serif;
+}
+
+
+/* There's no photo behind the nav on this page,
+   so the links and logo are dark instead of white */
+
+nav.desktop-nav .logo img {
+  filter: none;
+}
+
+nav.desktop-nav ul li a {
+  color: #1b1a1a;
+}
+
+nav.desktop-nav ul li a::after {
+  background-color: #1b1a1a;
+}
+
+
+/* Shared little heading */
+
+.pricing-eyebrow {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+
+
+/* =================================
+   HEADER
+================================= */
+
+.pricing-header {
+  padding: 190px 8% 80px;
+
+  text-align: center;
+}
+
+.pricing-header h1 {
+  margin: 0 0 28px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(3.4rem, 7vw, 6rem);
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #222;
+}
+
+.pricing-header h1 em {
+  font-style: italic;
+  font-weight: 400;
+
+  color: #8c8781;
+}
+
+.pricing-header p {
+  max-width: 460px;
+
+  margin: 0 auto;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: #666;
+}
+
+
+
+/* =================================
+   PACKAGE GRID
+================================= */
+
+.pricing-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+
+  align-items: stretch;
+
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 0 24px;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.price-card h3 {
+  margin: 0 0 10px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.9rem;
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #222;
+}
+
+.card-label {
+  margin-bottom: 26px;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.05rem;
+  font-style: italic;
+
+  color: #888;
+}
+
+.card-list {
+  list-style: none;
+
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.card-list li {
+  padding: 5px 0;
+
+  font-size: 0.8rem;
+  font-weight: 300;
+
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+
+  color: #555;
+}
+
+.card-price {
+  margin-top: auto;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.6rem;
+  font-style: italic;
+
+  color: #222;
+}
+
+.card-link {
+  position: relative;
+
+  margin-top: 26px;
+
+  font-size: 0.66rem;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #777;
+
+  transition: color 0.3s ease;
+}
+
+.card-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #222;
+
+  transition: width 0.3s ease;
+}
+
+.card-link:hover {
+  color: #222;
+}
+
+.card-link:hover::after {
+  width: 100%;
+}
+
+
+/* Photo on top */
+
+.photo-card {
+  padding-bottom: 50px;
+}
+
+.card-photo {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  margin-bottom: 30px;
+
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+
+/* Framed photo inside a white card */
+
+.framed-card {
+  padding: 44px 34px 50px;
+
+  background-color: #fff;
+
+  border: 1px solid #ddd6cb;
+}
+
+.framed-card h3 {
+  margin-bottom: 28px;
+}
+
+.card-frame {
+  width: 100%;
+
+  margin-bottom: 30px;
+  padding: 14px;
+
+  background-color: #f7f5f2;
+
+  border: 1px solid #ddd6cb;
+}
+
+.card-frame img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+
+/* Custom card sits in the middle column */
+
+.custom-card {
+  grid-column: 2;
+}
+
+
+
+/* =================================
+   BOOK
+================================= */
+
+.book-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 34px;
+
+  padding: 100px 24px 110px;
+}
+
+.book-line {
+  width: 200px;
+  height: 1px;
+
+  background-color: #d5d0ca;
+}
+
+.book-btn {
+  padding: 16px 40px;
+
+  border: 2px solid #333;
+
+  color: #333;
+
+  font-size: 0.74rem;
+
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #333;
+
+  color: #fff;
+}
+
+
+
+/* =================================
+   PACKAGES BY OCCASION  (white band)
+================================= */
+
+.occasions {
+  padding: 110px 24px 120px;
+
+  /* keeps the content 1300px wide while the white runs edge to edge */
+  padding-left: max(24px, calc((100% - 1252px) / 2));
+  padding-right: max(24px, calc((100% - 1252px) / 2));
+
+  background-color: #fff;
+}
+
+.occasions-heading {
+  margin-bottom: 55px;
+
+  text-align: center;
+}
+
+.occasions-heading h2 {
+  margin: 0;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 3.2rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #222;
+}
+
+.occasions-heading h2 em {
+  font-style: italic;
+  font-weight: 400;
+
+  color: #8c8781;
+}
+
+.occasion-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.occasion-card {
+  position: relative;
+
+  display: block;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background-color: #e6dfd5;
+}
+
+.occasion-card img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 30%;
+
+  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.occasion-card:hover img {
+  transform: scale(1.05);
+}
+
+.occasion-caption {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 90px 28px 26px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.occasion-name {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2rem;
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #fff;
+}
+
+.occasion-view {
+  margin-top: 10px;
+
+  font-size: 0.66rem;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+
+/* =================================
+   INSTAGRAM
+================================= */
+
+.insta {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 100px 24px 130px;
+
+  text-align: center;
+}
+
+.insta-handle {
+  display: inline-block;
+
+  margin-bottom: 40px;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #777;
+
+  transition: color 0.3s ease;
+}
+
+.insta-handle:hover {
+  color: #222;
+}
+
+.insta-grid {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 14px;
+}
+
+.insta-grid a {
+  display: block;
+
+  overflow: hidden;
+
+  background-color: #e6dfd5;
+}
+
+.insta-grid img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    opacity 0.4s ease;
+}
+
+.insta-grid a:hover img {
+  transform: scale(1.06);
+
+  opacity: 0.88;
+}
