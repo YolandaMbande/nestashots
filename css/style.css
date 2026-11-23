@@ -1501,7 +1501,7 @@ nav ul li a:hover::after {
 .contact-cta {
   width: 100%;
 
-  padding: 90px 8%;
+  padding: 110px 28%;
 
   /* dark on the left where the words are, lighter on the right */
   background:
@@ -1891,36 +1891,6 @@ nav ul li a:hover::after {
 
 
 /* =================================
-   HUGE NESTASHOTS WORD
-================================= */
-
-.footer-signature {
-  width: 100%;
-
-  margin: 0;
-
-  font-family: 'Cormorant Garamond', serif;
-
-  font-size: clamp(5rem, 13.5vw, 13rem);
-  font-weight: 300;
-
-  line-height: 0.72;
-
-  letter-spacing: -4px;
-
-  text-align: center;
-
-  color: #f4f1ec;
-
-  white-space: nowrap;
-
-  opacity: 0.95;
-
-  user-select: none;
-}
-
-
-/* =================================
    BOTTOM
 ================================= */
 
@@ -1932,7 +1902,7 @@ nav ul li a:hover::after {
 
   gap: 30px;
 
-  margin-top: 55px;
+  margin-top: 25px;
 
   padding-top: 25px;
 
